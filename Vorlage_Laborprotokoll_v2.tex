@@ -1,0 +1,64 @@
+%Einbindung Pakete
+\input{head}
+
+%Initialisierung des Dokuments
+\begin{document}
+
+%Einbindung unterschiedlicher Befehlsänderungen
+\input{style}
+
+\parindent 0cm
+
+%Zeilenabstand	
+\onehalfspacing			 									
+\addtolength{\footskip}{-8mm}
+
+%Titelseite
+\input{title}
+\newpage
+
+%Abstract (dieser ist für Laborprotokolle in der Regel nicht notwendig)
+\input{abstract}
+\newpage
+
+%\input{Acknowledgements}
+%\newpage
+
+\pagenumbering{roman}
+
+%Inhaltsverzeichnis
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%Abbildungsverzeichnis und Tabellenverzeichnis
+\listoffigures
+\listoftables
+\newpage
+
+%Abkürzungsverzeichnis
+%\input{AbkVerzeichnis}
+\newpage
+
+\pagenumbering{arabic}
+
+%Inhaltlicher Teil
+\input{1. Introduction}
+\input{2. Literature Review}
+\input{3. Methods and Materials}
+%\input{4. Experimental Procedures}
+\input{5. Result}
+\input{6. Conclusions}
+%\input{7. Abschlussbetrachtung}
+\newpage
+%Quellenverzeichnis
+\sloppy
+\input{Quellen}
+\fussy
+\newpage
+
+%Anhang
+\input{8. Anhang}
+
+
+\end{document}
