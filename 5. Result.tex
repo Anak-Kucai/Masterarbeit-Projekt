@@ -8,7 +8,7 @@
 The biochar yield was determined gravimetrically for both the French and the
 Algerian slaughterhouse digestate at 400, 500 and 600\,$^{\circ}$C. To accommodate
 the limited quantity of available material, each digestate portion was divided
-across three crucibles and pyrolysed under identical conditions (heating rate
+across three crucibles and pyrolyzed under identical conditions (heating rate
 10\,$^{\circ}$C\,min$^{-1}$, residence time 1\,h, with the crucible water held at
 approximately 20\,g in every run to maintain a comparable steam environment). The
 three crucibles act as replicates; the mean yields are plotted in
@@ -41,7 +41,7 @@ ratio of recovered biochar to the as-received digestate charge.
     (500,43.12) +- (0,0.04)
     (600,42.18) +- (0,0.05)
   };
-\addlegendentry{French}
+\addlegendentry{French Slaughterhouse Digestate}
 \addplot[color=red!70!black, mark=square*, thick,
     error bars/.cd, y dir=both, y explicit]
   coordinates {
@@ -49,7 +49,7 @@ ratio of recovered biochar to the as-received digestate charge.
     (500,34.37) +- (0,0.11)
     (600,33.45) +- (0,0.48)
   };
-\addlegendentry{Algerian}
+\addlegendentry{Algerian Slaughterhouse Digestate}
 \end{axis}
 \end{tikzpicture}
 \caption{Biochar yield as a function of pyrolysis temperature for the French and
@@ -68,7 +68,7 @@ temperature.
 
 Because both substrates derive from slaughterhouse waste and were processed under
 identical conditions, this difference is attributable to feedstock composition
-rather than to the pyrolysis programme. The consistently higher French yield
+rather than to the pyrolysis program. The consistently higher French yield
 reflects a larger fraction of material retained in the solid phase, which points to
 differences in the organic and mineral balance of the two digestates arising from
 their respective origins and upstream digestion. This interpretation is taken up
@@ -79,7 +79,7 @@ Both digestates show a steady decrease in yield as the pyrolysis temperature ris
 amounting to about 3.6 percentage points for the French and 4.0 for the Algerian
 material between 400 and 600\,$^{\circ}$C. The downward trend follows the expected
 release of volatile matter at higher temperature, as the more thermally labile
-fractions are driven off and a more carbonised residue remains
+fractions are driven off and a more carbonized residue remains
 (Section~\ref{subsubsec:Effect of Temperature on Biochar}). The modest size of the
 decline is itself informative: in digestate-derived feedstocks, the high mineral
 fraction is largely retained in the solid during pyrolysis, so the yield responds
@@ -90,7 +90,7 @@ feedstocks and temperatures reflect genuine compositional effects rather than
 measurement scatter.
 
 The Algerian runs also connect this work to the earlier Projektarbeit, in which the
-same slaughterhouse digestate was pyrolysed under comparable conditions. The present
+same slaughterhouse digestate was pyrolyzed under comparable conditions. The present
 yields of 37.4, 34.4 and 33.5\,\% reproduce the earlier values of approximately 37,
 34 and 31\,\% \parencite{MartinezHuete2024Projektarbeit}, confirming that the pyrolysis procedure is
 reproducible across the two experimental campaigns. Set in the wider context of that
@@ -118,6 +118,61 @@ Pyrolysis temperature (°C) & Bio-waste yield (\%) & Grass-silage yield (\%) & S
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\newpage
+\subsection{\texorpdfstring{H$_2$O}{H2O}-Activation}
+\label{subsec:results-activation}
+The steam activation was carried out at 700\,$^{\circ}$C on the French biochar samples. There are in total 3 samples - 400, 500, 600\,$^{\circ}$C. The result that will be reported and discussed here is the mass loss of the biochar before and after activation treatment.
+
+The mass loss was evaluated in two ways. The wet basis compares the mass of the biochar directly before and after activation. The other mass loss also takes into account the condensation of the water from the post activation sample. This moisture-corrected value therefore reflects the mass actually removed from the char and is used here as the primary measure. 
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.82\textwidth,
+    height=0.55\textwidth,
+    xlabel={Pyrolysis temperature of biochar ($^{\circ}$C)},
+    ylabel={Activation mass loss (\%)},
+    xtick={400,500,600},
+    xmin=370, xmax=630,
+    ymin=0, ymax=24,
+    ymajorgrids=true,
+    grid style={draw=gray!25},
+    legend style={at={(0.5,-0.20)}, anchor=north, legend columns=2,
+                  font=\small,
+                  /tikz/every even column/.append style={column sep=0.5cm}},
+    tick label style={font=\small},
+    label style={font=\small},
+]
+\addplot[color=red!75!black, mark=*, thick]
+  coordinates {(400,17.92) (500,15.86) (600,11.05)};
+\addlegendentry{0.5 mL, corrected}
+\addplot[color=orange!95!black, mark=triangle*, thick]
+  coordinates {(400,20.76) (500,21.65) (600,10.29)};
+\addlegendentry{0.1 mL, corrected}
+\addplot[color=blue!60!black, mark=square*, thick, dashed]
+  coordinates {(400,8.91) (500,7.92) (600,3.96)};
+\addlegendentry{0.5 mL, wet}
+\addplot[color=cyan!55!black, mark=diamond*, thick, dashed]
+  coordinates {(400,15.84) (500,7.92) (600,4.00)};
+\addlegendentry{0.1 mL, wet}
+\end{axis}
+\end{tikzpicture}
+\caption{Activation mass loss of the French biochar for both water doses (0.1 and
+0.5\,mL\,g$^{-1}$), on the moisture-corrected basis (solid) and the uncorrected wet basis (dashed). Complete data, including the 2\,g scale-up runs, are listed in Table~\ref{tab:activation-full}.}
+\label{fig:activation-massloss}
+\end{figure}
+
+Figure~\ref{fig:activation-massloss} shows both measures for the two water doses (0.5\,mL\,g$^{-1}$ and 0.1\,mL\,g$^{-1}$). The data show a downtrend for all of the mass loss graphic with the pyrolysis temperature of the biochar. On the moisture-corrected basis, the decrease of the mass loss could be seen, from from 17.9\,\% at 400\,$^{\circ}$C
+to 11.1\,\% at 600\,$^{\circ}$C, and the 2\,g scale-up runs follow the same
+descending order (20.6\,\%, 15.0\,\% and 9.8\,\%; Table~\ref{tab:activation-full}). The wet basis support this downtrend further as shown by the dashed line in the Figure~\ref{fig:activation-massloss}.
+
+From this behavior, one can interpret that a higher pyrolysis temperature yields a more carbonized and thermally stable solid in which the volatile fractions have already been burnt off (Section~\ref{subsubsec:Effect of Temperature on Biochar}), so less material remains available for removal during activation. The pattern is actually the counterpart of the pyrolysis line graph in Section~\ref{subsec:results-pyrolysis}. Volatile matter removed during pyrolysis not there anymore during activation, so the more extensively devolatilized high-temperature chars undergo, the least additional loss under activation.
+
+The two water doses did not produce a consistent difference in the corrected mass loss, especially the 0.1\,mL. The one shown by the orange line in the graph surpasses 0.5\,mL at 600\,$^{\circ}$C (about 10--11\,\%) but differs at the lower temperatures without a clear ordering. 
+
+
 
 \newpage
 \subsection{Calorific value}
