@@ -325,6 +325,74 @@ The result shows that each biochar
 
 \subsubsection{Calorific value}
 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    name=maxis,
+    width=0.82\textwidth,
+    height=0.55\textwidth,
+    ybar,
+    bar width=11pt,
+    symbolic x coords={Digestate,400,500,600},
+    xtick=data,
+    xticklabels={Digestate,{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
+    ylabel={Gross calorific value (MJ\,kg$^{-1}$)},
+    ymin=0, ymax=32,
+    axis y line*=left,
+    ymajorgrids=true,
+    grid style={draw=gray!25},
+    tick label style={font=\small},
+    label style={font=\small},
+    legend style={at={(0.5,1.14)}, anchor=north, legend columns=3,
+                  font=\small, draw=gray!40,
+                  /tikz/every even column/.append style={column sep=0.4cm}},
+]
+\addplot+[fill=red!65!black, draw=red!65!black,
+          error bars/.cd, y dir=both, y explicit]
+  coordinates {(Digestate,16.41)+-(0,0.13) (400,14.16)+-(0,0.43)
+               (500,14.17)+-(0,0.25) (600,14.11)+-(0,0.06)};
+\addlegendentry{HHV, as measured}
+\addplot+[fill=red!25, draw=red!40]
+  coordinates {(Digestate,21.20) (400,25.07) (500,27.88) (600,28.23)};
+\addlegendentry{HHV, ash-free}
+\addlegendimage{black!70, dashed, mark=square*, mark options={fill=black!70}}
+\addlegendentry{Ash content}
+\end{axis}
+\begin{axis}[
+    at={(maxis.south east)}, anchor=south east,
+    width=0.82\textwidth,
+    height=0.55\textwidth,
+    symbolic x coords={Digestate,400,500,600},
+    axis y line*=right,
+    axis x line=none,
+    ylabel={Ash content (\%)},
+    ymin=0, ymax=60,
+    tick label style={font=\small},
+    label style={font=\small},
+]
+\addplot[black!70, dashed, thick, mark=square*, mark options={fill=black!70},
+         error bars/.cd, y dir=both, y explicit]
+  coordinates {(Digestate,22.6)+-(0,0.6) (400,43.5)+-(0,2.0)
+               (500,49.2)+-(0,0.9) (600,50.0)+-(0,0.6)};
+\end{axis}
+\end{tikzpicture}
+\caption{Gross calorific value and ash content of the French digestate and its
+biochars. Dark bars are the calorific value as measured (left axis), light bars
+the same value on an ash-free basis, and the dashed line the ash content (right
+axis). Error bars are the standard deviation of three replicates; complete data
+are given in Table~\ref{tab:calorific-full}.}
+\label{fig:calorific-value}
+\end{figure}
+
+The gross calorific value of the slaughterhouse digestate from France was 16.41\,MJ\,kg$^{-1}$. After pyrolysis, these value are lower for all three biochars at about 4.1--14.2\,MJ\,kg$^{-1}$ (Figure~\ref{fig:calorific-value}; Table~\ref{tab:calorific-full}). The calorific values of the biochars are visibly lower than that of the raw digestate itself. There are also minimal differences between pyrolysis temperatures, which might suggest that temperature has little effect on calorific value — but the ash trend argues otherwise. Bomb calorimetry reports the heat released per gram of whole sample, which means ash is also included. Ash is an inert mineral matter that adds mass without contributing anything to combustion. Thus, dividing the measured value by the combustible fraction $(1 - \text{ash content})$ removes this ballast. Assuming that ash releases no heat, the ash-free calorific value climbs with pyrolysis temperature, from 21.2\,MJ\,kg$^{-1}$ for the digestate to 25.1, 27.9, and 28.2\,MJ\,kg$^{-1}$ at 400, 500, and 600\,$^{\circ}$C respectively. The organic fraction of the biochar becomes more energy-dense as temperature increases, consistent with the progressive loss of oxygen-rich volatiles and the enrichment in fixed carbon that accompany carbonization \parencite{pecchi-2019, hung-2017}.
+
+The high ash content additionally determines where these biochars are applicable. Half the mass of the 600\,$^{\circ}$C and 500\,$^{\circ}$C char is mineral residue, which makes it a poor option for solid fuel. On the other hand, going the soil-amendment route seemss like a better option since the same fraction could carry the mineral nutrients concentrated from the digestate or the biochar and return them to the soil with the carbon. In this context, the ash works in the material's favor, its effect on adsorption is a separate question, taken up with the BET surface-area results.
+
+
+%Lomselesai
+
+
 \newpage
 \subsubsection{CHNS elemental analysis}
 
