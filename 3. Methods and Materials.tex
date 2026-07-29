@@ -184,9 +184,28 @@ The analytical methods described in this section were applied to the raw digesta
 \label{Calorificvaluedetermination}
 The higher heating value (HHV) of the raw digestate and of the biochars was determined using an isoperibolic bomb calorimeter (IKA C 200, IKA-Werke GmbH \& Co. KG) following the principle described in \S~\ref{subsubsec:HHV}. The instrument was calibrated at the beginning of each measurement campaign using certified benzoic acid pellets, which served as a reference material for determining the effective heat capacity $\varepsilon$ of the calorimeter system.
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{Abbildungen/Kalorimeter.JPG}
+  \caption{IKA calorimeter C 200}
+  \label{fig:bombcalori}
+\end{figure}
+
 \vspace{0.3em}
 
 Prior to each measurement, samples were dried to remove residual moisture using a halogen moisture analyzer (PCE-MB 210C) Operated at 100°C until constant mass was reached, with the device evaluating dryness via a switch-off criterion of 10 s without further mass change. The dried samples were transferred to a desiccator and kept there until measurement to prevent the re-uptake of atmospheric moisture. The moisture content displayed by the device was used solely as a process control to confirm that the sample had reached a dry state and not to be reported as an independent result.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        angle=-90,
+        origin=c,
+        height=0.30\textheight,
+        keepaspectratio
+    ]{Abbildungen/moisture analyzer.jpeg}
+    \caption{Halogen moisture analyzer PCE-MB 210C}
+    \label{fig:moisture_analyzer}
+\end{figure}
 
 \vspace{0.3em}
 
@@ -197,13 +216,37 @@ For each measurement, approximately 1.0 g of dried sample was placed in the cruc
 Each Sample was measured in triplicate (n=3). Mean values and standard deviations are reported in Chapter 5. %INI NANTI di REFERENSI kan
 
 \subsubsection{CHNS Elemental Analysis}
-The mass fractions of carbon (C), hydrogen (H), nitrogen (N), and sulfur (S) in the raw digestate, pyrolyzed biochars, activated biochars, and sulfur-loaded biochars were determined by combustion-based CHNS elemental analysis, based on the principle described in \S~ 2.5. The analyses were carried out as a contracted service by the Technische Universität Berlin, as the corresponding instrumentation was not available at HTW Berlin.
+%The mass fractions of carbon (C), hydrogen (H), nitrogen (N), and sulfur (S) in the raw digestate, pyrolyzed biochars, activated biochars, and sulfur-loaded biochars were determined by combustion-based CHNS elemental analysis, based on the principle described in \S~ 2.5. The analyses were carried out as a contracted service by the Technische Universität Berlin, as the corresponding instrumentation was not available at HTW Berlin.
 
-Sample preparation on the HTW Berlin side consisted of drying each sample and storing them in sealed containers. The instrumental parameters of the analysis (instrument model, combustion conditions, calibration standard, and number of replicates) were defined by the external laboratory and are summarized in Table [w].
+%Sample preparation on the HTW Berlin side consisted of drying each sample and storing them in sealed containers. The instrumental parameters of the analysis (instrument model, combustion conditions, calibration standard, and number of replicates) were defined by the external laboratory and are summarized in Table [w].
 
-\subsubsection{BET Surface Area Analysis}
-The specific surface area, total pore volume, and pore size distribution of the activated biochars were determined by gas adsorption analysis based on the Brunauer-Emmett-Teller (BET) method, with the underlying principle and equation desrcribed in \S~ 2.6. The BET measurements were carried out as a contracted service by the Technische Universität Berlin. 
-\subsubsection{Scanning Electron Microscope Analysis (SEM-Analysis) and EDX}
+%DISINI LEBIH BAGUS KALO MASUKIN KAYAK PAARAMETER METHODE YANG DIGUNAIN TERUS KAYAK MISALNYA BRP LAAM DLL. PENJELASAN MISALNYA METHODE INI NGAPAIN ITU MENDINGAN DITHEORI
+
+\subsubsection{BET Surface-Area Analysis}
+
+The BET surface-area analysis was carried out externally at the Technical University of Berlin (TU Berlin) by the laboratory engineer, as the corresponding equipment was not available at University of Applied Science Berlin (HTW Berlin). The analysis used a BET surface-area analyzer with model Sync220A and a static volumetric method. This analysis used nitrogen as the adsorbate and the measurement was done at 77.35 K. The analysis required approximately 2 hours. 
+
+\vspace{0.3em}
+
+Data series obtained from the analysis was used to calculate the specific surface area of each biochar using the Equation~\ref{eq:bet_equation} and ~\ref{eq:specific_surface_area}. Since the data sets are based on two measurements under the same terms and condition, the final specific surface area is reported as the average value. The standard deviation is calculated using following equation:
+
+\begin{equation}
+s
+=
+\sqrt{
+\frac{
+\displaystyle\sum_{i=1}^{n}
+\left(x_i-\overline{x}\right)^2
+}{
+n-1
+}
+}
+\label{eq:standard_deviation}
+\end{equation}
+
+
+
+\vspace{0.3em}
 
 
 \subsubsection{Scanning Electron Microscope Analysis (SEM-Analysis) and EDX}
