@@ -475,7 +475,7 @@ In addition, the biochar activated with CO$_2$ exhibited lower H$_2$S adsorption
 \label{sec:characterisation}
 
 \subsubsection{Calorific value}
-
+\label{subsubsec:calorific}
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}
@@ -547,17 +547,119 @@ this work. Ash-content plays an important role. At roughly 50\,\% for the
 600\,$^{\circ}$C char, this places this material at the top of the 15--50\,wt\% band
 typical of digestates.
 
-To prove the points a bit further, using the equation~\ref{eq:edf}, the energy densification can be achieved by dividing the biochar calorific value by that of the feedstock. Every biochar has energy densification factor at 0.86, and that means one thing. The pyrolysis lowered the energy density of the solid instead of raising it. Lignocellulosic feedstocks treated over the same 400--600\,$^{\circ}$C window normally reach 1.4--1.8 \parencite{bridgwater-2011, antal-2003}. This differences actually could be expected. For high-ash digestates the factor should stay below 1.4 and can fall to 1 or lower. The reason is because ash dilution outweighs carbon enrichment \parencite{hung-2017, opatokun-2015}, and the present material reaches the lower bound of that prediction. Applying Equation~\ref{eq:energy-yield} with the mass
+To prove the points a bit further, using the equation~\ref{eq:edf}, The energy densification can be achieved by dividing the biochar calorific value by that of the feedstock. Every biochar has an energy densification factor of 0.86, and that means one thing. The pyrolysis lowered the energy density of the solid instead of raising it. Lignocellulosic feedstocks treated over the same 400--600\,$^{\circ}$C window normally reach 1.4--1.8 \parencite{bridgwater-2011, antal-2003}. This difference could actually be expected. For high-ash digestates, the factor should stay below 1.4 and can fall to 1 or lower. The reason is because ash dilution outweighs carbon enrichment \parencite{hung-2017, opatokun-2015}, and the present material reaches the lower bound of that prediction. Applying Equation~\ref{eq:energy-yield} with the mass
 yields of Section~\ref{subsec:results-pyrolysis} gives energy yields of 39.5,
 37.2 and 36.3\,\% at 400, 500 and 600\,$^{\circ}$C. For comparison, lignocellulosic feedstocks yield energy around 50--75\,\%.
 However, if compared on an ash-free basis, the same chars read differently. Their 25.1--28.2\,MJ\,kg$^{-1}$ lies inside the 25--33\,MJ\,kg$^{-1}$ reported for lignocellulosic
-biochar (Table~\ref{tab:hhv_fuels}), and when the densification factor recalculated again, this basis rises to 1.18--1.33. The ash-free char left by pyrolysis is comparable in energy density to wood-derived char, and the shortfall in the measured value comes from ash rather than from poor or incomplete carbonization. 
+biochar (Table~\ref{tab:hhv_fuels}), and when the densification factor is recalculated again, this basis rises to 1.18--1.33. The ash-free char left by pyrolysis is comparable in energy density to wood-derived char, and the shortfall in the measured value comes from ash rather than from poor or incomplete carbonization. 
 
 %Lomselesai
 
 
 \newpage
 \subsubsection{CHNS elemental analysis}
+\label{subsubsec:chns}
+With the help of CHNS elemental analysis, the carbon, hydrogen, nitrogen, and sulfur contents of the three French raw biochars were determined here. The same analysis was also carried out on the sulfur-loaded activated chars, whose values are listed alongside  in Table~\ref{tab:chns-full} and discussed here in this section. 
+Each reported figure is the mean of four individual determinations. The individual measurements themselves were not released by the laboratory of TU Berlin, so no scatter can be shown. The results are evaluated on two bases. The as-analyzed basis reports the composition of the whole sample, mineral matter included. The ash-free basis divides each element by the combustible fraction $(1-\text{ash})$ and therefore describes the organic matter alone.\textbf{ The Ash-content was determined for the three biochars in Section~\ref{subsubsec:calorific} but not yet for the activated and sulfur-loaded samples; a supplementary bomb-calorimetry campaign on those samples is planned to close this gap, and the ash-free values in Table~\ref{tab:chns-ashfree} will be completed once they are available.}
+
+\begin{table}[ht]
+\centering
+\caption{CHNS elemental analysis of the French slaughterhouse-digestate biochars
+and the corresponding sulfur-loaded activated chars, reported on the as-analyzed
+basis.}
+\label{tab:chns-full}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{7pt}
+\begin{tabular}{llccccccc}
+\toprule
+\multirow{2}{*}{\textbf{Sample}} & \multirow{2}{*}{\textbf{$T$ ($^\circ$C)}}
+& \multicolumn{4}{c}{\textbf{Elemental content (\%)}}
+& \multirow{2}{*}{\textbf{Ash (\%)}}
+& \multirow{2}{*}{\textbf{O$_{\text{diff}}$ (\%)}}
+& \multirow{2}{*}{\textbf{Sum (\%)}} \\
+\cmidrule(lr){3-6}
+& & \textbf{C} & \textbf{H} & \textbf{N} & \textbf{S} & & & \\
+\midrule
+\multirow{3}{*}{Biochar}
+& 400 & 37.98 & 1.534 & 2.744 & 1.486 & 43.5 & 12.76 & 100.0 \\
+& 500 & 38.43 & 0.814 & 2.320 & 1.629 & 49.2 & 7.61  & 100.0 \\
+& 600 & 37.99 & 0.521 & 1.626 & 1.584 & 50.0 & 8.28  & 100.0 \\
+\midrule
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Sulfur-loaded\\activated char\end{tabular}}
+& 400 & 31.66 & 0.342 & 1.148 & 6.804 & [pending] & [pending] & -- \\
+& 500 & 33.61 & 0.344 & 1.066 & 5.290 & [pending] & [pending] & -- \\
+& 600 & 33.47 & 0.348 & 0.943 & 5.217 & [pending] & [pending] & -- \\
+\bottomrule
+\end{tabular}
+
+\vspace{2mm}
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\textit{Note.} Each value is the arithmetic mean of four individual
+determinations reported by the analyzing laboratory; the individual measurements
+and their standard deviations were not provided. Oxygen was not measured
+directly and is obtained by difference,
+$\mathrm{O} = 100 - (\mathrm{C}+\mathrm{H}+\mathrm{N}+\mathrm{S}+\mathrm{ash})$,
+using the ash contents of Table~\ref{tab:calorific-full}. \textbf{Ash content for the
+activated and sulfur-loaded samples has not yet been determined; a
+supplementary bomb-calorimetry campaign on these samples is planned to obtain
+it. }The temperature refers to the pyrolysis temperature of the parent biochar;
+all activated samples were treated at 700\,$^\circ$C with a water dose of
+0.5\,mL\,g$^{-1}$.
+\end{minipage}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    name=caxis, width=0.82\textwidth, height=0.55\textwidth,
+    ybar, bar width=16pt,
+    symbolic x coords={400,500,600}, xtick=data,
+    xticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
+    xlabel={Pyrolysis temperature},
+    ylabel={Carbon content, ash-free basis (\%)},
+    ymin=0, ymax=100, axis y line*=left,
+    ymajorgrids=true, grid style={draw=gray!25},
+    tick label style={font=\small}, label style={font=\small},
+    legend style={at={(0.5,1.16)}, anchor=north, legend columns=3,
+                  font=\small, draw=gray!40,
+                  /tikz/every even column/.append style={column sep=0.35cm}},
+]
+\addplot+[fill=blue!25, draw=blue!45]
+  coordinates {(400,67.2) (500,75.7) (600,76.0)};
+\addlegendentry{C, ash-free}
+\addlegendimage{red!70!black, thick, mark=*}
+\addlegendentry{H/C}
+\addlegendimage{black!70, thick, dashed, mark=square*, mark options={fill=black!70}}
+\addlegendentry{O/C}
+\end{axis}
+\begin{axis}[
+    at={(caxis.south east)}, anchor=south east,
+    width=0.82\textwidth, height=0.55\textwidth,
+    symbolic x coords={400,500,600},
+    axis y line*=right, axis x line=none,
+    ylabel={Atomic ratio ($-$)}, ymin=0, ymax=0.60,
+    tick label style={font=\small}, label style={font=\small},
+]
+\addplot[red!70!black, thick, mark=*]
+  coordinates {(400,0.481) (500,0.252) (600,0.163)};
+\addplot[black!70, thick, dashed, mark=square*, mark options={fill=black!70}]
+  coordinates {(400,0.252) (500,0.149) (600,0.164)};
+\end{axis}
+\end{tikzpicture}
+\caption{Ash-free carbon content (bars, left axis) and the H/C and O/C atomic
+ratios (lines, right axis) of the French slaughterhouse-digestate biochar as a
+function of pyrolysis temperature. The two ratio curves coincide at
+600\,$^{\circ}$C because H/C and O/C both read approximately 0.16 there.
+Complete elemental data are given in Tables~\ref{tab:chns-full}
+to~\ref{tab:chns-ratios}.}
+\label{fig:chns-ratios}
+\end{figure}
+
+
+
+
 
 \newpage
 \subsubsection{BET analyis}
