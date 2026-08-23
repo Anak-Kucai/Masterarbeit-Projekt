@@ -1,24 +1,50 @@
 \section{Introduction}
 \setresponsible{Regen Wijaya}
 
-\subsection{Background and Previous Study}
-The meat-processing industry generates large quantities of organic residue that are difficult to dispose of and pose a risk to soil and water if they are left untreated. Anaerobic digestion is one established route for handling this material: micro-organisms break it down in the absence of oxygen and release biogas, a methane-rich fuel. What remains afterwards is digestate, a wet slurry that still carries most of the nitrogen, phosphorus and other nutrients of the original feedstock. Digestate is usually spread on farmland, but its high water content, variable composition, and the cost of transporting and storing it limit how much can be used in this way \parencite{tambone-2010}. The residue of a recycling process, therefore, becomes a waste problem of its own.
+\subsection{Background}
+Large amounts of organic waste are produced everyday by the meat-processing industry. This waste is harmful to soil and water if it is not properly treated and disposed of. Anaerobic digestion is one established route for handling this material, where micro-organisms break the material down in the absence of oxygen and release biogas. A byproduct of this process is digestate, which contains most of the nitrogen, phosphorus, and other nutrients from the original feedstock and is typically applied as fertilizer to farmland. However, the amount that can be used in this manner is limited due to its high water content, changeable composition, and expensive transportation and storage costs \parencite{tambone-2010}. The residue of a recycling process, therefore, becomes a waste problem of its own.
+
+\vspace{0.3em}
 
 Pyrolysis turns that residue into a more stable and useful solid. Heating the dried digestate in an oxygen-limited atmosphere drives off the volatile fraction and leaves a porous, carbon-rich material called biochar \parencite{Qi2024}. Biochar can be returned to the soil, where it improves structure, holds water and nutrients, and stores carbon for long periods \parencite{Lehmann2015}; with further treatment, it can also act as a porous adsorbent for removing contaminants from gasses and liquids. It is combustible as well, and thus has some value as a solid fuel; however, that is a secondary consideration in the present work.
 
+\vspace{0.3em}
+
 Most of what is known about biochar comes from wood and crop feedstock. Digestate-derived biochar, and slaughterhouse digestate in particular, has received far less attention, even though its mineral-rich composition makes it behave quite differently from lignocellulosic char \parencite{opatokun-2015}. A further practical point is that the digestate studied here arrived without any supplier specification of its composition, which is why its elemental make-up is determined in-house rather than taken from a data sheet.
+
+\vspace{0.3em}
 
 The slaughterhouse case closes a loop. Anaerobic digestion of slaughterhouse waste produces biogas contaminated with hydrogen sulfide (H$_2$S), a toxic and corrosive gas that must be removed before the biogas can be used \parencite{salminen-2002}. Activated biochar made from the digestate can adsorb that H$_2$S and convert it to elemental sulfur on its surface. The result is a sulfur-enriched biochar that can then be applied to soil, where sulfur serves as a plant nutrient \parencite{Zhang2017SulfurEnrichedBiochar}. A single feedstock thus addresses two problems at once: the digestate is diverted from disposal, and the H$_2$S is stripped from the biogas, with both ending up in a material that returns nutrients to the field.
 
-This thesis examines that route experimentally. It builds on an earlier Projektarbeit in which biochar was produced from three types of digestates, namely bio-waste, grass silage and slaughterhouse residue, and activated under carbon dioxide \parencite{MartinezHuete2024Projektarbeit}. Two changes define the present study. Activation is carried out with steam (H$_2$O) rather than CO$_2$, and the calorific value of the char is measured directly by bomb calorimetry, a method that was not used in the earlier work. Slaughterhouse digestate of French origin is the main feedstock, while a comparable Algerian digestate provides a second dataset against which the French results are read. Where they are relevant, the earlier CO$_2$-activation results are drawn into the discussion rather than presented as a separate chapter.
+\subsection{Previous Project Work}
+
+The present work builds on an previous project work in master program renewable energy as part of a research project on “Hybrid Biochemical and Thermochemical Conversion of Slaughterhouse Biowaste for Renewable Energy Production”. The digestates were provided by the institutes or companies as part of a collaborative partnership within the research project.
+
+\vspace{0.3em}
+
+The previous work investigated the biochar production from three different type of digestates:
+
+\begin{itemize}
+    \item \text{Biowaste Fermentation} 
+    \item \text{Grasssilage}
+    \item \text{Slaughterhouse}
+\end{itemize}
+
+The resulting biochars were subsequently activated with carbon dioxide, followed by the scanning electron microscopy (SEM) analysis to visualize the morphology and pore development as well as CHNS-analysis to determine the elemental composition of the biochars \parencite{MartinezHuete2024Projektarbeit}. 
 
 \subsection{Motivation of Work}
+
+This work differs from the earlier study in its definition and structure due to several changes and additions. This work focuses exclusively on the investigation of two different types wastes from slaughterhouses originating from France and Algeria, which—as in the previous project—were provided by the same corporate partner as part of a research project. In contrast to the previous work, this study examines activation using steam to characterize the properties of the resulting biochar, which will ultimately be compared with the results of the previous work.
+
+\vspace{0.3em}
+
+The present work also determines the calorific value of the biochar to obtain realistic information on the energy content of the digestate and the produced biochar. The characterization focuses more on the  Brunauer-Emmett-Teller (BET) analysis to determine the surface area and pore development of the biochar, which are the main objectives of the activation, as well as CHNS-analysis to assess the elemental content of the activated biochar. 
 
 \subsection{Objectives of The Work}
 
 \subsubsection{General Objective}
 
-The general objective of this work is to explore the potential of different digestates from slaughterhouse for biochar production, including its potential modification through activation and sulfur loading. This work investigates the effect of pyrolysis temperature on the biochar production, the effect of steam as activating agent on biochar activation, and the feasibility of sulfur enrichment on the resulting biochars. This works also aims to characterize the properties of the resulting biochars. In addition, another objective of this work is to draw comparisons with the authors’ previous project work on the production and characterization of biochar via pyrolysis and CO$_2$ activation.
+The general objective of this work is to explore the potential of different digestates from slaughterhouse for biochar production, including its potential modification through activation and sulfur loading. This work investigates the effect of pyrolysis temperature on biochar production, the effect of steam as an activating agent on biochar activation, and the feasibility of sulfur enrichment on the resulting biochars. This work also aims to characterize the properties of the resulting biochars. In addition, another objective of this work is to draw comparisons with the authors’ previous project on the production and characterization of biochar via pyrolysis and CO$_2$ activation and to discuss the findings.
 
 \subsubsection{Specific Objectives}
 
@@ -28,8 +54,8 @@ To help in achieving the overall objectives of this work, several specific objec
     \item to produce biochar from two different slaughterhouse digestate using pyrolysis with temperatures at 400, 500, and 600~$^\circ$C, and further determine the yield obtained at each temperature. The higher heating value of the char is also determined by bomb calorimetry as a complementary fuel property 
     \item to perform the activation of biochars with steam and to quantify the effect of activation through the associated mass loss.
     \item to carry out the sulfur-loading process on the activated biochars with sulfur-rich compound and to asses it suitability as soil amendment in agricultural application. 
-    \item to characterize the physicochemical of the resulting biochars using several methods, including BET surface area analysis, scanning electron microscopy with EDX, and CHNS elemental analysis.  
-    \item to compare the result from the feedstocks, and to set the findings against the CO$_2$-activation baseline of the authors’ previous project work.
+    \item to characterize the physicochemical of the resulting biochars using several methods, including BET surface area and CHNS elemental analysis.  
+    \item to compare the result from the feedstocks, and to set the findings against the CO$_2$-activation baseline of the authors’ previous project work and discuss the finding.
 \end{itemize}
 
 \subsubsection{Limitations of the Work}
@@ -38,8 +64,7 @@ In this work, several limitations were encountered, particularly in the pyrolysi
 
 \vspace{0.8em}
 
-\newpage
-Limitation was also encountered to analyze or characterize the resulting biochars. Analysis or characterization methods such as BET surface area analysis, scanning electron microscopy with EDX, and CHNS elemental analysis, had to be outsoruced and were relatively expensive, only several samples of biochars were selected. 
+Limitation was also encountered to analyze or characterize the resulting biochars. Analysis or characterization methods such as BET surface area analysis and CHNS elemental analysis, had to be outsoruced and were relatively expensive, only several samples of biochars were selected. Scanning electron microscopy with EDX analysis was also ruled out for resource-related reasons.
 
 \subsection{Structure of The Thesis}
 
@@ -59,4 +84,8 @@ The \textbf{chapter~3} outlines the experimental investigations that carried out
 
 \vspace{0.8em}
 
-The \textbf{chapter~4} presents the result of the experiments. The result is interpreted to highlight the key findings related to the overall objectives of this thesis.
+The \textbf{chapter~4} presents the result of the work. The result is interpreted to highlight the key findings related to the overall objectives of this work. The kef findings will be the discussed.
+
+\vspace{0.8em}
+
+The \textbf{chapter~5} presents the conclusion of the experiments.
