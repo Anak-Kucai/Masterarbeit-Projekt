@@ -554,7 +554,7 @@ biochar (Table~\ref{tab:hhv_fuels}), and when the densification factor is recalc
 \subsubsection{CHNS elemental analysis}
 \label{subsubsec:chns}
 With the help of CHNS elemental analysis, the carbon, hydrogen, nitrogen, and sulfur contents of the three French raw biochars were determined here. The same analysis was also carried out on the sulfur-loaded activated chars, whose values are listed alongside  in Table~\ref{tab:chns-full} and discussed here in this section. 
-Each reported figure is the mean of four individual determinations. The individual measurements themselves were not released by the laboratory of TU Berlin, so no scatter can be shown. The results are evaluated on two bases. The as-analyzed basis reports the composition of the whole sample, mineral matter included. The ash-free basis divides each element by the combustible fraction $(1-\text{ash})$ and therefore describes the organic matter alone.\textbf{ The Ash-content was determined for the three biochars in Section~\ref{subsubsec:calorific} but not yet for the activated and sulfur-loaded samples; a supplementary bomb-calorimetry campaign on those samples is planned to close this gap, and the ash-free values in Table~\ref{tab:chns-ashfree} will be completed once they are available.}
+Each reported figure is the mean of four individual determinations. The individual measurements themselves were not released by the laboratory of TU Berlin, so no scatter can be shown. The results are evaluated on two bases. The as-analyzed basis reports the composition of the whole sample, mineral matter included. %The ash-free basis divides each element by the combustible fraction $(1-\text{ash})$ and therefore describes the organic matter alone.\textbf{ The Ash-content was determined for the three biochars in Section~\ref{subsubsec:calorific} but not yet for the activated and sulfur-loaded samples; a supplementary bomb-calorimetry campaign on those samples is planned to close this gap, and the ash-free values in Table~\ref{tab:chns-ashfree} will be completed once they are available.}
 
 \begin{table}[ht]
 \centering
@@ -643,8 +643,207 @@ function of pyrolysis temperature.}
 
 
 \newpage
-\subsubsection{BET-Analyis}
+\newpage
+\subsubsection{BET Analyis}
+
+The changes in the specific surface area, as well as in pore volume and particle size, between raw and sulfur-loaded activated France biochar samples were determined through the BET analysis. 
 
 
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=\textwidth,
+            height=9cm,
+            bar width=18pt,
+            ymin=0,
+            ymax=160,
+            ytick={0,20,40,60,80,100,120,140,160},
+            xlabel={Sample},
+            ylabel={Specific surface area in m$^2$/g},
+            title={Specific surface area of the French biochar samples},
+            xtick={1,2,3,4,5,6},
+            xticklabels={
+                \shortstack{BC\\400$^\circ$C},
+                \shortstack{BC\\500$^\circ$C},
+                \shortstack{BC\\600$^\circ$C},
+                \shortstack{A-BC+S\\400$^\circ$C},
+                \shortstack{A-BC+S\\500$^\circ$C},
+                \shortstack{A-BC+S\\600$^\circ$C}
+            },
+            x tick label style={
+                font=\small,
+                align=center
+            },
+            ymajorgrids=true,
+            grid style={dashed},
+            axis line style={draw=none},
+            tick style={draw=none},
+            nodes near coords,
+            nodes near coords style={
+                font=\small,
+                /pgf/number format/fixed,
+                /pgf/number format/precision=3
+            },
+            enlarge x limits=0.10
+        ]
 
+        \addplot coordinates {
+            (1,0.780)
+            (2,1.800)
+            (3,31.970)
+            (4,100.966)
+            (5,146.089)
+            (6,88.636)
+        };
+
+        \end{axis}
+    \end{tikzpicture}
+
+    \caption{Specific surface area of the French biochar samples determined through BET analysis. BC = biochar; A-BC+S = sulfur-loaded activated biochar.}
+    \label{fig:bet_surface_area}
+\end{figure}
+
+As it is illustrated in Figure~\ref{fig:bet_surface_area}, the untreated biochars exhibited BET specific surface areas of only 0.78, 1.80, and 31.97~m$^2$,g$^{-1}$ at pyrolysis temperatures of 400, 500, and 600~$^\circ$C, respectively. Thus, increasing the pyrolysis temperature alone already promoted considerable pore development, particularly between 500 and 600~$^\circ$C. This behavior agrees with the mechanism discussed in Section~\ref{subsubsec:Effect of Temperature on Biochar}: increasing temperature promotes devolatilization, whereby volatile compounds are progressively removed from the carbon matrix and previously inaccessible voids and pores become exposed. As a result, a more developed internal pore network, including micropores and mesopores, can form. Since micropores provide a particularly large internal surface per unit mass, their formation and exposure can strongly increase the BET specific surface area \parencite{tomczyk-2020,ghorbani-2022}.
+
+\vspace{0.3em}
+
+The effect of the subsequent treatment was substantially greater than that of pyrolysis alone. After steam activation and sulfur loading, the BET specific surface areas increased to 100.97, 146.09, and 88.64~m$^2$,g$^{-1}$ for the samples initially pyrolyzed at 400, 500, and 600~$^\circ$C, respectively. The corresponding absolute increases relative to the untreated biochars were approximately 100, 144, and 57~m$^2$,g$^{-1}$. These large differences provide strong evidence that the treatment opened a substantial fraction of previously inaccessible internal surface. During steam activation, H$_2$O penetrates into the pore system and partially gasifies the carbon matrix. This process can remove carbon from pore entrances, open blocked micropores, create new micropores, and enlarge existing pores into mesopores. Macropores contribute comparatively little directly to BET surface area because of their large dimensions, but they can serve as transport channels through which the adsorbate reaches smaller mesopores and micropores located deeper within the particle. The large increase in BET surface area therefore indicates the development of a more accessible hierarchical pore structure rather than simply the formation of larger pores \parencite{Sajjadi2019}.
+
+\vspace{0.3em}
+
+The most important finding is that the highest BET surface area was not obtained from the biochar pyrolyzed at the highest temperature. Instead, the 500~$^\circ$C precursor reached the maximum value of 146.09~m$^2$,g$^{-1}$ after treatment. This suggests that the 500~$^\circ$C biochar provided the most favorable initial structure for subsequent pore development. At this temperature, sufficient devolatilization had already occurred to establish an initial pore network, while the carbon matrix apparently retained enough reactivity for steam to further gasify pore walls and open additional micropores. The 500~$^\circ$C precursor can therefore be interpreted as representing a balance between initial carbonization and subsequent activation reactivity under the conditions investigated.
+
+\vspace{0.3em}
+
+The 400~$^\circ$C result further supports this interpretation. Although this sample exhibited a relatively high mass loss during steam activation, its final specific surface area reached only 100.97~m$^2$,g$^{-1}$, considerably below the 146.09~m$^2$,g$^{-1}$ obtained from the 500~$^\circ$C precursor. Therefore, activation mass loss cannot be interpreted directly as pore formation. The biochar initially produced at 400~$^\circ$C was less carbonized and consequently still contained a larger proportion of thermally unstable and volatile material. When reheated to the activation temperature of 700~$^\circ$C, part of the measured mass loss was likely associated with further devolatilization rather than selective carbon gasification responsible for creating new internal surface. In other words, a larger amount of material was removed, but this removal was apparently less efficient in generating BET-accessible microporosity.
+
+\vspace{0.3em}
+
+A different behavior is observed for the 600~$^\circ$C precursor. Before activation, this sample already possessed by far the largest BET surface area of the untreated biochars, at 31.97~m$^2$,g$^{-1}$. Nevertheless, after treatment its surface area increased only to 88.64~m$^2$,g$^{-1}$ and remained below those of both the treated 400 and 500~$^\circ$C samples. Together with the lower activation mass loss measured for the 600~$^\circ$C biochar, this indicates that the highly carbonized precursor was less susceptible to additional steam gasification. A substantial portion of its pore structure may already have been developed during pyrolysis, leaving less reactive carbon available for further pore creation during activation.
+
+\vspace{0.3em}
+
+In addition, pore enlargement offers a plausible explanation for why stronger initial pore development does not necessarily lead to the largest final BET surface area. Steam gasification does not only create new micropores; continued carbon removal can also widen existing micropores into mesopores and, under stronger conversion, mesopores into macropores. While this process may increase total pore volume and improve transport through the particle, it does not necessarily increase specific surface area. A large number of narrow micropores provides considerably more internal surface than the same pore volume distributed among larger mesopores or macropores. Consequently, the decrease from 146.09~m$^2$,g$^{-1}$ for the 500~$^\circ$C precursor to 88.64~m$^2$,g$^{-1}$ for the 600~$^\circ$C precursor may indicate that pore development shifted from the generation of new high-surface-area micropores toward pore widening, or that parts of the pore network became less accessible \parencite{Sajjadi2019}.
+
+\vspace{0.3em}
+
+The BET results therefore complement the activation mass-loss results and reveal information that mass loss alone cannot provide. High burn-off does not automatically correspond to high surface area; the decisive factor is how carbon removal modifies the pore network. Among the investigated conditions, the biochar initially pyrolyzed at 500~$^\circ$C produced the highest accessible surface area after treatment and therefore appears to provide the most favorable precursor structure for steam-induced pore development. This condition most likely promoted effective formation and opening of micropores while avoiding excessive pore widening into larger mesopores and macropores.
+
+\vspace{0.3em}
+
+It should nevertheless be emphasized that the BET measurement was performed on samples that had undergone both steam activation and subsequent sulfur loading. The measured surface areas therefore represent the final pore accessibility after the complete treatment sequence and cannot be attributed quantitatively to steam activation alone. Sulfur deposited during the loading process may occupy or partially block micropores and mesopores, thereby reducing the surface accessible to nitrogen during BET analysis. Consequently, the actual surface area directly after steam activation may have been higher than the final values reported here. Separate BET measurements before and after sulfur loading would be required to distinguish pore generation during activation from subsequent pore occupation by sulfur.
+
+\vspace{0.3em}
+
+Overall, the results demonstrate that the development of specific surface area is governed not simply by the highest pyrolysis temperature or the greatest activation mass loss, but by the interaction between the initial carbon structure and its reactivity during steam activation. Under the experimental conditions used in this work, the biochar pyrolyzed at 500~$^\circ$C showed the most favorable balance, producing the largest BET-accessible internal surface and therefore the greatest apparent potential for adsorption-related applications.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=\textwidth,
+            height=9cm,
+            bar width=18pt,
+            ymin=0,
+            ymax=0.10,
+            ytick={0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10},
+            ylabel={Pore volume in cm$^3$/g},
+            xlabel={Sample},
+            title={Pore volume of French biochar samples},
+            xtick={1,2,3,4,5,6},
+            xticklabels={
+                {BC\\400$^\circ$C},
+                {BC\\500$^\circ$C},
+                {BC\\600$^\circ$C},
+                {A-BC+S\\400$^\circ$C},
+                {A-BC+S\\500$^\circ$C},
+                {A-BC+S\\600$^\circ$C}
+            },
+            x tick label style={
+                align=center,
+                font=\fontsize{8}{9}\selectfont
+            },
+            label style={font=\small},
+            title style={font=\small},
+            ymajorgrids=true,
+            grid style={dashed},
+            nodes near coords,
+            every node near coord/.append style={
+                font=\small,
+                /pgf/number format/fixed,
+                /pgf/number format/precision=3
+            },
+            enlarge x limits=0.12
+        ]
+        \addplot coordinates {
+            (1,0.003)
+            (2,0.005)
+            (3,0.028)
+            (4,0.071)
+            (5,0.095)
+            (6,0.068)
+        };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Pore volume of the French biochar samples determined through BET analysis.}
+    \label{fig:pore_volume_french_biochar}
+\end{figure}
+
+\vspace{0.3em}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=\textwidth,
+            height=9cm,
+            bar width=18pt,
+            ymin=0,
+            ymax=20,
+            ytick={0,2,4,6,8,10,12,14,16,18,20},
+            ylabel={Particle size in nm},
+            xlabel={Sample},
+            title={Particle size of French biochar samples},
+            xtick={1,2,3,4,5,6},
+            xticklabels={
+                {BC\\400$^\circ$C},
+                {BC\\500$^\circ$C},
+                {BC\\600$^\circ$C},
+                {A-BC+S\\400$^\circ$C},
+                {A-BC+S\\500$^\circ$C},
+                {A-BC+S\\600$^\circ$C}
+            },
+            x tick label style={
+                align=center,
+                font=\fontsize{8}{9}\selectfont
+            },
+            label style={font=\small},
+            title style={font=\small},
+            ymajorgrids=true,
+            grid style={dashed},
+            nodes near coords,
+            every node near coord/.append style={
+                font=\small,
+                /pgf/number format/fixed,
+                /pgf/number format/precision=3
+            },
+            enlarge x limits=0.12
+        ]
+        \addplot coordinates {
+            (1,17.814)
+            (2,10.933)
+            (3,3.508)
+            (4,2.804)
+            (5,2.603)
+            (6,3.076)
+        };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Particle size of the French biochar samples determined by BET analysis.}
+    \label{fig:particle_size_french_biochar}
+\end{figure}
 
