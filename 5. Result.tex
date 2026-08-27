@@ -6,23 +6,17 @@
 
 \subsection{Pyrolysis for Biochar Production}
 \label{subsec:results-pyrolysis}
-The biochar yield was determined gravimetrically for both the French and the
-Algerian slaughterhouse digestate at 400, 500 and 600\,$^{\circ}$C. To accommodate
-the limited quantity of available material, each digestate portion was divided
-across three crucibles and pyrolyzed under identical conditions (heating rate
-10\,$^{\circ}$C\,min$^{-1}$, residence time 1\,h, with the crucible water held at
-approximately 20\,g in every run to maintain a comparable steam environment). The
-three crucibles act as replicates; the mean yields are plotted in
-Figure~\ref{fig:pyrolysis-yield}, and the complete per-crucible breakdown is given
-in the appendix (Table~\ref{tab:pyrolysis-yield-full}). Yield is expressed as the
-ratio of recovered biochar to the as-received digestate charge.
+
+%The biochar yield was determined gravimetrically for both the French and the Algerian slaughterhouse digestate at 400, 500 and 600\,$^{\circ}$C. To accommodate the limited quantity of available material, each digestate portion was divided across three crucibles and pyrolyzed under identical conditions (heating rate 10\,$^{\circ}$C\,min$^{-1}$, residence time 1\,h, with the crucible water held at approximately 20\,g in every run to maintain a comparable steam environment). The three crucibles act as replicates; the mean yields are plotted in Figure~\ref{fig:pyrolysis-yield}, and the complete per-crucible breakdown is given in the appendix (Table~\ref{tab:pyrolysis-yield-full}). Yield is expressed as the ratio of recovered biochar to the as-received digestate charge.
 
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.82\textwidth,
-    height=0.52\textwidth,
+    width=15cm,
+    height=10cm,
+    title={Biochar production at different pyrolysis temperature},
+    title style={font=\large},
     xlabel={Pyrolysis temperature ($^{\circ}$C)},
     ylabel={Biochar yield (\%)},
     xtick={400,500,600},
@@ -42,7 +36,7 @@ ratio of recovered biochar to the as-received digestate charge.
     (500,43.12) +- (0,0.04)
     (600,42.18) +- (0,0.05)
   };
-\addlegendentry{French Slaughterhouse Digestate}
+\addlegendentry{French Digestate}
 \addplot[color=red!70!black, mark=square*, thick,
     error bars/.cd, y dir=both, y explicit]
   coordinates {
@@ -50,11 +44,11 @@ ratio of recovered biochar to the as-received digestate charge.
     (500,34.37) +- (0,0.11)
     (600,33.45) +- (0,0.48)
   };
-\addlegendentry{Algerian Slaughterhouse Digestate}
+\addlegendentry{Algerian Digestate}
 \end{axis}
 \end{tikzpicture}
-\caption{Biochar yield of pyrolysis temperature for the French and
-Algerian slaughterhouse digestate.}
+\caption{Biochar yield from pyrolysis at different temperature for the French and
+Algerian digestate.}
 \label{fig:pyrolysis-yield}
 \end{figure}
 
@@ -122,7 +116,6 @@ Pyrolysis temperature (°C) & Bio-waste yield (\%) & Grass-silage yield (\%) & S
 \end{tabularx}
 \end{table}
 
-\newpage
 \subsection{\texorpdfstring{H$_2$O}{H2O}-Activation}
 \label{subsec:results-activation}
 The steam activation was carried out at 700\,$^{\circ}$C on the French biochar samples. There are in total 3 samples - 400, 500, 600\,$^{\circ}$C. The result that will be reported and discussed here is the mass loss of the biochar before and after activation treatment.
@@ -135,8 +128,8 @@ The mass loss was evaluated in two ways. The wet basis compares the mass of the 
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.82\textwidth,
-    height=0.55\textwidth,
+    width=15cm,
+    height=10cm,
     xlabel={Pyrolysis temperature of biochar ($^{\circ}$C)},
     ylabel={Activation mass loss (\%)},
     xtick={400,500,600},
@@ -211,8 +204,8 @@ Feedstock & Pyrolysis temp.\ ($^{\circ}$C) & Residual char (g) & Mass loss (\%) 
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.80\textwidth,
-    height=0.50\textwidth,
+    width=15cm,
+    height=10cm,
     xlabel={Pyrolysis temperature of biochar ($^{\circ}$C)},
     ylabel={Activation mass loss (\%)},
     xtick={400,500,600},
@@ -640,72 +633,100 @@ function of pyrolysis temperature.}
 
 
 
-
-
-\newpage
 \newpage
 \subsubsection{BET Analyis}
 
-The changes in the specific surface area, as well as in pore volume and particle size, between raw and sulfur-loaded activated France biochar samples were determined through the BET analysis. 
-
+The BET analysis resulted in three parameters of untreated and sulfur-loaded and activated French biochar samples, such as the SSA, total pore volume and mean pore diameter.  
 
 \begin{figure}[htbp]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            width=\textwidth,
-            height=9cm,
-            bar width=18pt,
-            ymin=0,
-            ymax=160,
-            ytick={0,20,40,60,80,100,120,140,160},
-            xlabel={Sample},
-            ylabel={Specific surface area in m$^2$/g},
-            title={Specific surface area of the French biochar samples},
-            xtick={1,2,3,4,5,6},
-            xticklabels={
-                \shortstack{BC\\400$^\circ$C},
-                \shortstack{BC\\500$^\circ$C},
-                \shortstack{BC\\600$^\circ$C},
-                \shortstack{A-BC+S\\400$^\circ$C},
-                \shortstack{A-BC+S\\500$^\circ$C},
-                \shortstack{A-BC+S\\600$^\circ$C}
-            },
-            x tick label style={
-                font=\small,
-                align=center
-            },
-            ymajorgrids=true,
-            grid style={dashed},
-            axis line style={draw=none},
-            tick style={draw=none},
-            nodes near coords,
-            nodes near coords style={
-                font=\small,
-                /pgf/number format/fixed,
-                /pgf/number format/precision=3
-            },
-            enlarge x limits=0.10
-        ]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=10cm,
+    title={Specific surface area of biochars from BET analysis},
+    title style={font=\normalsize, yshift=2pt},
+    ybar,
+    bar width=22pt,
+    ymin=0,
+    ymax=160,
+    ylabel={Specific surface area in m$^2$/g},
+    xlabel={Pyrolysis temperature},
+    symbolic x coords={400C, 500C, 600C},
+    xtick=data,
+    xticklabels={400\textdegree C, 500\textdegree C, 600\textdegree C},
+    x tick label style={font=\small, align=center},
+    y tick label style={font=\small},
+    scaled y ticks=false,
+    scaled x ticks=false,
+    axis lines*=box,
+    axis line style={black, line width=0.6pt},
+    tick align=outside,
+    tick pos=left,
+    major tick length=3pt,
+    minor tick num=0,
+    ymajorgrids=true,
+    grid style={gray!25, line width=0.3pt},
+    enlarge x limits=0.3,
+    nodes near coords,
+    every node near coord/.append style={
+        font=\footnotesize,
+        /pgf/number format/.cd, fixed, precision=2
+    },
+    nodes near coords align={vertical},
+    axis on top=false,
+    label style={font=\normalsize},
+    legend columns=-1,
+    legend style={
+        font=\small,
+        draw=black,
+        fill=white,
+        at={(0.5,-0.22)},
+        anchor=north,
+        /tikz/every even column/.append style={column sep=0.6cm},
+        legend image code/.code={
+            \draw[#1] (0cm,-0.1cm) rectangle (0.25cm,0.15cm);
+        }
+    },
+    legend cell align={left},
+    clip=false,
+]
+\addplot[fill=blue!80!black, draw=none] coordinates {
+    (400C, 0.78)
+    (500C, 1.8)
+    (600C, 31.97)
+};
+\addlegendentry{BC}
 
-        \addplot coordinates {
-            (1,0.780)
-            (2,1.800)
-            (3,31.970)
-            (4,100.966)
-            (5,146.089)
-            (6,88.636)
-        };
+\addplot[fill=red!70!black, draw=none] coordinates {
+    (400C, 100.97)
+    (500C, 146.09)
+    (600C, 88.64)
+};
+\addlegendentry{A-BC+S}
 
-        \end{axis}
-    \end{tikzpicture}
-
-    \caption{Specific surface area of the French biochar samples determined through BET analysis. BC = biochar; A-BC+S = sulfur-loaded activated biochar.}
-    \label{fig:bet_surface_area}
+\end{axis}
+\end{tikzpicture}
+\caption{Specific surface area of biochars obtained by BET analysis, comparing untreated (BC) and activated, sulfur loaded (A-BC+S) biochar samples produced at different pyrolysis temperatures.}
+\label{fig:bet_surface_area}
 \end{figure}
 
-As it is illustrated in Figure~\ref{fig:bet_surface_area}, the untreated biochars exhibited BET specific surface areas of only 0.78, 1.80, and 31.97~m$^2$,g$^{-1}$ at pyrolysis temperatures of 400, 500, and 600~$^\circ$C, respectively. Thus, increasing the pyrolysis temperature alone already promoted considerable pore development, particularly between 500 and 600~$^\circ$C. This behavior agrees with the mechanism discussed in Section~\ref{subsubsec:Effect of Temperature on Biochar}: increasing temperature promotes devolatilization, whereby volatile compounds are progressively removed from the carbon matrix and previously inaccessible voids and pores become exposed. As a result, a more developed internal pore network, including micropores and mesopores, can form. Since micropores provide a particularly large internal surface per unit mass, their formation and exposure can strongly increase the BET specific surface area \parencite{tomczyk-2020,ghorbani-2022}.
+As illustrated in Figure~\ref{fig:bet_surface_area}, the specific surface area (SSA) of the untreated biochar samples increased with rising pyrolysis temperature. The untreated biochar sample produced at pyrolysis temperatures of 400 °C and 500 °C exhibited a SSA of 0.78 and 1.8 m²/g, respectively, which align with the range reported in the literature for animal-based biochar. However, the SSA of the untreated biochar sample at 600°C increased significantly to 31.97 m²/g, suggesting that 
+
+
+
+
+The specific surface area of untreated biochar remains very low at 400°C and 500°C (0.78 and 1.8 m²/g, respectively), indicating a largely non-porous or poorly developed pore structure at these temperatures. This is consistent with the fact that at lower pyrolysis temperatures, the carbonization process is incomplete — volatile matter and tars remain trapped within or block the developing pore network, limiting the accessible surface area. At 600°C, however, BC shows a sharp increase to 31.97 m²/g. This jump reflects more complete pyrolysis: at higher temperatures, greater release of volatile organic compounds occurs, along with more advanced decomposition of the lignocellulosic structure, which opens up internal pores that were previously blocked or undeveloped. This suggests 600°C represents a threshold temperature at which significant pore development begins to occur naturally, even without any activation treatment.
+
+
+
+
+
+
+
+
+
+the untreated biochar samples exhibited BET specific surface areas of only 0.78, 1.80, and 31.97~m$^2$,g$^{-1}$ at pyrolysis temperatures of 400, 500, and 600~$^\circ$C, respectively. Thus, increasing the pyrolysis temperature alone already promoted considerable pore development, particularly between 500 and 600~$^\circ$C. This behavior agrees with the mechanism discussed in Section~\ref{subsubsec:Effect of Temperature on Biochar}: increasing temperature promotes devolatilization, whereby volatile compounds are progressively removed from the carbon matrix and previously inaccessible voids and pores become exposed. As a result, a more developed internal pore network, including micropores and mesopores, can form. Since micropores provide a particularly large internal surface per unit mass, their formation and exposure can strongly increase the BET specific surface area \parencite{tomczyk-2020,ghorbani-2022}.
 
 \vspace{0.3em}
 
@@ -721,7 +742,7 @@ The 400~$^\circ$C result further supports this interpretation. Although this sam
 
 \vspace{0.3em}
 
-A different behavior is observed for the 600~$^\circ$C precursor. Before activation, this sample already possessed by far the largest BET surface area of the untreated biochars, at 31.97~m$^2$,g$^{-1}$. Nevertheless, after treatment its surface area increased only to 88.64~m$^2$,g$^{-1}$ and remained below those of both the treated 400 and 500~$^\circ$C samples. Together with the lower activation mass loss measured for the 600~$^\circ$C biochar, this indicates that the highly carbonized precursor was less susceptible to additional steam gasification. A substantial portion of its pore structure may already have been developed during pyrolysis, leaving less reactive carbon available for further pore creation during activation.
+A different behavior is observed for the 600~$^\circ$C precursor. Before activation, this sample already possessed by far the largest BET surface area of the untreated biochars, at 31.97~m$^2$,g$^{-1}$. Nevertheless, after treatment its surface area increased only to 88.64~m$^2$,g$^{-1}$ and remained below those of both the treated 400 and 500~$^\circ$C samples. Together with the lower activation mass loss measured for the 600~$^\circ$C biochar, this indicates that the highly carbonized precursor was less susceptible to additional steam gasification. A substantial portion of its pore structure may already have been developed during pyrolysis, leaving less reactive carbon available for further pore creation during activation. 
 
 \vspace{0.3em}
 
@@ -739,111 +760,149 @@ It should nevertheless be emphasized that the BET measurement was performed on s
 
 Overall, the results demonstrate that the development of specific surface area is governed not simply by the highest pyrolysis temperature or the greatest activation mass loss, but by the interaction between the initial carbon structure and its reactivity during steam activation. Under the experimental conditions used in this work, the biochar pyrolyzed at 500~$^\circ$C showed the most favorable balance, producing the largest BET-accessible internal surface and therefore the greatest apparent potential for adsorption-related applications.
 
-\begin{figure}[htbp]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            width=\textwidth,
-            height=9cm,
-            bar width=18pt,
-            ymin=0,
-            ymax=0.10,
-            ytick={0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10},
-            ylabel={Pore volume in cm$^3$/g},
-            xlabel={Sample},
-            title={Pore volume of French biochar samples},
-            xtick={1,2,3,4,5,6},
-            xticklabels={
-                {BC\\400$^\circ$C},
-                {BC\\500$^\circ$C},
-                {BC\\600$^\circ$C},
-                {A-BC+S\\400$^\circ$C},
-                {A-BC+S\\500$^\circ$C},
-                {A-BC+S\\600$^\circ$C}
-            },
-            x tick label style={
-                align=center,
-                font=\fontsize{8}{9}\selectfont
-            },
-            label style={font=\small},
-            title style={font=\small},
-            ymajorgrids=true,
-            grid style={dashed},
-            nodes near coords,
-            every node near coord/.append style={
-                font=\small,
-                /pgf/number format/fixed,
-                /pgf/number format/precision=3
-            },
-            enlarge x limits=0.12
-        ]
-        \addplot coordinates {
-            (1,0.003)
-            (2,0.005)
-            (3,0.028)
-            (4,0.071)
-            (5,0.095)
-            (6,0.068)
-        };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Pore volume of the French biochar samples determined through BET analysis.}
-    \label{fig:pore_volume_french_biochar}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=10cm,
+    title={Total pore volume of French biochar samples},
+    title style={font=\normalsize, yshift=2pt},
+    ybar,
+    bar width=22pt,
+    ymin=0,
+    ymax=0.1,
+    ylabel={Total pore volume in cm$^3$/g},
+    xlabel={Pyrolysis temperature},
+    symbolic x coords={400C, 500C, 600C},
+    xtick=data,
+    xticklabels={400\textdegree C, 500\textdegree C, 600\textdegree C},
+    x tick label style={font=\small, align=center},
+    y tick label style={font=\small},
+    scaled y ticks=false,
+    scaled x ticks=false,
+    axis lines*=box,
+    axis line style={black, line width=0.6pt},
+    tick align=outside,
+    tick pos=left,
+    major tick length=3pt,
+    minor tick num=0,
+    ymajorgrids=true,
+    grid style={gray!25, line width=0.3pt},
+    enlarge x limits=0.3,
+    nodes near coords,
+    every node near coord/.append style={
+        font=\footnotesize,
+        /pgf/number format/.cd, fixed, precision=3
+    },
+    nodes near coords align={vertical},
+    axis on top=false,
+    label style={font=\normalsize},
+    legend columns=-1,
+    legend style={
+        font=\small,
+        draw=black,
+        fill=white,
+        at={(0.5,-0.22)},
+        anchor=north,
+        /tikz/every even column/.append style={column sep=0.6cm},
+        legend image code/.code={
+            \draw[#1] (0cm,-0.1cm) rectangle (0.25cm,0.15cm);
+        }
+    },
+    legend cell align={left},
+    clip=false,
+]
+\addplot[fill=blue!80!black, draw=none] coordinates {
+    (400C, 0.003)
+    (500C, 0.005)
+    (600C, 0.028)
+};
+\addlegendentry{BC}
+
+\addplot[fill=red!70!black, draw=none] coordinates {
+    (400C, 0.071)
+    (500C, 0.095)
+    (600C, 0.068)
+};
+\addlegendentry{A-BC+S}
+
+\end{axis}
+\end{tikzpicture}
+\caption{Total pore volume of the French biochar samples determined through BET analysis.}
 \end{figure}
 
 \vspace{0.3em}
 
-\begin{figure}[htbp]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            width=\textwidth,
-            height=9cm,
-            bar width=18pt,
-            ymin=0,
-            ymax=20,
-            ytick={0,2,4,6,8,10,12,14,16,18,20},
-            ylabel={Particle size in nm},
-            xlabel={Sample},
-            title={Particle size of French biochar samples},
-            xtick={1,2,3,4,5,6},
-            xticklabels={
-                {BC\\400$^\circ$C},
-                {BC\\500$^\circ$C},
-                {BC\\600$^\circ$C},
-                {A-BC+S\\400$^\circ$C},
-                {A-BC+S\\500$^\circ$C},
-                {A-BC+S\\600$^\circ$C}
-            },
-            x tick label style={
-                align=center,
-                font=\fontsize{8}{9}\selectfont
-            },
-            label style={font=\small},
-            title style={font=\small},
-            ymajorgrids=true,
-            grid style={dashed},
-            nodes near coords,
-            every node near coord/.append style={
-                font=\small,
-                /pgf/number format/fixed,
-                /pgf/number format/precision=3
-            },
-            enlarge x limits=0.12
-        ]
-        \addplot coordinates {
-            (1,17.814)
-            (2,10.933)
-            (3,3.508)
-            (4,2.804)
-            (5,2.603)
-            (6,3.076)
-        };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Particle size of the French biochar samples determined by BET analysis.}
-    \label{fig:particle_size_french_biochar}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=10cm,
+    title={Mean pore diameter of French biochar samples},
+    title style={font=\normalsize, yshift=2pt},
+    ybar,
+    bar width=22pt,
+    ymin=0,
+    ymax=20,
+    ylabel={Mean pore diameter in nm},
+    xlabel={Pyrolysis temperature},
+    symbolic x coords={400C, 500C, 600C},
+    xtick=data,
+    xticklabels={400\textdegree C, 500\textdegree C, 600\textdegree C},
+    x tick label style={font=\small, align=center},
+    y tick label style={font=\small},
+    scaled y ticks=false,
+    scaled x ticks=false,
+    axis lines*=box,
+    axis line style={black, line width=0.6pt},
+    tick align=outside,
+    tick pos=left,
+    major tick length=3pt,
+    minor tick num=0,
+    ymajorgrids=true,
+    grid style={gray!25, line width=0.3pt},
+    enlarge x limits=0.3,
+    nodes near coords,
+    every node near coord/.append style={
+        font=\footnotesize,
+        /pgf/number format/.cd, fixed, precision=3
+    },
+    nodes near coords align={vertical},
+    axis on top=false,
+    label style={font=\normalsize},
+    legend columns=-1,
+    legend style={
+        font=\small,
+        draw=black,
+        fill=white,
+        at={(0.5,-0.22)},
+        anchor=north,
+        /tikz/every even column/.append style={column sep=0.6cm},
+        legend image code/.code={
+            \draw[#1] (0cm,-0.1cm) rectangle (0.25cm,0.15cm);
+        }
+    },
+    legend cell align={left},
+    clip=false,
+]
+\addplot[fill=blue!80!black, draw=none] coordinates {
+    (400C, 17.814)
+    (500C, 10.933)
+    (600C, 3.508)
+};
+\addlegendentry{BC}
+
+\addplot[fill=red!70!black, draw=none] coordinates {
+    (400C, 2.804)
+    (500C, 2.603)
+    (600C, 3.076)
+};
+\addlegendentry{A-BC+S}
+
+\end{axis}
+\end{tikzpicture}
+\caption{Particle size of the French biochar samples determined by BET analysis.}
 \end{figure}
 
