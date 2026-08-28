@@ -116,6 +116,8 @@ Pyrolysis temperature (°C) & Bio-waste yield (\%) & Grass-silage yield (\%) & S
 \end{tabularx}
 \end{table}
 
+\newpage
+
 \subsection{\texorpdfstring{H$_2$O}{H2O}-Activation}
 \label{subsec:results-activation}
 The steam activation was carried out at 700\,$^{\circ}$C on the French biochar samples. There are in total 3 samples - 400, 500, 600\,$^{\circ}$C. The result that will be reported and discussed here is the mass loss of the biochar before and after activation treatment.
@@ -204,8 +206,8 @@ Feedstock & Pyrolysis temp.\ ($^{\circ}$C) & Residual char (g) & Mass loss (\%) 
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=15cm,
-    height=10cm,
+    width=14cm,
+    height=9cm,
     xlabel={Pyrolysis temperature of biochar ($^{\circ}$C)},
     ylabel={Activation mass loss (\%)},
     xtick={400,500,600},
@@ -242,35 +244,35 @@ The CO$_2$-activation of the preceding Projektarbeit offers a direct point of co
 Steam tends toward a more extensive distribution of micropores and mesopores and adds more oxygen-containing surface groups, whereas CO$_2$ works mainly within the micropore range, as mentioned in \ref{Physical Activation of Biochar}. 
 
 
+
 \newpage
 \subsection{Sulfur loading}
 
-The result of sulfur loading process on each biochar obtained from the gravimetric measurement as well as the calculated adsorption capacity of each sample of biochars are listed in Table~\ref{tab:sulfur_loading}.
+The mass gain of each samples after the sulfur loading process is calculated from difference
+between the mass before and after the sulfur loading and listed in Table~\ref{tab:sulfur_loading}. 
 
 \begin{table}[H]
 \centering
-\caption{Results of the sulfur loading process on the biochars activated using water.}
+\caption{Results of the sulfur loading process of the French biochar samples activated using water.}
 \label{tab:sulfur_loading}
 \renewcommand{\arraystretch}{1.15}
 \setlength{\tabcolsep}{8pt}
 
-\begin{tabular}{lcccccc}
+\begin{tabular}{lccccc}
 \toprule
 
 \textbf{Sample}
 & \textbf{Water}
-& \textbf{Temperature}
+& \textbf{PT}
 & \multicolumn{2}{c}{\textbf{Mass of biochar (g)}}
-& \textbf{Mass gain}
-& \textbf{Capacity}
+& \textbf{Mass gain (g)}
 \\
 
 & \textbf{(mL)}
 & \textbf{($^\circ$C)}
 & \textbf{Before}
 & \textbf{After}
-& \textbf{(g)}
-& \textbf{(mg/g)}
+&
 \\
 
 \midrule
@@ -280,8 +282,7 @@ The result of sulfur loading process on each biochar obtained from the gravimetr
 & 400
 & 0.829
 & 0.875
-& 0.045
-& 54.504
+& 0.046
 \\
 
 &
@@ -289,26 +290,23 @@ The result of sulfur loading process on each biochar obtained from the gravimetr
 & 0.829
 & 0.882
 & 0.053
-& 64.302
 \\
 
 &
 & 600
 & 0.904
 & 0.946
-& 0.041
-& 45.671
+& 0.042
 \\
 
-\cmidrule(lr){2-7}
+\cmidrule(lr){2-6}
 
 &
 \multirow{3}{*}{0.5}
 & 400
 & 0.900
 & 0.936
-& 0.037
-& 40.912
+& 0.036
 \\
 
 &
@@ -316,7 +314,6 @@ The result of sulfur loading process on each biochar obtained from the gravimetr
 & 0.932
 & 0.966
 & 0.034
-& 36.373
 \\
 
 &
@@ -324,7 +321,6 @@ The result of sulfur loading process on each biochar obtained from the gravimetr
 & 0.923
 & 0.963
 & 0.040
-& 43.883
 \\
 
 \bottomrule
@@ -334,20 +330,62 @@ The result of sulfur loading process on each biochar obtained from the gravimetr
 
 \begin{minipage}{0.95\textwidth}
 \footnotesize
-\textit{Note.} The “Before and After” refers to the period prior to the drying and sulfur loading processes, as well as the period following the completion of both processes. The "Water" refers to the amount of water doses injected for the activation, The "Temperature" refers to samples of biochar produced at corresponding temperature pyrolysis. The "Capacity" refers to the adsorption capacity of the biochar. 
+\textit{Note.} ``Water'' refers to the amount of water added during activation, while ``PT'' refers to the pyrolysis temperature at which the biochar samples were produced. 
 \end{minipage}
 
 \end{table}
 
-Table~\ref{tab:sulfur_loading} shows that all samples exhibited an increase in mass after the sulfur loading process, suggesting that elemental sulfur was successfully adsorbed and retained on the surface of the activated biochar. The biochar activated with a water dose of 0.1 ml exhibited a greater mass increase in the range of 0.04 to 0.05 g and an adsorption capacity in the range of 45 to 64 mg/g compared to the biochars activated with a water dose of 0.5 ml, for which the mass increase ranged from 0.034 to 0.04 g and the adsorption capacities ranged from 36 to 44 mg/g. This suggests that a higher water dose for activation results in lower adsorption capacity because it can lead to excessive gasification and conversion of micropores to meso- or macropores, thereby reducing available sites for adsorption.
+Using the Equation~\ref{Equation sulfur loading}, the adsoprtion capacity of each sample can be calculated and represented in Figure~\ref{fig:sulfur-loading-capacity}.  
+
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.9\textwidth,
+    height=0.55\textwidth,
+    xbar,
+    bar width=16pt,
+    symbolic y coords={400,500,600},
+    ytick=data,
+    yticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
+    y dir=reverse,
+    title={Adsorption capacity of French biochar},
+    xlabel={Adsorption capacity in mg/g},
+    ylabel={Pyrolysis temperature in $^\circ$C},
+    xmin=0, xmax=75,
+    xmajorgrids=true,
+    grid style={draw=gray!25},
+    tick label style={font=\small},
+    label style={font=\small},
+    legend style={at={(0.5,-0.18)}, anchor=north, legend columns=2,
+                  font=\small, draw=gray!40,
+                  /tikz/every even column/.append style={column sep=0.4cm}},
+    nodes near coords={\pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}},
+    every node near coord/.append style={font=\scriptsize, text=black, anchor=west},
+]
+\addplot+[fill=blue!50, draw=blue!50!black]
+  coordinates {(54.504,400) (64.302,500) (45.671,600)};
+\addlegendentry{Adsorption capacity, 0.1\,mL}
+
+\addplot+[fill=red!50, draw=red!50!black]
+  coordinates {(40.912,400) (36.373,500) (43.883,600)};
+\addlegendentry{Adsorption capacity, 0.5\,mL}
+\end{axis}
+\end{tikzpicture}
+\caption{Adsorption capacity of French biochar after sulfur loading, at two water activation doses (0.1 and 0.5\,mL) across pyrolysis temperatures.}
+\label{fig:sulfur-loading-capacity}
+\end{figure}
+
+Table~\ref{tab:sulfur_loading} shows that all samples exhibited an increase in mass after the sulfur loading process, suggesting that elemental sulfur was successfully adsorbed during the process and retained on the surface of the activated biochar. The biochar samples activated with a water dose of 0.1 ml exhibited a greater mass increase in the range of 0.04 to 0.05 g and an adsorption capacity in the range of 45 to 64 mg/g compared to the biochar samples activated with a water dose of 0.5 ml, for which the mass increase ranged from 0.034 to 0.04 g and the adsorption capacities ranged from 36 to 44 mg/g. This suggests that a higher water dose for activation results in lower adsorption capacity because it can lead to excessive gasification and conversion of micropores to meso- or macropores, thereby reducing available sites for adsorption.
 
 \vspace{0.3em}
 
-Among the samples activated with a water dose of 0.1 ml, the highest mass increase of approximately 0.053 g and the highest adsorption capacity of approximately 64.3 mg/g were observed for biochar produced by pyrolysis at 500 °C, followed by biochar produced by pyrolysis at 400 °C and 600 °C, although higher pyrolysis temperatures are generally considered advantageous for higher adsorption capacity, as they promote pore development and result in a larger specific surface area. This could possibly be attributed to further carbonization at 600 °C, which can lead to a reduction in oxygen-containing functional groups.
+Among the samples activated with a water dose of 0.1 ml, the highest mass increase of approximately 0.053 g and the highest adsorption capacity of approximately 64.3 mg/g were observed in the sample produced by pyrolysis at 500 °C, followed by the sample produced by pyrolysis at 400 °C and 600 °C, although higher pyrolysis temperatures are generally considered advantageous for higher adsorption capacity, as they promote pore formation and result in a larger specific surface area. This could possibly be attributed to further carbonization at 600 °C, which can lead to a reduction in oxygen-containing functional groups.
 
 \vspace{0.3em}
 
-In contrast, among the samples activated with a water dose of 0.5 ml, the biochar produced by pyrolysis at 600 °C exhibited the highest mass increase of approximately 0.04 g and an adsorption capacity of 43.884 mg/g, while the lowest values were observed for the biochar produced by pyrolysis at 500 °C. This result contradicts the result observed with the lower water dose. 
+In contrast, among the samples activated with a water dose of 0.5 ml, the sample produced by pyrolysis at 600 °C exhibited the highest mass increase of approximately 0.04 g and an adsorption capacity of 43.884 mg/g, while the lowest values were observed for the sample produced by pyrolysis at 500 °C. This result contradicts the result observed with the lower water dose. 
 
 %Although higher pyrolysis temperatures generally promote pore development and may increase the specific surface area of biochar, the highest average apparent adsorption capacity in this study was obtained for the biochar produced at 500 °C. This may indicate that the biochar produced at 500 °C retained a more favorable balance between accessible pore structure and reactive surface functional groups. At 600 °C, further carbonization may have reduced the availability of oxygen-containing functional groups involved in H₂S retention. However, because the adsorption performance also varied with the amount of activation water, the observed differences cannot be attributed to pyrolysis temperature alone.
 
@@ -359,9 +397,7 @@ In contrast, among the samples activated with a water dose of 0.5 ml, the biocha
 
 %Overall, biochar activated with the lower water dose (0.1 mL) exhibited higher sulfur adsorption capacities (45.671–64.302 mg/g) compared to those activated with the higher dose (0.5 mL), which yielded capacities between 36.373 and 43.883 mg/g. This suggests that a lower water content during the activation process is more favorable for sulfur uptake, possibly because excess water occupies or obstructs the pore structure of the biochar, thereby reducing the surface area accessible for sulfur adsorption.
 
-\newpage
-
-The results in Table~\ref{tab:sulfur_loading} can be compared with the results on sulfur loading of CO$_2$-activated biochar from earlier project work, which are listed in Table~\ref{tab:sulfur_loading_co2}.
+The results in Table~\ref{tab:sulfur_loading} can be compared with the results on sulfur loading of CO$_2$-activated biochar samples from previous project work, which are presented as follows: 
 
 \begin{table}[H]
 \centering
@@ -453,12 +489,49 @@ digestate\\
 
 \end{table}
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.9\textwidth,
+    height=0.55\textwidth,
+    xbar,
+    bar width=16pt,
+    symbolic y coords={400,500,600},
+    ytick=data,
+    yticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
+    y dir=reverse,
+    xlabel={Adsorption capacity (mg\,g$^{-1}$)},
+    ylabel={Pyrolysis temperature},
+    xmin=0, xmax=75,
+    xmajorgrids=true,
+    grid style={draw=gray!25},
+    tick label style={font=\small},
+    label style={font=\small},
+    legend style={at={(0.5,1.12)}, anchor=north, legend columns=2,
+                  font=\small, draw=gray!40,
+                  /tikz/every even column/.append style={column sep=0.4cm}},
+    nodes near coords={\pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}},
+    every node near coord/.append style={font=\scriptsize, text=black, anchor=west},
+]
+\addplot+[fill=blue!80!black, draw=black!85]
+  coordinates {(54.504,400) (64.302,500) (45.671,600)};
+\addlegendentry{Capacity, 0.1\,mL}
+\addplot+[fill=red!80!black, draw=blue!60!black]
+  coordinates {(40.912,400) (36.373,500) (43.883,600)};
+\addlegendentry{Capacity, 0.5\,mL}
+\end{axis}
+\end{tikzpicture}
+\caption{Adsorption capacity of French biochar after sulfur loading, at two water activation doses (0.1 and 0.5\,mL) across pyrolysis temperatures. Mass gain data are reported in Table~X.}
+\label{fig:sulfur-loading-capacity}
+\end{figure}
+
 The results in Table~\ref{tab:sulfur_loading_co2} show that the adsorption capacity of CO$_2$-activated biochar decreases as the pyrolysis temperature decreases, with the highest adsorption capacity of approximately 24 mg/g observed for biochar produced by pyrolysis at 400 °C. This suggests that CO$_2$ activation is favored in biochar produced by pyrolysis at lower temperatures.    
 
 
 \vspace{0.3em}
 
-In addition, the biochar activated with CO$_2$ exhibited lower H$_2$S adsorption capacity compared to biochar activated water, even though CO$_2$ activation is generally associated with the development of narrow micropores and a high specific surface area. This may be attributed to steam activation that also produces meso- and macropores that facilitate the transport of elemental sulfur to the adsorption active sites. The fewer formation of oxygen containing functional groups such as phenolic and carbonyl can also contribute to lower adsorption capacity of the biochar, since elemental sulfur can be adsorbed chemically to the active sites. This suggests that the adsorption capacity may be influenced not only by the surface area, but also by the pore size distribution and the oxygen-containing functional groups.  
+In addition, the biochar activated with CO$_2$ exhibited lower H$_2$S adsorption capacity compared to biochar activated with water, even though CO$_2$ activation is generally associated with the development of narrow micropores and a high specific surface area. This may be attributed to steam activation, which also produces meso- and macropores that facilitate the transport of elemental sulfur to the adsorption active sites. The fewer formation of oxygen containing functional groups such as phenolic and carbonyl can also contribute to the lower adsorption capacity of the biochar, since elemental sulfur can be adsorbed chemically to the active sites. This suggests that the adsorption capacity may be influenced not only by the surface area but also by the pore size distribution and the oxygen-containing functional groups.  
 
 \newpage
 \subsection{Characterization of biochar}
@@ -466,6 +539,7 @@ In addition, the biochar activated with CO$_2$ exhibited lower H$_2$S adsorption
 
 \subsubsection{Calorific value}
 \label{subsubsec:calorific}
+
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}
@@ -523,24 +597,28 @@ biochars.}
 \label{fig:calorific-value}
 \end{figure}
 
-The gross calorific value of the slaughterhouse digestate from France was 16.41\,MJ\,kg$^{-1}$. After pyrolysis, these value are lower for all three biochars at about 4.1--14.2\,MJ\,kg$^{-1}$ (Figure~\ref{fig:calorific-value}; Table~\ref{tab:calorific-full}). The calorific values of the biochars are visibly lower than that of the raw digestate itself. There are also minimal differences between pyrolysis temperatures, which might suggest that temperature has little effect on calorific value — but the ash trend argues otherwise. Bomb calorimetry reports the heat released per gram of whole sample, which means ash is also included. Ash is an inert mineral matter that adds mass without contributing anything to combustion. Thus, dividing the measured value by the combustible fraction $(1 - \text{ash content})$ removes this ballast. Assuming that ash releases no heat, the ash-free calorific value climbs with pyrolysis temperature, from 21.2\,MJ\,kg$^{-1}$ for the digestate to 25.1, 27.9, and 28.2\,MJ\,kg$^{-1}$ at 400, 500, and 600\,$^{\circ}$C respectively. The organic fraction of the biochar becomes more energy-dense as temperature increases, consistent with the progressive loss of oxygen-rich volatiles and the enrichment in fixed carbon that accompany carbonization \parencite{pecchi-2019, hung-2017}.
+The gross calorific value of the slaughterhouse digestate from France was 16.41\,MJ\,kg$^{-1}$. After pyrolysis, these value are lower for all three biochars at about 14.1--14.2\,MJ\,kg$^{-1}$ (Figure~\ref{fig:calorific-value}; Table~\ref{tab:calorific-full}). The calorific values of the biochars are visibly lower than that of the raw digestate itself. There are also minimal differences between pyrolysis temperatures, which might suggest that temperature has little effect on calorific value — but the ash trend argues otherwise. Bomb calorimetry reports the heat released per gram of whole samples, which means ash is also included. Ash is an inert mineral matter that adds mass without contributing anything to combustion. Thus, dividing the measured value by the combustible fraction $(1 - \text{ash content})$ removes this ballast. Assuming that ash releases no heat, the ash-free calorific value climbs with pyrolysis temperature, from 21.2\,MJ\,kg$^{-1}$ for the digestate to 25.1, 27.9, and 28.2\,MJ\,kg$^{-1}$ at 400, 500, and 600\,$^{\circ}$C respectively. The organic fraction of the biochar becomes more energy-dense as temperature increases, consistent with the progressive loss of oxygen-rich volatiles and the enrichment in fixed carbon that accompanies carbonization \parencite{pecchi-2019, hung-2017}. 
+
+
+
+%Each activated value is a single determination, since only about 0.6\,g of each char remained, so they are read as indicative rather than replicated.
 
 The high ash content additionally determines where these biochars are applicable. Half the mass of the 600\,$^{\circ}$C and 500\,$^{\circ}$C char is mineral residue, which makes it a poor option for solid fuel. On the other hand, taking the soil-amendment route seems like a better option since the same fraction could carry the mineral nutrients concentrated from the digestate or the biochar and return them to the soil with the carbon. In this context, the ash works in the material's favor; its effect on adsorption is a separate question, addressed along with the BET surface-area results.
 
 \vspace{0.3em}
 
-\textcite{hung-2017} reports about 16.6\,MJ\,kg$^{-1}$ for a solid digestate, containing roughly 23\,wt\% ash. The 16.41\,MJ\,kg$^{-1}$ measured here at 22.6\,\% ash closely reproduces that number, which can lay the foundation for the upcoming comparison of the chars. The biochars themselves fall at or below the bottom of the published HHV trend range, shown in table \ref{tab:hhv_digestate_comparison}. Digestate-derived biochars are generally reported to have HHV between 15 and 22\,MJ\,kg$^{-1}$ after pyrolysis, compared to 14.1--14.2\,MJ\,kg$^{-1}$ in
+\textcite{hung-2017} reports about 16.6\,MJ\,kg$^{-1}$ for a solid digestate, containing roughly 23\,wt\% ash. The 16.41\,MJ\,kg$^{-1}$ measured here at 22.6\,\% ash closely reproduces that number, which can lay the foundation for the upcoming comparison of the chars. The biochars themselves fall at or below the bottom of the published HHV trend range, shown in table \ref{tab:hhv_digestate_comparison}. Digestate-derived biochars are generally reported to have an HHV between 15 and 22\,MJ\,kg$^{-1}$ after pyrolysis, compared to 14.1--14.2\,MJ\,kg$^{-1}$ in
 this work. Ash-content plays an important role. At roughly 50\,\% for the
 600\,$^{\circ}$C char, this places this material at the top of the 15--50\,wt\% band
 typical of digestates.
 
-To prove the points a bit further, using the equation~\ref{eq:edf}, The energy densification can be achieved by dividing the biochar calorific value by that of the feedstock. Every biochar has an energy densification factor of 0.86, and that means one thing. The pyrolysis lowered the energy density of the solid instead of raising it. Lignocellulosic feedstocks treated over the same 400--600\,$^{\circ}$C window normally reach 1.4--1.8 \parencite{bridgwater-2011, antal-2003}. This difference could actually be expected. For high-ash digestates, the factor should stay below 1.4 and can fall to 1 or lower. The reason is because ash dilution outweighs carbon enrichment \parencite{hung-2017, opatokun-2015}, and the present material reaches the lower bound of that prediction. Applying Equation~\ref{eq:energy-yield} with the mass
+To prove the points a bit further, using the equation~\ref{eq:edf}, The energy densification can be achieved by dividing the biochar calorific value by that of the feedstock. Every biochar has an energy densification factor of 0.86, and that means one thing. The pyrolysis lowered the energy density of the solid instead of raising it. Lignocellulosic feedstocks treated over the same 400--600\,$^{\circ}$C window normally reach 1.4--1.8 \parencite{bridgwater-2011, antal-2003}. This difference could actually be expected. For high-ash digestates, the factor should stay below 1.4 and can fall to 1 or lower. The reason is that ash dilution outweighs carbon enrichment \parencite{hung-2017, opatokun-2015}, and the present material reaches the lower bound of that prediction. Applying Equation~\ref{eq:energy-yield} with the mass
 yields of Section~\ref{subsec:results-pyrolysis} gives energy yields of 39.5,
 37.2 and 36.3\,\% at 400, 500 and 600\,$^{\circ}$C. For comparison, lignocellulosic feedstocks yield energy around 50--75\,\%.
 However, if compared on an ash-free basis, the same chars read differently. Their 25.1--28.2\,MJ\,kg$^{-1}$ lies inside the 25--33\,MJ\,kg$^{-1}$ reported for lignocellulosic
 biochar (Table~\ref{tab:hhv_fuels}), and when the densification factor is recalculated again, this basis rises to 1.18--1.33. The ash-free char left by pyrolysis is comparable in energy density to wood-derived char, and the shortfall in the measured value comes from ash rather than from poor or incomplete carbonization. 
 
-%Lomselesai
+
 
 
 \newpage
@@ -634,7 +712,7 @@ function of pyrolysis temperature.}
 
 
 \newpage
-\subsubsection{BET Analyis}
+\subsubsection{BET analysis}
 
 The BET analysis resulted in three parameters of untreated and sulfur-loaded and activated French biochar samples, such as the SSA, total pore volume and mean pore diameter.  
 
