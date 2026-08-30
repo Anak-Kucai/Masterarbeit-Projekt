@@ -245,11 +245,10 @@ Steam tends toward a more extensive distribution of micropores and mesopores and
 
 
 
-\newpage
 \subsection{Sulfur loading}
 
-The mass gain of each samples after the sulfur loading process is calculated from difference
-between the mass before and after the sulfur loading and listed in Table~\ref{tab:sulfur_loading}. 
+The mass gain of each sample after the sulfur loading process is calculated from the difference
+between the mass before and after the sulfur loading and is listed in Table~\ref{tab:sulfur_loading}. 
 
 \begin{table}[H]
 \centering
@@ -335,7 +334,7 @@ between the mass before and after the sulfur loading and listed in Table~\ref{ta
 
 \end{table}
 
-Using the Equation~\ref{Equation sulfur loading}, the adsoprtion capacity of each sample can be calculated and represented in Figure~\ref{fig:sulfur-loading-capacity}.  
+Using the Equation~\ref{Equation sulfur loading}, the adsorption capacity of each sample is calculated and represented in Figure~\ref{fig:sulfur-loading-capacity}.  
 
 
 \begin{figure}[htbp]
@@ -343,7 +342,7 @@ Using the Equation~\ref{Equation sulfur loading}, the adsoprtion capacity of eac
 \begin{tikzpicture}
 \begin{axis}[
     width=0.9\textwidth,
-    height=0.55\textwidth,
+    height=0.6\textwidth,
     xbar,
     bar width=16pt,
     symbolic y coords={400,500,600},
@@ -397,7 +396,7 @@ In contrast, among the samples activated with a water dose of 0.5 ml, the sample
 
 %Overall, biochar activated with the lower water dose (0.1 mL) exhibited higher sulfur adsorption capacities (45.671–64.302 mg/g) compared to those activated with the higher dose (0.5 mL), which yielded capacities between 36.373 and 43.883 mg/g. This suggests that a lower water content during the activation process is more favorable for sulfur uptake, possibly because excess water occupies or obstructs the pore structure of the biochar, thereby reducing the surface area accessible for sulfur adsorption.
 
-The results in Table~\ref{tab:sulfur_loading} can be compared with the results on sulfur loading of CO$_2$-activated biochar samples from previous project work, which are presented as follows: 
+Compared to the result on sulfur loading of CO$_2$-activated biochar samples from previous project work, as shown in Table~\ref{tab:sulfur_loading_co2} and Figure ~\ref{fig:adsoprtion capacity algeria biochar preivous}, the samples from present work exhibited higher adsorption capacity. 
 
 \begin{table}[H]
 \centering
@@ -480,13 +479,6 @@ digestate\\
 \bottomrule
 \end{tabular}
 
-\vspace{2mm}
-
-\begin{minipage}{0.95\textwidth}
-\footnotesize
-\textit{Note.} As previously mentioned, these results are derived from the authors’ earlier project work. Although the source material is not the same as that used in this study, it is of the same type—namely, a digestate from slaughterhouses—and was subjected to the same pyrolysis process at the same temperatures.
-\end{minipage}
-
 \end{table}
 
 \begin{figure}[htbp]
@@ -501,29 +493,24 @@ digestate\\
     ytick=data,
     yticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
     y dir=reverse,
-    xlabel={Adsorption capacity (mg\,g$^{-1}$)},
-    ylabel={Pyrolysis temperature},
-    xmin=0, xmax=75,
+    title={Adsorption capacity of Algeria biochar},
+    xlabel={Adsorption capacity in mg/g},
+    ylabel={Pyrolysis temperature in $^\circ$C},
+     xmin=0, xmax=30,
+    xtick distance=10,
     xmajorgrids=true,
     grid style={draw=gray!25},
     tick label style={font=\small},
     label style={font=\small},
-    legend style={at={(0.5,1.12)}, anchor=north, legend columns=2,
-                  font=\small, draw=gray!40,
-                  /tikz/every even column/.append style={column sep=0.4cm}},
     nodes near coords={\pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}},
     every node near coord/.append style={font=\scriptsize, text=black, anchor=west},
 ]
-\addplot+[fill=blue!80!black, draw=black!85]
-  coordinates {(54.504,400) (64.302,500) (45.671,600)};
-\addlegendentry{Capacity, 0.1\,mL}
-\addplot+[fill=red!80!black, draw=blue!60!black]
-  coordinates {(40.912,400) (36.373,500) (43.883,600)};
-\addlegendentry{Capacity, 0.5\,mL}
+\addplot+[fill=blue!50, draw=blue!50!black]
+  coordinates {(24.428,400) (16.426,500) (12.298,600)};
 \end{axis}
 \end{tikzpicture}
-\caption{Adsorption capacity of French biochar after sulfur loading, at two water activation doses (0.1 and 0.5\,mL) across pyrolysis temperatures. Mass gain data are reported in Table~X.}
-\label{fig:sulfur-loading-capacity}
+\caption{Adsorption capacity of Algeria biochar activated using CO$_2$ from previous work.}
+\label{fig:adsoprtion capacity algeria biochar preivous}
 \end{figure}
 
 The results in Table~\ref{tab:sulfur_loading_co2} show that the adsorption capacity of CO$_2$-activated biochar decreases as the pyrolysis temperature decreases, with the highest adsorption capacity of approximately 24 mg/g observed for biochar produced by pyrolysis at 400 °C. This suggests that CO$_2$ activation is favored in biochar produced by pyrolysis at lower temperatures.    
