@@ -9,12 +9,45 @@
 
 %The biochar yield was determined gravimetrically for both the French and the Algerian slaughterhouse digestate at 400, 500 and 600\,$^{\circ}$C. To accommodate the limited quantity of available material, each digestate portion was divided across three crucibles and pyrolyzed under identical conditions (heating rate 10\,$^{\circ}$C\,min$^{-1}$, residence time 1\,h, with the crucible water held at approximately 20\,g in every run to maintain a comparable steam environment). The three crucibles act as replicates; the mean yields are plotted in Figure~\ref{fig:pyrolysis-yield}, and the complete per-crucible breakdown is given in the appendix (Table~\ref{tab:pyrolysis-yield-full}). Yield is expressed as the ratio of recovered biochar to the as-received digestate charge.
 
+The amount of biochar produced during pyrolysis, as well as the amount of digestate used in the process, are listed in Table~\ref{tab:yield_summary}. The biochar yield from the pyrolysis is calculated using the Equation~\ref{eq:biochar yield} and documented together in Table~\ref{tab:yield_summary}. 
+
+\begin{table}[htbp]
+\centering
+\caption{Yields in biochar production from France and Algerian digestate via pyrolysis at different temperature}
+\label{tab:yield_summary}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{llccc}
+\toprule
+\multirow{2}{*}{\textbf{Sample}} & \multirow{2}{*}{\textbf{$PT$ (\textdegree C)}} & \multicolumn{2}{c}{\textbf{Mass (g)}} & \multirow{2}{*}{\textbf{Yield (\%)}} \\
+\cmidrule(lr){3-4}
+ & & \textbf{Digestate} & \textbf{Biochar} & \\
+\midrule
+\multirow{3}{*}{French digestate}   & 400 & $14.068 \pm 0.034$ & $6.436 \pm 0.019$ & $45.750 \pm 0.040$ \\
+                                          & 500 & $14.044 \pm 0.004$ & $6.056 \pm 0.005$ & $43.120 \pm 0.040$ \\
+                                          & 600 & $15.122 \pm 0.355$ & $6.379 \pm 0.158$ & $42.180 \pm 0.050$ \\
+\midrule
+\multirow{3}{*}{Algerian digestate} & 400 & $2.402 \pm 0.006$  & $0.899 \pm 0.005$ & $37.420 \pm 0.260$ \\
+                                          & 500 & $2.406 \pm 0.005$  & $0.827 \pm 0.002$ & $34.370 \pm 0.110$ \\
+                                          & 600 & $2.405 \pm 0.006$  & $0.805 \pm 0.013$ & $33.450 \pm 0.480$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{2mm}
+
+\begin{minipage}{0.95\textwidth}
+\footnotesize
+\textit{Note.} ``PT'' refers to the pyrolysis temperature at which the biochar samples were produced. 
+\end{minipage}
+\end{table}
+
+The Figure~\ref{fig:pyrolysis-yield} also provides an visual overview of how the biochar yield changed across the investigated temperature range for both digestates.
+
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
     width=15cm,
-    height=10cm,
+    height=9cm,
     title={Biochar production at different pyrolysis temperature},
     title style={font=\large},
     xlabel={Pyrolysis temperature ($^{\circ}$C)},
@@ -36,7 +69,7 @@
     (500,43.12) +- (0,0.04)
     (600,42.18) +- (0,0.05)
   };
-\addlegendentry{French Digestate}
+\addlegendentry{French digestate}
 \addplot[color=red!70!black, mark=square*, thick,
     error bars/.cd, y dir=both, y explicit]
   coordinates {
@@ -44,7 +77,7 @@
     (500,34.37) +- (0,0.11)
     (600,33.45) +- (0,0.48)
   };
-\addlegendentry{Algerian Digestate}
+\addlegendentry{Algerian digestate}
 \end{axis}
 \end{tikzpicture}
 \caption{Biochar yield from pyrolysis at different temperature for the French and
@@ -52,58 +85,23 @@ Algerian digestate.}
 \label{fig:pyrolysis-yield}
 \end{figure}
 
-Both feedstocks behave consistently within each run, with the replicate standard
-deviation staying below half a percentage point throughout. Across the temperature
-range, the French digestate returns the higher solid yield, falling from 45.7\,\% at
-400\,$^{\circ}$C to 42.2\,\% at 600\,$^{\circ}$C, whereas the Algerian digestate
-yields between 37.4\,\% and 33.5\,\% over the same interval. The French char
-therefore exceeds the Algerian by roughly eight to nine percentage points at every
-temperature.
 
-Because both substrates derive from slaughterhouse waste and were processed under
-identical conditions, this difference is attributable to feedstock composition
-rather than to the pyrolysis program. The consistently higher French yield
-reflects a larger fraction of material retained in the solid phase, which points to
-differences in the organic and mineral balance of the two digestates arising from
-their respective origins and upstream digestion. This interpretation is taken up
-again against the elemental and ash data in Section~\ref{sec:characterisation},
+\newpage
+
+As shown in Figure~\ref{fig:pyrolysis-yield}, the biochar yields from both digestates seem to behave consistently within each run,  with the replicate standard deviation staying below half a percentage point throughout. Across the temperature range, the French digestate returned the higher solid yield, falling from 45.7\,\% at 400\,$^{\circ}$C to 42.2\,\% at 600\,$^{\circ}$C, whereas the Algerian digestate yielded between 37.4\,\% and 33.5\,\% over the same interval, as shown in Table~\ref{tab:yield_summary}. The French biochar therefore exceeded the Algerian biochar by roughly eight to nine percentage points at every temperature. This difference is attributable to feedstock composition rather than the pyrolysis program because both digestates derived from slaughterhouse waste and were processed under identical conditions. The consistently higher French biochar yield reflected a larger fraction of material retained in the solid phase, which pointed to differences in the organic and mineral balance of the two digestates arising from their respective origins and upstream digestion. This interpretation was taken up again against the elemental and ash data in Section~\ref{sec:characterisation},
 where the mineral content recovered in the char is quantified directly.
 
 \vspace{0.3em}
 
-Both digestates show a steady decrease in yield as the pyrolysis temperature rises,
-amounting to about 3.6 percentage points for the French and 4.0 for the Algerian
-material between 400 and 600\,$^{\circ}$C. The downward trend follows the expected
-release of volatile matter at higher temperature, as the more thermally labile
-fractions are driven off and a more carbonized residue remains
-(Section~\ref{subsubsec:Effect of Temperature on Biochar}). The modest size of the
-decline is itself informative: in digestate-derived feedstocks, the high mineral
-fraction is largely retained in the solid during pyrolysis, so the yield responds
-less steeply to temperature than is typical for lignocellulosic biomass
-(Section~\ref{subsubsec:digestate-pyrolysis relevance}) \parencite{kujawska-2026, wang-2023}.
-The close replicate agreement gives confidence that the differences between
-feedstocks and temperatures reflect genuine compositional effects rather than
-measurement scatter.
+Figure~\ref{fig:pyrolysis-yield} and Table~\ref{tab:yield_summary} also show that both digestates exhibit a steady decrease in yield as the pyrolysis temperature rises, amounting to about 3.6 percentage points for the French and 4.0 for the Algerian biochar between 400 and 600\,$^{\circ}$C. The downward trend follows the expected release of volatile matter at higher temperature, as the more thermally labile fractions are driven off and a more carbonized residue remains (Section~\ref{subsubsec:Effect of Temperature on Biochar}). The modest size of the decline is itself informative: in digestate-derived feedstocks, the high mineral
+fraction is largely retained in the solid during pyrolysis, so the yield responds less steeply to temperature than is typical for lignocellulosic biomass (Section~\ref{subsubsec:digestate-pyrolysis relevance}) \parencite{kujawska-2026, wang-2023}. The close replicate agreement gives confidence that the differences between feedstocks and temperatures reflect genuine compositional effects rather than measurement scatter.
 
 \vspace{0.3em}
 
-The Algerian runs also connect this work to the earlier Projektarbeit, in which the
-same slaughterhouse digestate was pyrolyzed under comparable conditions. The present
-yields of 37.4, 34.4 and 33.5\,\% reproduce the earlier values of approximately 37,
-34 and 31\,\% \parencite{MartinezHuete2024Projektarbeit}, confirming that the pyrolysis procedure is reproducible across the two experimental campaigns. Set in the wider context of that
-study, the slaughterhouse digestate falls in the same range as the grass-silage
-digestate (roughly 34--38\,\%) and well below the bio-waste digestate (72--75\,\%),
-whose anomalously high yield was traced to non-degradable residues such as plastics
-that do not decompose during pyrolysis \parencite{MartinezHuete2024Projektarbeit}. The French
-digestate, at 42--46\,\%, therefore sits at the upper end of the genuinely biogenic
-digestates examined across both works, while remaining far below the contaminated
-bio-waste material.
-
 \begin{table}[ht]
 \centering
-\caption{Biochar yield (\%) of the three digestate feedstocks examined in the
-earlier Projektarbeit
-\parencite{MartinezHuete2024Projektarbeit}.}
+\caption{Biochar yield of the three digestates examined in the
+previous project work \parencite{MartinezHuete2024Projektarbeit}.}
 \label{tab:projektarbeit-yield}
 \begin{tabularx}{\textwidth}{@{}CCCC@{}}
 \toprule
@@ -116,15 +114,27 @@ Pyrolysis temperature (°C) & Bio-waste yield (\%) & Grass-silage yield (\%) & S
 \end{tabularx}
 \end{table}
 
+The Algerian digestate runs also connect this work to the previous project work mentioned before, in which the
+same slaughterhouse waste derived digestate was pyrolyzed under comparable conditions. The present
+yields of 37.4, 34.4 and 33.5\,\% reproduce the earlier values of approximately 37,
+34, and 31\,\% \parencite{MartinezHuete2024Projektarbeit}, confirming that the pyrolysis procedure is reproducible across the two experimental campaigns. Set in the wider context of that
+study, the digestate from shlaughterhouse waste falls in the same range as the grass-silage
+digestate (roughly 34--38\,\%) and well below the bio-waste digestate (72--75\,\%),
+whose anomalously high yield was traced to non-degradable residues such as plastics
+that do not decompose during pyrolysis \parencite{MartinezHuete2024Projektarbeit}. The French
+digestate, at 42--46\,\%, therefore sits at the upper end of the genuinely biogenic
+digestates examined across both works, while remaining far below the contaminated
+bio-waste material.
+
 \newpage
 
 \subsection{\texorpdfstring{H$_2$O}{H2O}-Activation}
 \label{subsec:results-activation}
-The steam activation was carried out at 700\,$^{\circ}$C on the French biochar samples. There are in total 3 samples - 400, 500, 600\,$^{\circ}$C. The result that will be reported and discussed here is the mass loss of the biochar before and after activation treatment.
+%The steam activation was carried out at 700\,$^{\circ}$C on the French biochar samples. There are in total 3 samples - 400, 500, and 600\,$^{\circ}$C. The result that will be reported and discussed here is the mass loss of the biochar before and after the activation treatment.
 
 \vspace{0.3em}
 
-The mass loss was evaluated in two ways. The wet basis compares the mass of the biochar directly before and after activation. The other mass loss also takes into account the condensation of the water from the post activation sample. This moisture-corrected value therefore reflects the mass actually removed from the char and is used here as the primary measure. 
+%The mass loss was evaluated in two ways. The wet basis compares the mass of the biochar directly before and after activation. The other mass loss also takes into account the condensation of the water from the post activation sample. This moisture-corrected value therefore reflects the mass actually removed from the char and is used here as the primary measure. 
 
 \begin{figure}[ht]
 \centering
@@ -186,14 +196,6 @@ the preceding Projektarbeit, reproduced here for comparison
 \toprule
 Feedstock & Pyrolysis temp.\ ($^{\circ}$C) & Residual char (g) & Mass loss (\%) \\
 \midrule
-\multirow{3}{*}{Bio-waste digestate}     & 400 & 0.96 & 4  \\
-                                         & 500 & 0.98 & 2  \\
-                                         & 600 & 0.98 & 2  \\
-\midrule
-\multirow{3}{*}{Grass silage digestate}  & 400 & 0.83 & 17 \\
-                                         & 500 & 0.93 & 8  \\
-                                         & 600 & 0.97 & 3  \\
-\midrule
 \multirow{3}{*}{Slaughterhouse digestate}& 400 & 0.85 & 15 \\
                                          & 500 & 0.93 & 7  \\
                                          & 600 & 0.98 & 2  \\
@@ -243,8 +245,7 @@ biochar under steam activation and for the slaughterhouse-digestate biochar unde
 The CO$_2$-activation of the preceding Projektarbeit offers a direct point of comparison, since it also used the same reactor, temperature, and residence time as the steam-activation runs here (700\,$^{\circ}$C, 1\,h). These two slaughterhouse-digestates, though they come from different sources, could provide insight into this discussion. Since no water is sprayed during CO$_2$ activation, the reported before/after loss is assumed to be under low-moisture conditions and can be placed alongside the corrected steam values without adjustment. Based on this, the steam-activated char loses more mass than the CO$_2$-activated char at every pyrolysis temperature (Figure~\ref{fig:co2-vs-steam}; Table~\ref{tab:co2-activation-projektarbeit}). The widest gap could be seen at 600\,$^{\circ}$C, where steam removes about 10--11\,\% compared to roughly 2\,\% for CO$_2$. 
 Steam tends toward a more extensive distribution of micropores and mesopores and adds more oxygen-containing surface groups, whereas CO$_2$ works mainly within the micropore range, as mentioned in \ref{Physical Activation of Biochar}. 
 
-
-
+\newpage
 \subsection{Sulfur loading}
 
 The mass gain of each sample after the sulfur loading process is calculated from the difference
@@ -336,6 +337,8 @@ between the mass before and after the sulfur loading and is listed in Table~\ref
 
 Using the Equation~\ref{Equation sulfur loading}, the adsorption capacity of each sample is calculated and represented in Figure~\ref{fig:sulfur-loading-capacity}.  
 
+Sulfur loading ubah jadi line chart instead of bar chart
+
 
 \begin{figure}[htbp]
 \centering
@@ -400,7 +403,7 @@ Compared to the result on sulfur loading of CO$_2$-activated biochar samples fro
 
 \begin{table}[H]
 \centering
-\caption{Results of the sulfur loading process on the slaughterhouse digestate biochar from Algerian activated with CO$_2$.}
+\caption{Results of the sulfur loading process on the slaughterhouse digestate biochar from Algeria activated with CO$_2$.}
 \label{tab:sulfur_loading_co2}
 
 \renewcommand{\arraystretch}{1.15}
@@ -438,7 +441,7 @@ Compared to the result on sulfur loading of CO$_2$-activated biochar samples fro
 \begin{tabular}[c]{@{}l@{}}
 Slaughterhouse\\
 digestate\\
-(Algerian)
+(Algeria)
 \end{tabular}}
 &
 400
@@ -493,7 +496,7 @@ digestate\\
     ytick=data,
     yticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
     y dir=reverse,
-    title={Adsorption capacity of Algeria biochar},
+    title={Adsorption capacity of Algerian biochar},
     xlabel={Adsorption capacity in mg/g},
     ylabel={Pyrolysis temperature in $^\circ$C},
      xmin=0, xmax=30,
@@ -509,7 +512,7 @@ digestate\\
   coordinates {(24.428,400) (16.426,500) (12.298,600)};
 \end{axis}
 \end{tikzpicture}
-\caption{Adsorption capacity of Algeria biochar activated using CO$_2$ from previous work.}
+\caption{Adsorption capacity of Algerian biochar activated using CO$_2$ from previous work.}
 \label{fig:adsoprtion capacity algeria biochar preivous}
 \end{figure}
 
@@ -638,9 +641,9 @@ basis.}
 & 600 & 37.99 & 0.521 & 1.626 & 1.584 & 50.0 & 8.28  & 100.0 \\
 \midrule
 \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Sulfur-loaded\\activated char\end{tabular}}
-& 400 & 31.66 & 0.342 & 1.148 & 6.804 & [pending] & [pending] & -- \\
-& 500 & 33.61 & 0.344 & 1.066 & 5.290 & [pending] & [pending] & -- \\
-& 600 & 33.47 & 0.348 & 0.943 & 5.217 & [pending] & [pending] & -- \\
+& 400 & 31.66 & 0.342 & 1.148 & 6.804 & N/A & N/A & -- \\
+& 500 & 33.61 & 0.344 & 1.066 & 5.290 & N/A & N/A & -- \\
+& 600 & 33.47 & 0.348 & 0.943 & 5.217 & N/A & N/A & -- \\
 \bottomrule
 \end{tabular}
 
@@ -655,53 +658,76 @@ basis.}
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    name=caxis, width=0.82\textwidth, height=0.55\textwidth,
-    ybar, bar width=16pt,
-    symbolic x coords={400,500,600}, xtick=data,
+    width=0.82\textwidth, height=0.5\textwidth,
+    ybar, bar width=20pt,
+    symbolic x coords={400,500,600},
+    xtick=data,
     xticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
     xlabel={Pyrolysis temperature},
-    ylabel={Carbon content, ash-free basis (\%)},
-    ymin=0, ymax=100, axis y line*=left,
+    ylabel={Carbon content (\%)},
+    ymin=0, ymax=90,
     ymajorgrids=true, grid style={draw=gray!25},
     tick label style={font=\small}, label style={font=\small},
-    legend style={at={(0.5,1.16)}, anchor=north, legend columns=3,
-                  font=\small, draw=gray!40,
-                  /tikz/every even column/.append style={column sep=0.35cm}},
+    nodes near coords,
+    every node near coord/.append style={font=\footnotesize, /pgf/number format/.cd, fixed, precision=1},
+    legend style={at={(0.5,1.13)}, anchor=north, legend columns=2, draw=gray!40,
+                  /tikz/every even column/.append style={column sep=0.5cm}},
 ]
-\addplot+[fill=blue!25, draw=blue!45]
-  coordinates {(400,67.2) (500,75.7) (600,76.0)};
-\addlegendentry{C, ash-free}
-\addlegendimage{red!70!black, thick, mark=*}
-\addlegendentry{H/C}
-\addlegendimage{black!70, thick, dashed, mark=square*, mark options={fill=black!70}}
-\addlegendentry{O/C}
-\end{axis}
-\begin{axis}[
-    at={(caxis.south east)}, anchor=south east,
-    width=0.82\textwidth, height=0.55\textwidth,
-    symbolic x coords={400,500,600},
-    axis y line*=right, axis x line=none,
-    ylabel={Atomic ratio ($-$)}, ymin=0, ymax=0.60,
-    tick label style={font=\small}, label style={font=\small},
-]
-\addplot[red!70!black, thick, mark=*]
-  coordinates {(400,0.481) (500,0.252) (600,0.163)};
-\addplot[black!70, thick, dashed, mark=square*, mark options={fill=black!70}]
-  coordinates {(400,0.252) (500,0.149) (600,0.164)};
+\addplot+[fill=gray!45, draw=gray!65] coordinates {(400,37.98) (500,38.43) (600,37.99)};
+\addlegendentry{As-analyzed}
+\addplot+[fill=red!55!black, draw=red!55!black] coordinates {(400,67.2) (500,75.7) (600,76.0)};
+\addlegendentry{Ash-free}
 \end{axis}
 \end{tikzpicture}
-\caption{Ash-free carbon content (bars, left axis) and the H/C and O/C atomic
-ratios (lines, right axis) of the French slaughterhouse-digestate biochar as a
-function of pyrolysis temperature.}
-\label{fig:chns-ratios}
+\caption{Carbon content of the French digestate biochars.Ash-free values use the ash contents of Section~\ref{subsubsec:calorific}.}
+\label{fig:chns-carbon}
 \end{figure}
+
+Figure~\ref{fig:chns-carbon} separates the carbon content on the two bases, as-analyzed and ash-free numbers. On the as-analyzed basis, the carbon content barely shows any difference in all three pyrolysis temperatures, sitting at 38.0, 38.4 and 38.0\,\% at 400, 500, and 600\,$^{\circ}$C. If plainly interpreted, that flatness would suggest that temperature didn't have any influence to the carbon content. If we take the rising ash-content into account, which climbs from 43.5 to 50.0\,\% across the same range (Section~\ref{subsubsec:calorific}) and dilutes every organic element in equal measure, it shows a different picture. After dividing the carbon by the combustible fraction, which strips out that ballast, the ash-free carbon then rises from 67.2 to 75.7 to 76.0\,\%. The most noticeable gain is in the  400--500\,$^{\circ}$C step. The rise above 500\,$^{\circ}$C is very small. This means that the majority of carbonization happened below 500\,$^{\circ}$C. These ash-free numbers fall in the range reported for digestate biochars, whose carbon enriches more gently compared to lignocellulosic chars because anaerobic digestion has already removed the fragile, easily devolatilized fractions before pyrolysis begins \cite{kujawska-2026}. 
+
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.8\textwidth, height=0.55\textwidth,
+    xlabel={Atomic O/C ratio}, ylabel={Atomic H/C ratio},
+    xmin=0, xmax=0.42, ymin=0, ymax=0.62,
+    grid=both, grid style={draw=gray!20},
+    tick label style={font=\small}, label style={font=\small},
+    legend pos=north west, legend style={font=\small, draw=gray!40},
+]
+\addplot[mark=*, mark size=3pt, color=red!60!black, thick] coordinates {(0.252,0.481) (0.149,0.252) (0.164,0.163)};
+\addlegendentry{This work (biochar)}
+\addplot[mark=square*, mark size=2.5pt, color=blue!55, dashed, thick, mark options={fill=blue!55}] coordinates {(0.379,0.565) (0.138,0.086)};
+\addlegendentry{Digestate biochar, Kujawska et al.}
+\node[anchor=south west, font=\footnotesize] at (axis cs:0.252,0.481) {400\,$^{\circ}$C};
+\node[anchor=south west, font=\footnotesize] at (axis cs:0.149,0.252) {500\,$^{\circ}$C};
+\node[anchor=south west, font=\footnotesize] at (axis cs:0.164,0.163) {600\,$^{\circ}$C};
+\node[anchor=west, font=\footnotesize, text=blue!55!black] at (axis cs:0.379,0.565) {400\,$^{\circ}$C};
+\node[anchor=west, font=\footnotesize, text=blue!55!black] at (axis cs:0.138,0.086) {800\,$^{\circ}$C};
+\end{axis}
+\end{tikzpicture}
+\caption{Van Krevelen diagram (H/C versus O/C) for the French digestate biochars, with the digestate-biochar trajectory of \textcite{kujawska-2026} shown for reference.}
+\label{fig:chns-vankrevelen}
+\end{figure}
+
+
+%Figure~\ref{fig:chns-vankrevelen} places the three biochars on a van Krevelen diagram, which tracks the atomic H/C ratio against O/C and is the standard way to read the degree of carbonization. Both ratios fall as the pyrolysis temperature rises: H/C drops from 0.481 at 400\,$^{\circ}$C to 0.252 at 500\,$^{\circ}$C and 0.163 at 600\,$^{\circ}$C, while O/C moves from 0.252 to 0.149. The downward-left path is the signature of aromatization, where the char sheds hydrogen- and oxygen-bearing groups and its carbon condenses into fused aromatic rings. The steepest move is the 400--500\,$^{\circ}$C step, mirroring the carbon plateau of Figure~\ref{fig:chns-carbon} and placing most of the structural change below 500\,$^{\circ}$C. The reference trajectory of \textcite{Kujawska2026} for a manure digestate biochar runs along the same diagonal, showing that this material carbonizes along the near-linear path typical of a digestate that anaerobic digestion has already part-stabilized.
+
+%Two caveats sit on the diagram. The oxygen is obtained by difference and so absorbs every error in the other channels; the small rightward step in O/C between 500 and 600\,$^{\circ}$C (0.149 to 0.164) falls within that uncertainty and is not read as real re-oxygenation. The sulfur-loaded activated chars cannot be placed here at all, since without an ash value their oxygen is unknown. Their hydrogen still speaks, though: all three converge on an H/C near 0.12--0.13 regardless of parent pyrolysis temperature, below even the 600\,$^{\circ}$C biochar at 0.163. The 700\,$^{\circ}$C steam-activation step drives the residual hydrogen out to a common floor, which independently supports the residual-devolatilization argument of Section~\ref{subsec:results-activation}.
+
+
+
+
+
 
 
 
 \newpage
 \subsubsection{BET analysis}
 
-The BET analysis resulted in three parameters of untreated and sulfur-loaded and activated French biochar samples, such as the SSA, total pore volume and mean pore diameter.  
+The BET analysis resulted in three parameters of untreated, sulfur-loaded, and activated French biochar samples, such as the SSA, total pore volume and mean pore diameter.  
 
 \begin{figure}[htbp]
 \centering
