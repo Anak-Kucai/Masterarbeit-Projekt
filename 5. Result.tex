@@ -249,30 +249,37 @@ Steam tends toward a more extensive distribution of micropores and mesopores and
 \subsection{Sulfur loading}
 
 The mass gain of each sample after the sulfur loading process is calculated from the difference
-between the mass before and after the sulfur loading and is listed in Table~\ref{tab:sulfur_loading}. 
+between the mass before and after the sulfur loading. The adsorption capacity of each sample is then calculated using Equation~\ref{Equation sulfur loading} and listed in Table~\ref{tab:sulfur_loading}. 
+
 
 \begin{table}[H]
 \centering
 \caption{Results of the sulfur loading process of the French biochar samples activated using water.}
 \label{tab:sulfur_loading}
-\renewcommand{\arraystretch}{1.15}
-\setlength{\tabcolsep}{8pt}
 
-\begin{tabular}{lccccc}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{5pt}
+
+\small
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
 \toprule
 
 \textbf{Sample}
 & \textbf{Water}
 & \textbf{PT}
 & \multicolumn{2}{c}{\textbf{Mass of biochar (g)}}
-& \textbf{Mass gain (g)}
+& \textbf{Mass gain}
+& \textbf{Adsorption capacity}
 \\
 
 & \textbf{(mL)}
 & \textbf{($^\circ$C)}
 & \textbf{Before}
 & \textbf{After}
-&
+& \textbf{(g)}
+& \textbf{(mg/g)}
 \\
 
 \midrule
@@ -283,6 +290,7 @@ between the mass before and after the sulfur loading and is listed in Table~\ref
 & 0.829
 & 0.875
 & 0.046
+& 54.504
 \\
 
 &
@@ -290,6 +298,7 @@ between the mass before and after the sulfur loading and is listed in Table~\ref
 & 0.829
 & 0.882
 & 0.053
+& 64.302
 \\
 
 &
@@ -297,9 +306,10 @@ between the mass before and after the sulfur loading and is listed in Table~\ref
 & 0.904
 & 0.946
 & 0.042
+& 45.671
 \\
 
-\cmidrule(lr){2-6}
+\cmidrule(lr){2-7}
 
 &
 \multirow{3}{*}{0.5}
@@ -307,6 +317,7 @@ between the mass before and after the sulfur loading and is listed in Table~\ref
 & 0.900
 & 0.936
 & 0.036
+& 40.912
 \\
 
 &
@@ -314,6 +325,7 @@ between the mass before and after the sulfur loading and is listed in Table~\ref
 & 0.932
 & 0.966
 & 0.034
+& 36.373
 \\
 
 &
@@ -321,57 +333,52 @@ between the mass before and after the sulfur loading and is listed in Table~\ref
 & 0.923
 & 0.963
 & 0.040
+& 43.883
 \\
 
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 
 \vspace{2mm}
 
-\begin{minipage}{0.95\textwidth}
+\begin{minipage}{\textwidth}
 \footnotesize
-\textit{Note.} ``Water'' refers to the amount of water added during activation, while ``PT'' refers to the pyrolysis temperature at which the biochar samples were produced. 
+\textit{Note.} ``Water'' refers to the amount of water added during activation, while ``PT'' refers to the pyrolysis temperature at which the biochar samples were produced.
 \end{minipage}
 
 \end{table}
 
-Using the Equation~\ref{Equation sulfur loading}, the adsorption capacity of each sample is calculated and represented in Figure~\ref{fig:sulfur-loading-capacity}.  
 
-Sulfur loading ubah jadi line chart instead of bar chart
+
 
 
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.9\textwidth,
+    width=1\textwidth,
     height=0.6\textwidth,
-    xbar,
-    bar width=16pt,
-    symbolic y coords={400,500,600},
-    ytick=data,
-    yticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
-    y dir=reverse,
+    xtick={400,500,600},
+    xticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
     title={Adsorption capacity of French biochar},
-    xlabel={Adsorption capacity in mg/g},
-    ylabel={Pyrolysis temperature in $^\circ$C},
-    xmin=0, xmax=75,
+    ylabel={Adsorption capacity in mg/g},
+    xlabel={Pyrolysis temperature in $^\circ$C},
+    ymin=25, ymax=70,
     xmajorgrids=true,
+    ymajorgrids=true,
     grid style={draw=gray!25},
     tick label style={font=\small},
     label style={font=\small},
     legend style={at={(0.5,-0.18)}, anchor=north, legend columns=2,
                   font=\small, draw=gray!40,
                   /tikz/every even column/.append style={column sep=0.4cm}},
-    nodes near coords={\pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}},
-    every node near coord/.append style={font=\scriptsize, text=black, anchor=west},
 ]
-\addplot+[fill=blue!50, draw=blue!50!black]
-  coordinates {(54.504,400) (64.302,500) (45.671,600)};
+\addplot[mark=*, color=blue!50!black, thick]
+  coordinates {(400,54.504) (500,64.302) (600,45.671)};
 \addlegendentry{Adsorption capacity, 0.1\,mL}
-
-\addplot+[fill=red!50, draw=red!50!black]
-  coordinates {(40.912,400) (36.373,500) (43.883,600)};
+\addplot[mark=square*, color=red!50!black, thick]
+  coordinates {(400,40.912) (500,36.373) (600,43.883)};
 \addlegendentry{Adsorption capacity, 0.5\,mL}
 \end{axis}
 \end{tikzpicture}
@@ -379,7 +386,7 @@ Sulfur loading ubah jadi line chart instead of bar chart
 \label{fig:sulfur-loading-capacity}
 \end{figure}
 
-Table~\ref{tab:sulfur_loading} shows that all samples exhibited an increase in mass after the sulfur loading process, suggesting that elemental sulfur was successfully adsorbed during the process and retained on the surface of the activated biochar. The biochar samples activated with a water dose of 0.1 ml exhibited a greater mass increase in the range of 0.04 to 0.05 g and an adsorption capacity in the range of 45 to 64 mg/g compared to the biochar samples activated with a water dose of 0.5 ml, for which the mass increase ranged from 0.034 to 0.04 g and the adsorption capacities ranged from 36 to 44 mg/g. This suggests that a higher water dose for activation results in lower adsorption capacity because it can lead to excessive gasification and conversion of micropores to meso- or macropores, thereby reducing available sites for adsorption.
+Table~\ref{tab:sulfur_loading} shows that all samples exhibited an increase in mass after the sulfur loading process, suggesting that elemental sDulfur was successfully adsorbed during the process and retained on the surface of the activated biochar. The biochar samples activated with a water dose of 0.1 ml exhibited a greater mass increase in the range of 0.04 to 0.05 g and an adsorption capacity in the range of 45 to 64 mg/g compared to the biochar samples activated with a water dose of 0.5 ml, for which the mass increase ranged from 0.034 to 0.04 g and the adsorption capacities ranged from 36 to 44 mg/g. This suggests that a higher water dose for activation results in lower adsorption capacity because it can lead to excessive gasification and conversion of micropores to meso- or macropores, thereby reducing available sites for adsorption.
 
 \vspace{0.3em}
 
@@ -714,8 +721,39 @@ Looking by the as-analyzed number, the loaded chars visibly carry less carbon th
 With the van Krevelen diagram (Figure~\ref{fig:chns-vankrevelen}), one can utilize the atomic H/C and O/C ratios to explain the changes in the degree of biochar carbonization. This method is widely applied as an indicator of the stability and long-term environmental properties of biochar \cite{kumar-2024}. It could be seen in figure~\ref{fig:chns-vankrevelen} that both ratios fall as the pyrolysis temperature rises. H/C drops from 0.481 at 400\,$^{\circ}$C to 0.252 at 500\,$^{\circ}$C and 0.163 at 600\,$^{\circ}$C, while O/C moves from 0.252 to 0.149. The downward-left trend is the signature of aromatization, where the char sheds hydrogen- and oxygen-bearing groups and its carbon condenses into fused aromatic rings. The steepest move is between 400-500\,$^{\circ}$C, which corresponds with the increase in carbon in figure~\ref{fig:chns-carbon}. The reference line of \textcite{kujawska-2026} for a manure digestate biochar also runs along the same diagonal. This biochar carbonizes along the near-linear path typical of a digestate that anaerobic digestion has already partially stabilized.
 Since the oxygen is obtained by difference and thus contains every error in the other channels, the small rightward step in O/C between 500 and 600\,$^{\circ}$C (0.149 to 0.164) falls within that case. 
 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.8\textwidth, height=0.5\textwidth,
+    ybar, bar width=20pt,
+    symbolic x coords={400,500,600},
+    xtick=data,
+    xticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
+    xlabel={Parent pyrolysis temperature},
+    ylabel={Atomic H/C ratio},
+    ymin=0, ymax=0.56,
+    ymajorgrids=true, grid style={draw=gray!25},
+    tick label style={font=\small}, label style={font=\small},
+    nodes near coords,
+    every node near coord/.append style={font=\footnotesize, /pgf/number format/.cd, fixed, precision=3},
+    legend style={at={(0.5,1.14)}, anchor=north, legend columns=2, draw=gray!40,
+                  /tikz/every even column/.append style={column sep=0.5cm}},
+]
+\addplot+[fill=red!55!black, draw=red!55!black] coordinates {(400,0.481) (500,0.252) (600,0.163)};
+\addlegendentry{Raw biochar}
+\addplot+[fill=teal!55!black, draw=teal!55!black] coordinates {(400,0.129) (500,0.122) (600,0.124)};
+\addlegendentry{Sulfur-loaded activated char}
+\end{axis}
+\end{tikzpicture}
+\caption{Atomic H/C ratio of the raw biochars and the sulfur-loaded activated chars.}
+\label{fig:chns-hc-loaded}
+\end{figure}
 
-%The sulfur-loaded activated chars cannot be placed here at all, since without an ash value their oxygen is unknown. Their hydrogen still speaks, though: all three converge on an H/C near 0.12--0.13 regardless of parent pyrolysis temperature, below even the 600\,$^{\circ}$C biochar at 0.163. The 700\,$^{\circ}$C steam-activation step drives the residual hydrogen out to a common floor, which independently supports the residual-devolatilization argument of Section~\ref{subsec:results-activation}.
+Now that both chars are set side by side, it can be observed, that once the chars have been steam-activated and sulfur-loaded, that trend is gone. All three sit at 0.129, 0.122, and 0.124, a common floor near 0.12-0.13 across all temperatures. It is safe to assume that the hydrogen is stripped in the 700\,$^{\circ}$C activation step, not during sulfur loading. The size of the change tracks how much hydrogen was there to lose. The 400\,$^{\circ}$C biochar falls the furthest, from 0.481 to 0.129, while the 600\,$^{\circ}$C parent only moves from 0.163 to 0.124. The pyrolysis had already carbonized it close to the same level. All three loaded and activated chars end up below even the 600\,$^{\circ}$C raw biochar number, This means that activation carries aromatization past what pyrolysis alone reaches at 600\,$^{\circ}$C. Another thing to take from this is that the pyrolysis temperature, which matters a lot for the raw biochar, has little influence on the aromaticity of the final activated char once the activation step has leveled it out.
+
+
+
 
 
 
