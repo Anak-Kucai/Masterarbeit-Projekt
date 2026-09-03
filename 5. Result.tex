@@ -249,7 +249,7 @@ Steam tends toward a more extensive distribution of micropores and mesopores and
 \subsection{Sulfur loading}
 
 The mass gain of each sample after the sulfur loading process is calculated from the difference
-between the mass before and after the sulfur loading. The adsorption capacity of each sample is then calculated using Equation~\ref{Equation sulfur loading} and listed in Table~\ref{tab:sulfur_loading}. 
+between the mass before and after the sulfur loading. The adsorption capacity of each sample is then calculated using Equation~\ref{Equation sulfur loading} and summarized together with the collected data in Table~\ref{tab:sulfur_loading}. 
 
 
 \begin{table}[H]
@@ -257,7 +257,7 @@ between the mass before and after the sulfur loading. The adsorption capacity of
 \caption{Results of the sulfur loading process of the French biochar samples activated using water.}
 \label{tab:sulfur_loading}
 
-\renewcommand{\arraystretch}{1.15}
+\renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{5pt}
 
 \small
@@ -344,53 +344,60 @@ between the mass before and after the sulfur loading. The adsorption capacity of
 
 \begin{minipage}{\textwidth}
 \footnotesize
-\textit{Note.} ``Water'' refers to the amount of water added during activation, while ``PT'' refers to the pyrolysis temperature at which the biochar samples were produced.
+\textit{Note.} ``Water'' refers to the amount of water added during activation.
 \end{minipage}
 
 \end{table}
 
-
-
-
-
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=1\textwidth,
-    height=0.6\textwidth,
-    xtick={400,500,600},
-    xticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
-    title={Adsorption capacity of French biochar},
-    ylabel={Adsorption capacity in mg/g},
-    xlabel={Pyrolysis temperature in $^\circ$C},
-    ymin=25, ymax=70,
-    xmajorgrids=true,
-    ymajorgrids=true,
-    grid style={draw=gray!25},
-    tick label style={font=\small},
-    label style={font=\small},
-    legend style={at={(0.5,-0.18)}, anchor=north, legend columns=2,
-                  font=\small, draw=gray!40,
-                  /tikz/every even column/.append style={column sep=0.4cm}},
-]
-\addplot[mark=*, color=blue!50!black, thick]
-  coordinates {(400,54.504) (500,64.302) (600,45.671)};
-\addlegendentry{Adsorption capacity, 0.1\,mL}
-\addplot[mark=square*, color=red!50!black, thick]
-  coordinates {(400,40.912) (500,36.373) (600,43.883)};
-\addlegendentry{Adsorption capacity, 0.5\,mL}
-\end{axis}
-\end{tikzpicture}
-\caption{Adsorption capacity of French biochar after sulfur loading, at two water activation doses (0.1 and 0.5\,mL) across pyrolysis temperatures.}
-\label{fig:sulfur-loading-capacity}
-\end{figure}
-
-Table~\ref{tab:sulfur_loading} shows that all samples exhibited an increase in mass after the sulfur loading process, suggesting that elemental sDulfur was successfully adsorbed during the process and retained on the surface of the activated biochar. The biochar samples activated with a water dose of 0.1 ml exhibited a greater mass increase in the range of 0.04 to 0.05 g and an adsorption capacity in the range of 45 to 64 mg/g compared to the biochar samples activated with a water dose of 0.5 ml, for which the mass increase ranged from 0.034 to 0.04 g and the adsorption capacities ranged from 36 to 44 mg/g. This suggests that a higher water dose for activation results in lower adsorption capacity because it can lead to excessive gasification and conversion of micropores to meso- or macropores, thereby reducing available sites for adsorption.
+Table~\ref{tab:sulfur_loading} shows that all samples exhibited an increase in mass after the sulfur loading process, suggesting that elemental sulfur was successfully adsorbed during the process and retained on the surface of the activated biochar. The biochar samples activated with a water dose of 0.1 ml exhibited a greater mass increase in the range of 0.04 to 0.05 g and an adsorption capacity in the range of 45 to 64 mg/g compared to the biochar samples activated with a water dose of 0.5 ml, for which the mass increase ranged from 0.034 to 0.04 g and the adsorption capacities ranged from 36 to 44 mg/g. This implies that a steam activation with higher water injected leads to excessive gasification, in which micropores are converted into mesopores or macropores. As a result, the specific surface area to retain more elemental sulfur is reduced, thereby decreasing the area available for adsorption. 
 
 \vspace{0.3em}
 
 Among the samples activated with a water dose of 0.1 ml, the highest mass increase of approximately 0.053 g and the highest adsorption capacity of approximately 64.3 mg/g were observed in the sample produced by pyrolysis at 500 °C, followed by the sample produced by pyrolysis at 400 °C and 600 °C, although higher pyrolysis temperatures are generally considered advantageous for higher adsorption capacity, as they promote pore formation and result in a larger specific surface area. This could possibly be attributed to further carbonization at 600 °C, which can lead to a reduction in oxygen-containing functional groups.
+
+
+%\begin{figure}[htbp]
+%\centering
+%\begin{tikzpicture}
+%\begin{axis}[
+%    width=1\textwidth,
+%    height=0.62\textwidth,
+%    xtick={400,500,600},
+%    xticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
+%    title={Adsorption capacity of French biochar},
+%    ylabel={Adsorption capacity in mg/g},
+%    xlabel={Pyrolysis temperature in $^\circ$C},
+%    ymin=25, ymax=70,
+%    xmajorgrids=true,
+%    ymajorgrids=true,
+%    grid style={draw=gray!25},
+%    tick label style={font=\small},
+%    label style={font=\small},
+%    legend style={at={(0.5,-0.18)}, anchor=north, legend columns=2,
+%                   font=\small, draw=gray!40,
+%                  /tikz/every even column/.append style={column sep=0.4cm}},
+%]
+%\addplot[mark=*, color=blue!50!black, thick]
+% coordinates {(400,54.504) (500,64.302) (600,45.671)};
+%\addlegendentry{Adsorption capacity, 0.1\,mL}
+%\addplot[mark=square*, color=red!50!black, thick]
+%  coordinates {(400,40.912) (500,36.373) (600,43.883)};
+%\addlegendentry{Adsorption capacity, 0.5\,mL}
+%\end{axis}
+%\end{tikzpicture}
+%\caption{Adsorption capacity of French biochar after sulfur loading, at two water activation doses (0.1 and 0.5\,mL) across pyrolysis temperatures.}
+%\label{fig:sulfur-loading-capacity}
+%\end{figure}
+
+%\vspace{0.3em}
+
+%\newpage
+
+%Figure~\ref{fig:sulfur-loading-capacity} illustrates the adsorption capacity of French biochar samples after sulfur loading as a function of pyrolysis temperature. The samples activated using 0.1 and 0.5 mL water exhibited different behavior at different pyrolysis temperature. For the samples activated with 0.1 mL water, the adsorption capacity increases from the biochar produced at 400°C to  
+
+
+
+%Figure~\ref{fig:sulfur_loading_capacity} visualizes the influence of pyrolysis temperature and activation-water dose on the sulfur-loading capacity. The two activation conditions show different temperature-dependent trends. For the samples activated with 0.1~mL water, the capacity increases from 400 to 500,$^{\circ}$C and then decreases considerably at 600,$^{\circ}$C, resulting in a clear maximum at 500,$^{\circ}$C. In contrast, the 0.5~mL series shows a slight decrease between 400 and 500,$^{\circ}$C followed by an increase at 600,$^{\circ}$C. Therefore, no simple monotonic relationship between pyrolysis temperature and sulfur-loading capacity can be observed.
 
 \vspace{0.3em}
 
@@ -406,11 +413,9 @@ In contrast, among the samples activated with a water dose of 0.5 ml, the sample
 
 %Overall, biochar activated with the lower water dose (0.1 mL) exhibited higher sulfur adsorption capacities (45.671–64.302 mg/g) compared to those activated with the higher dose (0.5 mL), which yielded capacities between 36.373 and 43.883 mg/g. This suggests that a lower water content during the activation process is more favorable for sulfur uptake, possibly because excess water occupies or obstructs the pore structure of the biochar, thereby reducing the surface area accessible for sulfur adsorption.
 
-Compared to the result on sulfur loading of CO$_2$-activated biochar samples from previous project work, as shown in Table~\ref{tab:sulfur_loading_co2} and Figure ~\ref{fig:adsoprtion capacity algeria biochar preivous}, the samples from present work exhibited higher adsorption capacity. 
-
 \begin{table}[H]
 \centering
-\caption{Results of the sulfur loading process on the slaughterhouse digestate biochar from Algeria activated with CO$_2$.}
+\caption{Results of the sulfur loading process on the Algeria biochar activated with CO$_2$.}
 \label{tab:sulfur_loading_co2}
 
 \renewcommand{\arraystretch}{1.15}
@@ -491,44 +496,44 @@ digestate\\
 
 \end{table}
 
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=0.9\textwidth,
-    height=0.55\textwidth,
-    xbar,
-    bar width=16pt,
-    symbolic y coords={400,500,600},
-    ytick=data,
-    yticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
-    y dir=reverse,
-    title={Adsorption capacity of Algerian biochar},
-    xlabel={Adsorption capacity in mg/g},
-    ylabel={Pyrolysis temperature in $^\circ$C},
-     xmin=0, xmax=30,
-    xtick distance=10,
-    xmajorgrids=true,
-    grid style={draw=gray!25},
-    tick label style={font=\small},
-    label style={font=\small},
-    nodes near coords={\pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}},
-    every node near coord/.append style={font=\scriptsize, text=black, anchor=west},
-]
-\addplot+[fill=blue!50, draw=blue!50!black]
-  coordinates {(24.428,400) (16.426,500) (12.298,600)};
-\end{axis}
-\end{tikzpicture}
-\caption{Adsorption capacity of Algerian biochar activated using CO$_2$ from previous work.}
-\label{fig:adsoprtion capacity algeria biochar preivous}
-\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\begin{tikzpicture}
+%\begin{axis}[
+%    width=0.9\textwidth,
+%    height=0.55\textwidth,
+%    xbar,
+%    bar width=16pt,
+%    symbolic y coords={400,500,600},
+%    ytick=data,
+%    yticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
+%    y dir=reverse,
+%    title={Adsorption capacity of Algerian biochar},
+%    xlabel={Adsorption capacity in mg/g},
+%    ylabel={Pyrolysis temperature in $^\circ$C},
+%     xmin=0, xmax=30,
+%    xtick distance=10,
+%    xmajorgrids=true,
+%    grid style={draw=gray!25},
+%    tick label style={font=\small},
+%    label style={font=\small},
+%    nodes near coords={\pgfmathprintnumber[fixed,precision=1]{\pgfplotspointmeta}},
+%    every node near coord/.append style={font=\scriptsize, text=black, anchor=west},
+%]
+%\addplot+[fill=blue!50, draw=blue!50!black]
+%  coordinates {(24.428,400) (16.426,500) (12.298,600)};
+%\end{axis}
+%\end{tikzpicture}
+%\caption{Adsorption capacity of Algerian biochar activated using CO$_2$ from previous work.}
+%\label{fig:adsoprtion capacity algeria biochar preivous}
+%\end{figure}
 
-The results in Table~\ref{tab:sulfur_loading_co2} show that the adsorption capacity of CO$_2$-activated biochar decreases as the pyrolysis temperature decreases, with the highest adsorption capacity of approximately 24 mg/g observed for biochar produced by pyrolysis at 400 °C. This suggests that CO$_2$ activation is favored in biochar produced by pyrolysis at lower temperatures.    
-
+The results of the sulfur loading process from previous project work are displayed in Table~\ref{tab:sulfur_loading_co2}. It shows the adsorption capacity of CO$_2$-activated biochar decreases as the pyrolysis temperature decreases, with the highest adsorption capacity of approximately 24 mg/g observed for biochar produced by pyrolysis at 400 °C. This suggests that CO$_2$ activation is favored in biochar produced by pyrolysis at lower temperatures.
 
 \vspace{0.3em}
 
-In addition, the biochar activated with CO$_2$ exhibited lower H$_2$S adsorption capacity compared to biochar activated with water, even though CO$_2$ activation is generally associated with the development of narrow micropores and a high specific surface area. This may be attributed to steam activation, which also produces meso- and macropores that facilitate the transport of elemental sulfur to the adsorption active sites. The fewer formation of oxygen containing functional groups such as phenolic and carbonyl can also contribute to the lower adsorption capacity of the biochar, since elemental sulfur can be adsorbed chemically to the active sites. This suggests that the adsorption capacity may be influenced not only by the surface area but also by the pore size distribution and the oxygen-containing functional groups.  
+Compared to the adsorption capacity CO$_2$-activated biochar samples after sulfur loading process from previous project work, the samples from present work exhibited 2-3 higher adsorption capacity, even though CO$_2$ activation is generally associated with the development of narrow micropores and a high specific surface area. This may be attributed to steam activation, which also produces meso- and macropores that facilitate the transport of elemental sulfur to the adsorption active sites. The fewer formation of oxygen containing functional groups such as phenolic and carbonyl can also contribute to the lower adsorption capacity of the biochar, since elemental sulfur can be adsorbed chemically to the active sites. This suggests that the adsorption capacity may be influenced not only by the surface area but also by the pore size distribution and the oxygen-containing functional groups.
+
 
 \newpage
 \subsection{Characterization of biochar}
@@ -678,7 +683,7 @@ basis.}
     legend style={at={(0.5,1.13)}, anchor=north, legend columns=2, draw=gray!40,
                   /tikz/every even column/.append style={column sep=0.5cm}},
 ]
-\addplot+[fill=gray!45, draw=gray!65] coordinates {(400,37.98) (500,38.43) (600,37.99)};
+\addplot+[fill=teal!55!black, draw=teal!55!black] coordinates {(400,37.98) (500,38.43) (600,37.99)};
 \addlegendentry{As-analyzed}
 \addplot+[fill=red!55!black, draw=red!55!black] coordinates {(400,67.2) (500,75.7) (600,76.0)};
 \addlegendentry{Ash-free}
@@ -725,7 +730,7 @@ Since the oxygen is obtained by difference and thus contains every error in the 
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.8\textwidth, height=0.5\textwidth,
+    width=0.78\textwidth, height=0.48\textwidth,
     ybar, bar width=20pt,
     symbolic x coords={400,500,600},
     xtick=data,
@@ -750,7 +755,44 @@ Since the oxygen is obtained by difference and thus contains every error in the 
 \label{fig:chns-hc-loaded}
 \end{figure}
 
-Now that both chars are set side by side, it can be observed, that once the chars have been steam-activated and sulfur-loaded, that trend is gone. All three sit at 0.129, 0.122, and 0.124, a common floor near 0.12-0.13 across all temperatures. It is safe to assume that the hydrogen is stripped in the 700\,$^{\circ}$C activation step, not during sulfur loading. The size of the change tracks how much hydrogen was there to lose. The 400\,$^{\circ}$C biochar falls the furthest, from 0.481 to 0.129, while the 600\,$^{\circ}$C parent only moves from 0.163 to 0.124. The pyrolysis had already carbonized it close to the same level. All three loaded and activated chars end up below even the 600\,$^{\circ}$C raw biochar number, This means that activation carries aromatization past what pyrolysis alone reaches at 600\,$^{\circ}$C. Another thing to take from this is that the pyrolysis temperature, which matters a lot for the raw biochar, has little influence on the aromaticity of the final activated char once the activation step has leveled it out.
+
+
+Now that in figure~\ref{fig:chns-hc-loaded} both chars are set side by side, it can be observed, that once the chars have been steam-activated and sulfur-loaded, that trend is gone. All three sit at 0.129, 0.122, and 0.124, a common floor near 0.12-0.13 across all temperatures. It is safe to assume that the hydrogen is stripped in the 700\,$^{\circ}$C activation step, not during sulfur loading. The size of the change tracks how much hydrogen was there to lose. The 400\,$^{\circ}$C biochar falls the furthest, from 0.481 to 0.129, while the 600\,$^{\circ}$C parent only moves from 0.163 to 0.124. The pyrolysis had already carbonized it close to the same level. All three loaded and activated chars end up below even the 600\,$^{\circ}$C raw biochar number, This means that activation carries aromatization past what pyrolysis alone reaches at 600\,$^{\circ}$C. Another thing to take from this is that the pyrolysis temperature, which matters a lot for the raw biochar, has little influence on the aromaticity of the final activated char once the activation step has leveled it out.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.78\textwidth, height=0.48\textwidth,
+    ybar, bar width=20pt,
+    symbolic x coords={400,500,600},
+    xtick=data,
+    xticklabels={{400\,$^{\circ}$C},{500\,$^{\circ}$C},{600\,$^{\circ}$C}},
+    xlabel={Parent pyrolysis temperature},
+    ylabel={Atomic N/C ratio},
+    ymin=0, ymax=0.072,
+    ymajorgrids=true, grid style={draw=gray!25},
+    tick label style={font=\small}, label style={font=\small},
+    nodes near coords,
+    every node near coord/.append style={font=\footnotesize, /pgf/number format/.cd, fixed, precision=3},
+    legend style={at={(0.5,1.14)}, anchor=north, legend columns=2, draw=gray!40,
+                  /tikz/every even column/.append style={column sep=0.5cm}},
+]
+\addplot+[fill=red!55!black, draw=red!55!black] coordinates {(400,0.062) (500,0.052) (600,0.037)};
+\addlegendentry{Raw biochar}
+\addplot+[fill=teal!55!black, draw=teal!55!black] coordinates {(400,0.031) (500,0.027) (600,0.024)};
+\addlegendentry{Sulfur-loaded activated char}
+\end{axis}
+\end{tikzpicture}
+\caption{Atomic N/C ratio of the raw biochars and the sulfur-loaded activated chars.}
+\label{fig:chns-nc}
+\end{figure}
+
+Slaughterhouse digestate is protein-rich, and the raw biochars hold a correspondingly large share of nitrogen: 2.74, 2.32, and 1.63\,\% at 400, 500, and 600\,$^{\circ}$C on the as-analyzed basis. From the N/C ratio in figure~\ref{fig:chns-nc}, the nitrogen falls as pyrolysis temperatur rises. Compared to carbon, the nitrogen is seen leaving faster. The N/C ratio drops from 0.062 to 0.037 across the three temperatures, so each step of carbonization removes proportionally more nitrogen than carbon.  Labile nitrogen in amide and amine groups volatilizes while the carbon condenses and stays behind. The same decline of nitrogen with temperature is reported across different papers for digestate biochars \cite{kujawska-2026, tomczyk-2020}
+
+The loaded chars sit lower again, with N/C at 0.031, 0.027 and 0.024, close to half the related biochar at every temperature. Due to activation process, also the same with atomic H/C ratio, where it drove off the residual nitrogen, much as the residual hydrogen. H/C collapsed onto a single floor, but N/C still keeps the down trend of the parent biochar.
+
+
 
 
 
@@ -765,7 +807,7 @@ Now that both chars are set side by side, it can be observed, that once the char
 \newpage
 \subsubsection{BET analysis}
 
-The BET analysis resulted in three parameters of untreated, sulfur-loaded, and activated French biochar samples, such as the SSA, total pore volume and mean pore diameter.  
+The BET analysis resulted in three parameters of pristine, sulfur-loaded, and activated French biochar samples, such as the SSA, total pore volume and mean pore diameter.  
 
 \begin{figure}[htbp]
 \centering
@@ -821,31 +863,37 @@ The BET analysis resulted in three parameters of untreated, sulfur-loaded, and a
     clip=false,
 ]
 \addplot[fill=blue!80!black, draw=none] coordinates {
-    (400C, 0.78)
-    (500C, 1.8)
-    (600C, 31.97)
+    (400C, 0.780)
+    (500C, 1.800)
+    (600C, 31.970)
 };
 \addlegendentry{BC}
 
 \addplot[fill=red!70!black, draw=none] coordinates {
-    (400C, 100.97)
-    (500C, 146.09)
-    (600C, 88.64)
+    (400C, 100.966)
+    (500C, 146.089)
+    (600C, 88.636)
 };
 \addlegendentry{A-BC+S}
 
 \end{axis}
 \end{tikzpicture}
-\caption{Specific surface area of biochars obtained by BET analysis, comparing untreated (BC) and activated, sulfur loaded (A-BC+S) biochar samples produced at different pyrolysis temperatures.}
+\caption{Specific surface area of biochars obtained by BET analysis, comparing pristine (BC) and activated, sulfur loaded (A-BC+S) biochar samples produced at different pyrolysis temperatures.}
 \label{fig:bet_surface_area}
 \end{figure}
 
-As illustrated in Figure~\ref{fig:bet_surface_area}, the specific surface area (SSA) of the untreated biochar samples increased with rising pyrolysis temperature. The untreated biochar sample produced at pyrolysis temperatures of 400 °C and 500 °C exhibited a SSA of 0.78 and 1.8 m²/g, respectively, which align with the range reported in the literature for animal-based biochar. However, the SSA of the untreated biochar sample at 600°C increased significantly to 31.97 m²/g, suggesting that 
+Figure~\ref{fig:...} shows that the specific surface area of the untreated biochar increased with increasing pyrolysis temperature, from 0.78~m$^2$,g$^{-1}$ at 400,$^\circ$C to 1.80~m$^2$,g$^{-1}$ at 500,$^\circ$C and 31.97~m$^2$,g$^{-1}$ at 600,$^\circ$C. This trend is consistent with the effect of pyrolysis temperature discussed in the Literature Review, where increasing temperature promotes devolatilization and the development or exposure of internal pores, thereby increasing the accessible surface area \parencite{tomczyk-2020,ghorbani-2022}.
+
+A substantially larger specific surface area was observed for the activated and sulfur-loaded samples. The values increased to 100.97, 146.09, and 88.64~m$^2$,g$^{-1}$ for the biochars initially pyrolyzed at 400, 500, and 600,$^\circ$C, respectively. The largest final surface area was therefore obtained for the 500,$^\circ$C precursor rather than for the biochar produced at the highest pyrolysis temperature. This suggests that the 500,$^\circ$C biochar provided a particularly favorable precursor structure for subsequent pore development during steam activation. At this temperature, sufficient devolatilization had already taken place to establish an initial pore network, while the carbon structure apparently remained sufficiently reactive for further gasification and pore opening during activation.
+
+In contrast, the 600,$^\circ$C precursor already exhibited the largest surface area before activation but showed a smaller final surface area than the treated 500,$^\circ$C sample. This may indicate that the more strongly carbonized 600,$^\circ$C material was less susceptible to further pore development during steam activation. It is also possible that part of the existing pore structure was widened rather than generating additional high-surface-area pores \parencite{Sajjadi2019}.
+
+%As illustrated in Figure~\ref{fig:bet_surface_area}, the specific surface area (SSA) of the pristine biochar samples increased with rising pyrolysis temperature. The pristine biochar sample produced at pyrolysis temperatures of 400 °C and 500 °C exhibited a SSA of 0.78 and 1.8 m²/g, respectively, which align with the range reported in the literature for animal-based biochar. However, the SSA of the pristine biochar sample at 600°C increased significantly to 31.97 m²/g, suggesting that 
 
 
 
 
-The specific surface area of untreated biochar remains very low at 400°C and 500°C (0.78 and 1.8 m²/g, respectively), indicating a largely non-porous or poorly developed pore structure at these temperatures. This is consistent with the fact that at lower pyrolysis temperatures, the carbonization process is incomplete — volatile matter and tars remain trapped within or block the developing pore network, limiting the accessible surface area. At 600°C, however, BC shows a sharp increase to 31.97 m²/g. This jump reflects more complete pyrolysis: at higher temperatures, greater release of volatile organic compounds occurs, along with more advanced decomposition of the lignocellulosic structure, which opens up internal pores that were previously blocked or undeveloped. This suggests 600°C represents a threshold temperature at which significant pore development begins to occur naturally, even without any activation treatment.
+%The specific surface area of pristine biochar remains very low at 400°C and 500°C (0.78 and 1.8 m²/g, respectively), indicating a largely non-porous or poorly developed pore structure at these temperatures. This is consistent with the fact that at lower pyrolysis temperatures, the carbonization process is incomplete — volatile matter and tars remain trapped within or block the developing pore network, limiting the accessible surface area. At 600°C, however, BC shows a sharp increase to 31.97 m²/g. This jump reflects more complete pyrolysis: at higher temperatures, greater release of volatile organic compounds occurs, along with more advanced decomposition of the lignocellulosic structure, which opens up internal pores that were previously blocked or undeveloped. This suggests 600°C represents a threshold temperature at which significant pore development begins to occur naturally, even without any activation treatment.
 
 
 
@@ -855,39 +903,39 @@ The specific surface area of untreated biochar remains very low at 400°C and 50
 
 
 
-the untreated biochar samples exhibited BET specific surface areas of only 0.78, 1.80, and 31.97~m$^2$,g$^{-1}$ at pyrolysis temperatures of 400, 500, and 600~$^\circ$C, respectively. Thus, increasing the pyrolysis temperature alone already promoted considerable pore development, particularly between 500 and 600~$^\circ$C. This behavior agrees with the mechanism discussed in Section~\ref{subsubsec:Effect of Temperature on Biochar}: increasing temperature promotes devolatilization, whereby volatile compounds are progressively removed from the carbon matrix and previously inaccessible voids and pores become exposed. As a result, a more developed internal pore network, including micropores and mesopores, can form. Since micropores provide a particularly large internal surface per unit mass, their formation and exposure can strongly increase the BET specific surface area \parencite{tomczyk-2020,ghorbani-2022}.
-
-\vspace{0.3em}
-
-The effect of the subsequent treatment was substantially greater than that of pyrolysis alone. After steam activation and sulfur loading, the BET specific surface areas increased to 100.97, 146.09, and 88.64~m$^2$,g$^{-1}$ for the samples initially pyrolyzed at 400, 500, and 600~$^\circ$C, respectively. The corresponding absolute increases relative to the untreated biochars were approximately 100, 144, and 57~m$^2$,g$^{-1}$. These large differences provide strong evidence that the treatment opened a substantial fraction of previously inaccessible internal surface. During steam activation, H$_2$O penetrates into the pore system and partially gasifies the carbon matrix. This process can remove carbon from pore entrances, open blocked micropores, create new micropores, and enlarge existing pores into mesopores. Macropores contribute comparatively little directly to BET surface area because of their large dimensions, but they can serve as transport channels through which the adsorbate reaches smaller mesopores and micropores located deeper within the particle. The large increase in BET surface area therefore indicates the development of a more accessible hierarchical pore structure rather than simply the formation of larger pores \parencite{Sajjadi2019}.
-
-\vspace{0.3em}
-
-The most important finding is that the highest BET surface area was not obtained from the biochar pyrolyzed at the highest temperature. Instead, the 500~$^\circ$C precursor reached the maximum value of 146.09~m$^2$,g$^{-1}$ after treatment. This suggests that the 500~$^\circ$C biochar provided the most favorable initial structure for subsequent pore development. At this temperature, sufficient devolatilization had already occurred to establish an initial pore network, while the carbon matrix apparently retained enough reactivity for steam to further gasify pore walls and open additional micropores. The 500~$^\circ$C precursor can therefore be interpreted as representing a balance between initial carbonization and subsequent activation reactivity under the conditions investigated.
+%the pristine biochar samples exhibited BET specific surface areas of only 0.78, 1.80, and 31.97~m$^2$,g$^{-1}$ at pyrolysis temperatures of 400, 500, and 600~$^\circ$C, respectively. Thus, increasing the pyrolysis temperature alone already promoted considerable pore development, particularly between 500 and 600~$^\circ$C. This behavior agrees with the mechanism discussed in Section~\ref{subsubsec:Effect of Temperature on Biochar}: increasing temperature promotes devolatilization, whereby volatile compounds are progressively removed from the carbon matrix and previously inaccessible voids and pores become exposed. As a result, a more developed internal pore network, including micropores and mesopores, can form. Since micropores provide a particularly large internal surface per unit mass, their formation and exposure can strongly increase the BET specific surface area \parencite{tomczyk-2020,ghorbani-2022}.
 
 \vspace{0.3em}
 
-The 400~$^\circ$C result further supports this interpretation. Although this sample exhibited a relatively high mass loss during steam activation, its final specific surface area reached only 100.97~m$^2$,g$^{-1}$, considerably below the 146.09~m$^2$,g$^{-1}$ obtained from the 500~$^\circ$C precursor. Therefore, activation mass loss cannot be interpreted directly as pore formation. The biochar initially produced at 400~$^\circ$C was less carbonized and consequently still contained a larger proportion of thermally unstable and volatile material. When reheated to the activation temperature of 700~$^\circ$C, part of the measured mass loss was likely associated with further devolatilization rather than selective carbon gasification responsible for creating new internal surface. In other words, a larger amount of material was removed, but this removal was apparently less efficient in generating BET-accessible microporosity.
+%The effect of the subsequent treatment was substantially greater than that of pyrolysis alone. After steam activation and sulfur loading, the BET specific surface areas increased to 100.97, 146.09, and 88.64~m$^2$,g$^{-1}$ for the samples initially pyrolyzed at 400, 500, and 600~$^\circ$C, respectively. The corresponding absolute increases relative to the pristine biochars were approximately 100, 144, and 57~m$^2$,g$^{-1}$. These large differences provide strong evidence that the treatment opened a substantial fraction of previously inaccessible internal surface. During steam activation, H$_2$O penetrates into the pore system and partially gasifies the carbon matrix. This process can remove carbon from pore entrances, open blocked micropores, create new micropores, and enlarge existing pores into mesopores. Macropores contribute comparatively little directly to BET surface area because of their large dimensions, but they can serve as transport channels through which the adsorbate reaches smaller mesopores and micropores located deeper within the particle. The large increase in BET surface area therefore indicates the development of a more accessible hierarchical pore structure rather than simply the formation of larger pores \parencite{Sajjadi2019}.
 
 \vspace{0.3em}
 
-A different behavior is observed for the 600~$^\circ$C precursor. Before activation, this sample already possessed by far the largest BET surface area of the untreated biochars, at 31.97~m$^2$,g$^{-1}$. Nevertheless, after treatment its surface area increased only to 88.64~m$^2$,g$^{-1}$ and remained below those of both the treated 400 and 500~$^\circ$C samples. Together with the lower activation mass loss measured for the 600~$^\circ$C biochar, this indicates that the highly carbonized precursor was less susceptible to additional steam gasification. A substantial portion of its pore structure may already have been developed during pyrolysis, leaving less reactive carbon available for further pore creation during activation. 
+%The most important finding is that the highest BET surface area was not obtained from the biochar pyrolyzed at the highest temperature. Instead, the 500~$^\circ$C precursor reached the maximum value of 146.09~m$^2$,g$^{-1}$ after treatment. This suggests that the 500~$^\circ$C biochar provided the most favorable initial structure for subsequent pore development. At this temperature, sufficient devolatilization had already occurred to establish an initial pore network, while the carbon matrix apparently retained enough reactivity for steam to further gasify pore walls and open additional micropores. The 500~$^\circ$C precursor can therefore be interpreted as representing a balance between initial carbonization and subsequent activation reactivity under the conditions investigated.
 
 \vspace{0.3em}
 
-In addition, pore enlargement offers a plausible explanation for why stronger initial pore development does not necessarily lead to the largest final BET surface area. Steam gasification does not only create new micropores; continued carbon removal can also widen existing micropores into mesopores and, under stronger conversion, mesopores into macropores. While this process may increase total pore volume and improve transport through the particle, it does not necessarily increase specific surface area. A large number of narrow micropores provides considerably more internal surface than the same pore volume distributed among larger mesopores or macropores. Consequently, the decrease from 146.09~m$^2$,g$^{-1}$ for the 500~$^\circ$C precursor to 88.64~m$^2$,g$^{-1}$ for the 600~$^\circ$C precursor may indicate that pore development shifted from the generation of new high-surface-area micropores toward pore widening, or that parts of the pore network became less accessible \parencite{Sajjadi2019}.
+%The 400~$^\circ$C result further supports this interpretation. Although this sample exhibited a relatively high mass loss during steam activation, its final specific surface area reached only 100.97~m$^2$,g$^{-1}$, considerably below the 146.09~m$^2$,g$^{-1}$ obtained from the 500~$^\circ$C precursor. Therefore, activation mass loss cannot be interpreted directly as pore formation. The biochar initially produced at 400~$^\circ$C was less carbonized and consequently still contained a larger proportion of thermally unstable and volatile material. When reheated to the activation temperature of 700~$^\circ$C, part of the measured mass loss was likely associated with further devolatilization rather than selective carbon gasification responsible for creating new internal surface. In other words, a larger amount of material was removed, but this removal was apparently less efficient in generating BET-accessible microporosity.
 
 \vspace{0.3em}
 
-The BET results therefore complement the activation mass-loss results and reveal information that mass loss alone cannot provide. High burn-off does not automatically correspond to high surface area; the decisive factor is how carbon removal modifies the pore network. Among the investigated conditions, the biochar initially pyrolyzed at 500~$^\circ$C produced the highest accessible surface area after treatment and therefore appears to provide the most favorable precursor structure for steam-induced pore development. This condition most likely promoted effective formation and opening of micropores while avoiding excessive pore widening into larger mesopores and macropores.
+%A different behavior is observed for the 600~$^\circ$C precursor. Before activation, this sample already possessed by far the largest BET surface area of the pristine biochars, at 31.97~m$^2$,g$^{-1}$. Nevertheless, after treatment its surface area increased only to 88.64~m$^2$,g$^{-1}$ and remained below those of both the treated 400 and 500~$^\circ$C samples. Together with the lower activation mass loss measured for the 600~$^\circ$C biochar, this indicates that the highly carbonized precursor was less susceptible to additional steam gasification. A substantial portion of its pore structure may already have been developed during pyrolysis, leaving less reactive carbon available for further pore creation during activation. 
 
 \vspace{0.3em}
 
-It should nevertheless be emphasized that the BET measurement was performed on samples that had undergone both steam activation and subsequent sulfur loading. The measured surface areas therefore represent the final pore accessibility after the complete treatment sequence and cannot be attributed quantitatively to steam activation alone. Sulfur deposited during the loading process may occupy or partially block micropores and mesopores, thereby reducing the surface accessible to nitrogen during BET analysis. Consequently, the actual surface area directly after steam activation may have been higher than the final values reported here. Separate BET measurements before and after sulfur loading would be required to distinguish pore generation during activation from subsequent pore occupation by sulfur.
+%In addition, pore enlargement offers a plausible explanation for why stronger initial pore development does not necessarily lead to the largest final BET surface area. Steam gasification does not only create new micropores; continued carbon removal can also widen existing micropores into mesopores and, under stronger conversion, mesopores into macropores. While this process may increase total pore volume and improve transport through the particle, it does not necessarily increase specific surface area. A large number of narrow micropores provides considerably more internal surface than the same pore volume distributed among larger mesopores or macropores. Consequently, the decrease from 146.09~m$^2$,g$^{-1}$ for the 500~$^\circ$C precursor to 88.64~m$^2$,g$^{-1}$ for the 600~$^\circ$C precursor may indicate that pore development shifted from the generation of new high-surface-area micropores toward pore widening, or that parts of the pore network became less accessible \parencite{Sajjadi2019}.
 
 \vspace{0.3em}
 
-Overall, the results demonstrate that the development of specific surface area is governed not simply by the highest pyrolysis temperature or the greatest activation mass loss, but by the interaction between the initial carbon structure and its reactivity during steam activation. Under the experimental conditions used in this work, the biochar pyrolyzed at 500~$^\circ$C showed the most favorable balance, producing the largest BET-accessible internal surface and therefore the greatest apparent potential for adsorption-related applications.
+%The BET results therefore complement the activation mass-loss results and reveal information that mass loss alone cannot provide. High burn-off does not automatically correspond to high surface area; the decisive factor is how carbon removal modifies the pore network. Among the investigated conditions, the biochar initially pyrolyzed at 500~$^\circ$C produced the highest accessible surface area after treatment and therefore appears to provide the most favorable precursor structure for steam-induced pore development. This condition most likely promoted effective formation and opening of micropores while avoiding excessive pore widening into larger mesopores and macropores.
+
+\vspace{0.3em}
+
+%It should nevertheless be emphasized that the BET measurement was performed on samples that had undergone both steam activation and subsequent sulfur loading. The measured surface areas therefore represent the final pore accessibility after the complete treatment sequence and cannot be attributed quantitatively to steam activation alone. Sulfur deposited during the loading process may occupy or partially block micropores and mesopores, thereby reducing the surface accessible to nitrogen during BET analysis. Consequently, the actual surface area directly after steam activation may have been higher than the final values reported here. Separate BET measurements before and after sulfur loading would be required to distinguish pore generation during activation from subsequent pore occupation by sulfur.
+
+\vspace{0.3em}
+
+%Overall, the results demonstrate that the development of specific surface area is governed not simply by the highest pyrolysis temperature or the greatest activation mass loss, but by the interaction between the initial carbon structure and its reactivity during steam activation. Under the experimental conditions used in this work, the biochar pyrolyzed at 500~$^\circ$C showed the most favorable balance, producing the largest BET-accessible internal surface and therefore the greatest apparent potential for adsorption-related applications.
 
 \begin{figure}[H]
 \centering
@@ -961,6 +1009,12 @@ Overall, the results demonstrate that the development of specific surface area i
 \caption{Total pore volume of the French biochar samples determined through BET analysis.}
 \end{figure}
 
+Figure~\ref{fig:...} shows a similar tendency for the total pore volume. For the untreated biochars, the pore volume increased from 0.003~cm$^3$,g$^{-1}$ at 400,$^\circ$C to 0.005~cm$^3$,g$^{-1}$ at 500,$^\circ$C and 0.028~cm$^3$,g$^{-1}$ at 600,$^\circ$C. This increase supports the interpretation that higher pyrolysis temperatures promote the development and exposure of the internal pore structure through progressive devolatilization.
+
+After activation and sulfur loading, the pore volumes increased markedly to 0.071, 0.095, and 0.068~cm$^3$,g$^{-1}$ for the 400, 500, and 600,$^\circ$C precursors, respectively. As observed for the specific surface area, the highest value was obtained for the 500,$^\circ$C sample. The agreement between the maximum pore volume and maximum surface area suggests that this precursor developed the most extensive accessible pore network under the investigated treatment conditions.
+
+The lower final pore volume of the 600,$^\circ$C sample, despite its relatively high initial pore volume, further indicates that the response to steam activation depended on the degree of carbonization of the precursor. The more strongly carbonized structure may have been less reactive toward additional gasification, while pore widening or subsequent sulfur deposition may also have influenced the final pore volume accessible to nitrogen.
+
 \vspace{0.3em}
 
 \begin{figure}[H]
@@ -1032,6 +1086,19 @@ Overall, the results demonstrate that the development of specific surface area i
 
 \end{axis}
 \end{tikzpicture}
-\caption{Particle size of the French biochar samples determined by BET analysis.}
+\caption{Mean pore diameter of the French biochar samples determined by BET analysis.}
 \end{figure}
 
+Figure~\ref{fig:...} shows that the mean pore diameter of the untreated biochar decreased strongly with increasing pyrolysis temperature, from 17.814~nm at 400,$^\circ$C to 10.933~nm at 500,$^\circ$C and 3.508~nm at 600,$^\circ$C. At the same time, both the specific surface area and pore volume increased. This indicates that increasing pyrolysis temperature did not simply create larger pores, but instead produced a finer and more extensively developed internal pore structure with a greater surface-to-volume ratio.
+
+Following activation and sulfur loading, the mean pore diameters were considerably smaller and much closer to one another, with values of 2.804, 2.603, and 3.076~nm for the 400, 500, and 600,$^\circ$C precursors, respectively. The 500,$^\circ$C sample therefore combined the smallest mean pore diameter with the highest specific surface area and the largest pore volume. This combination suggests the development of a particularly fine and extensive accessible pore network.
+
+However, the mean pore diameter should be interpreted cautiously. In the present BET analysis, it represents an equivalent average pore diameter derived from the relationship between pore volume and surface area rather than a complete pore-size distribution. Therefore, these values do not demonstrate that all pores have the reported diameter, nor do they allow the exact proportions of micropores and mesopores to be determined.
+
+
+
+Considered together, the three BET parameters show that pyrolysis temperature and subsequent treatment strongly influenced the pore structure of the French biochars. Increasing pyrolysis temperature alone resulted in higher specific surface area and pore volume, while the mean pore diameter decreased. This indicates that progressive devolatilization during pyrolysis exposed and developed a finer internal pore network rather than merely generating larger voids.
+
+The subsequent treatment produced an even stronger modification of the pore structure. Among the investigated precursors, the biochar initially pyrolyzed at 500,$^\circ$C showed the most favorable final BET characteristics, combining the highest specific surface area of 146.09~m$^2$,g$^{-1}$ and the highest pore volume of 0.095~cm$^3$,g$^{-1}$ with the smallest mean pore diameter of 2.603~nm. This suggests that 500,$^\circ$C provided a favorable balance between sufficient initial carbonization and remaining reactivity toward steam activation. In comparison, the 400,$^\circ$C precursor was less carbonized and likely underwent a larger contribution from additional devolatilization during activation, whereas the 600,$^\circ$C precursor was already more strongly carbonized and therefore less susceptible to further pore development.
+
+Nevertheless, the final BET values represent the combined effects of steam activation and subsequent sulfur loading. Since BET analysis was performed after sulfur loading, the increase in surface area and pore volume cannot be attributed quantitatively to steam activation alone. Sulfur deposited within the pore system may also have occupied part of the available pore volume or partially blocked pore entrances, thereby influencing the surface subsequently accessible to nitrogen during BET measurement. A separate BET analysis directly after activation and before sulfur loading would therefore be required to distinguish the effect of activation from the effect of sulfur deposition.
