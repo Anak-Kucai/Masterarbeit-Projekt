@@ -247,7 +247,7 @@ Steam tends toward a more extensive distribution of micropores and mesopores and
 
 \newpage
 \subsection{Sulfur loading}
-\label{subsec:results-sulfur}
+
 The mass gain of each sample after the sulfur loading process is calculated from the difference
 between the mass before and after the sulfur loading. The adsorption capacity of each sample is then calculated using Equation~\ref{Equation sulfur loading} and summarized together with the collected data in Table~\ref{tab:sulfur_loading}. 
 
@@ -648,7 +648,7 @@ basis.}
 \cmidrule(lr){3-6}
 & & \textbf{C} & \textbf{H} & \textbf{N} & \textbf{S} & & & \\
 \midrule
-\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Pristine\\biochar\end{tabular}}
+\multirow{3}{*}{Biochar}
 & 400 & 37.98 & 1.534 & 2.744 & 1.486 & 43.5 & 12.76 & 100.0 \\
 & 500 & 38.43 & 0.814 & 2.320 & 1.629 & 49.2 & 7.61  & 100.0 \\
 & 600 & 37.99 & 0.521 & 1.626 & 1.584 & 50.0 & 8.28  & 100.0 \\
@@ -668,7 +668,7 @@ basis.}
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.89\textwidth, height=0.58\textwidth,
+    width=0.82\textwidth, height=0.5\textwidth,
     title={Carbon content of the pristine biochars},
     title style={font=\normalsize, yshift=2pt},
     ybar, bar width=20pt,
@@ -704,9 +704,9 @@ Looking by the as-analyzed number, the loaded chars visibly carry less carbon th
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.95\textwidth, height=0.7\textwidth,
+    width=0.8\textwidth, height=0.55\textwidth,
     title={H/C vs O/C : pristine biochar},
-    title style={font=\normalsize, yshift=2pt},
+    title style={font=\small},
     xlabel={Atomic O/C ratio}, ylabel={Atomic H/C ratio},
     xmin=0, xmax=0.42, ymin=0, ymax=0.62,
     grid=both, grid style={draw=gray!20},
@@ -735,9 +735,9 @@ Since the oxygen is obtained by difference and thus contains every error in the 
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.85\textwidth, height=0.6\textwidth,
+    width=0.78\textwidth, height=0.48\textwidth,
     title={H/C Ratio of the Biochars},
-    title style={font=\normalsize, yshift=2pt},
+    title style={font=\small},
     ybar, bar width=20pt,
     symbolic x coords={400,500,600},
     xtick=data,
@@ -753,25 +753,25 @@ Since the oxygen is obtained by difference and thus contains every error in the 
                   /tikz/every even column/.append style={column sep=0.5cm}},
 ]
 \addplot+[fill=red!55!black, draw=red!55!black] coordinates {(400,0.481) (500,0.252) (600,0.163)};
-\addlegendentry{Pristine Biochar}
+\addlegendentry{pristine biochar}
 \addplot+[fill=teal!55!black, draw=teal!55!black] coordinates {(400,0.129) (500,0.122) (600,0.124)};
 \addlegendentry{Sulfur-loaded activated char}
 \end{axis}
 \end{tikzpicture}
-\caption{Hydrogen content of the pristine Biochars and the sulfur-loaded activated chars.}
+\caption{Hydrogen content of the pristine biochars and the sulfur-loaded activated chars.}
 \label{fig:chns-hc-loaded}
 \end{figure}
 
 
 
 
-Now that in figure~\ref{fig:chns-hc-loaded} both chars are set side by side, it can be observed, that once the chars have been steam-activated and sulfur-loaded, that trend is gone. All three sit at 0.129, 0.122, and 0.124, a common floor near 0.12-0.13 across all temperatures. It is safe to assume that the hydrogen is stripped in the 700\,$^{\circ}$C activation step, not during sulfur loading. The size of the change tracks how much hydrogen was there to lose. The 400\,$^{\circ}$C biochar falls the furthest, from 0.481 to 0.129, while the 600\,$^{\circ}$C parent only moves from 0.163 to 0.124. The pyrolysis had already carbonized it close to the same level. All three loaded and activated chars end up below even the 600\,$^{\circ}$C pristine Biochar number, This means that activation carries aromatization past what pyrolysis alone reaches at 600\,$^{\circ}$C. Another thing to take from this is that the pyrolysis temperature, which matters a lot for the pristine Biochar, has little influence on the aromaticity of the final activated char once the activation step has leveled it out.
+Now that in figure~\ref{fig:chns-hc-loaded} both chars are set side by side, it can be observed, that once the chars have been steam-activated and sulfur-loaded, that trend is gone. All three sit at 0.129, 0.122, and 0.124, a common floor near 0.12-0.13 across all temperatures. It is safe to assume that the hydrogen is stripped in the 700\,$^{\circ}$C activation step, not during sulfur loading. The size of the change tracks how much hydrogen was there to lose. The 400\,$^{\circ}$C biochar falls the furthest, from 0.481 to 0.129, while the 600\,$^{\circ}$C parent only moves from 0.163 to 0.124. The pyrolysis had already carbonized it close to the same level. All three loaded and activated chars end up below even the 600\,$^{\circ}$C pristine biochar number, This means that activation carries aromatization past what pyrolysis alone reaches at 600\,$^{\circ}$C. Another thing to take from this is that the pyrolysis temperature, which matters a lot for the pristine biochar, has little influence on the aromaticity of the final activated char once the activation step has leveled it out.
 \clearpage
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.85\textwidth, height=0.6\textwidth,
+    width=0.78\textwidth, height=0.48\textwidth,
     title={N/C Ratio of the Biochars},
     title style={font=\small},
     ybar, bar width=20pt,
@@ -789,17 +789,17 @@ Now that in figure~\ref{fig:chns-hc-loaded} both chars are set side by side, it 
                   /tikz/every even column/.append style={column sep=0.5cm}},
 ]
 \addplot+[fill=red!55!black, draw=red!55!black] coordinates {(400,0.062) (500,0.052) (600,0.037)};
-\addlegendentry{Pristine Biochar}
+\addlegendentry{pristine biochar}
 \addplot+[fill=teal!55!black, draw=teal!55!black] coordinates {(400,0.031) (500,0.027) (600,0.024)};
 \addlegendentry{Sulfur-loaded activated char}
 \end{axis}
 \end{tikzpicture}
-\caption{Nitrogen content of the pristine Biochars and the sulfur-loaded activated chars.}
+\caption{Nitrogen content of the pristine biochars and the sulfur-loaded activated chars.}
 \label{fig:chns-nc}
 \end{figure}
 
 
-Slaughterhouse digestate is protein-rich, and the pristine Biochars hold a correspondingly large share of nitrogen: 2.74, 2.32, and 1.63\,\% at 400, 500, and 600\,$^{\circ}$C on an as-analyzed basis. From the N/C ratio in figure~\ref{fig:chns-nc}, nitrogen decreases as the pyrolysis temperature rises. Compared to carbon, nitrogen is observed to leave faster. The N/C ratio drops from 0.062 to 0.037 across the three temperatures, indicating that each step of carbonization removes proportionally more nitrogen than carbon.  Labile nitrogen in amide and amine groups volatilizes while the carbon condenses and remains behind. The same decline in nitrogen with temperature is reported across different papers for digestate biochars \cite{kujawska-2026, tomczyk-2020}
+Slaughterhouse digestate is protein-rich, and the pristine biochars hold a correspondingly large share of nitrogen: 2.74, 2.32, and 1.63\,\% at 400, 500, and 600\,$^{\circ}$C on the as-analyzed basis. From the N/C ratio in figure~\ref{fig:chns-nc}, nitrogen decreases as the pyrolysis temperature rises. Compared to carbon, nitrogen is seen leaving faster. The N/C ratio drops from 0.062 to 0.037 across the three temperatures, indicating that each step of carbonization removes proportionally more nitrogen than carbon.  Labile nitrogen in amide and amine groups volatilizes while the carbon condenses and remains behind. The same decline in nitrogen with temperature is reported across different papers for digestate biochars \cite{kujawska-2026, tomczyk-2020}
  
 The loaded chars sit lower again, with N/C values at 0.031, 0.027, and 0.024, close to half of the related biochar at every temperature. Due to the activation process, which is the same as the atomic H/C ratio, it drove off the residual nitrogen, much like the residual hydrogen. H/C collapsed onto a single floor, but N/C still maintains the downward trend of the parent biochar.
 
@@ -808,9 +808,7 @@ The loaded chars sit lower again, with N/C values at 0.031, 0.027, and 0.024, cl
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    width=0.85\textwidth, height=0.6\textwidth,
-    title={Sulfur content of the Biochars},
-    title style={font=\normalsize, yshift=2pt},
+    width=0.8\textwidth, height=0.5\textwidth,
     ybar, bar width=20pt,
     symbolic x coords={400,500,600},
     xtick=data,
@@ -822,25 +820,30 @@ The loaded chars sit lower again, with N/C values at 0.031, 0.027, and 0.024, cl
     tick label style={font=\small}, label style={font=\small},
     nodes near coords,
     every node near coord/.append style={font=\footnotesize, /pgf/number format/.cd, fixed, precision=2},
-    legend style={at={(0.5,-0.24)}, anchor=north, legend columns=2, draw=gray!40,
+    legend style={at={(0.5,1.14)}, anchor=north, legend columns=2, draw=gray!40,
                   /tikz/every even column/.append style={column sep=0.5cm}},
 ]
 \addplot+[fill=red!55!black, draw=red!55!black] coordinates {(400,1.486) (500,1.629) (600,1.584)};
-\addlegendentry{Pristine Biochar}
+\addlegendentry{Pristine biochar}
 \addplot+[fill=teal!55!black, draw=teal!55!black] coordinates {(400,6.804) (500,5.290) (600,5.217)};
 \addlegendentry{Sulfur-loaded activated char}
 \end{axis}
 \end{tikzpicture}
-\caption{Sulfur content of the pristine Biochars and the sulfur-loaded activated chars.}
+\caption{Sulfur content of the pristine biochars and the sulfur-loaded activated chars.}
 \label{fig:chns-s}
 \end{figure}
 
-The data shown by the figure~\ref{fig:chns-s} can be compared against the gravimetric loading capacities in Section~\ref{subsec:results-sulfur}. The results from table~\ref{tab:sulfur_loading} were obtained independently from the mass each sample gained during loading. Treating the loaded sulfur as a deposited mass and taking the char's own sulfur as the baseline, the deposited-sulfur capacity per gram, $q_\mathrm{S}$, follows from the measured loaded fraction $w_\mathrm{S,loaded}$ and the baseline $w_\mathrm{S,base}$:
-\begin{equation}
-q_\mathrm{S} = \frac{w_\mathrm{S,loaded} - w_\mathrm{S,base}}{1 - w_\mathrm{S,loaded}}
-\label{eq:s-capacity}
-\end{equation}
-With $w_\mathrm{S,base}\approx1.5\,\%$, Equation~\ref{eq:s-capacity} gives 57, 40 and 39\,mg\,g$^{-1}$ at 400, 500, and 600\,$^{\circ}$C, against the gravimetric 41, 36, and 44\,mg\,g$^{-1}$. These two measures tell a broadly consistent story but do not match point for point. The 400\,$^{\circ}$C parent is widely agreed to be a strong loader. They diverge most at 600\,$^{\circ}$C, where the mass gain ranks highest (44\,mg\,g$^{-1}$) but here, the sulfur analysis ranks among the lowest (5.2\,\%). The major reason for this difference is that the two methods count different things. The mass gain records the net change (or decrease) in weight, which does not take some variables into account, like moisture, oxidation, and handling alongside the deposited sulfur. CHNS on the other side responds to sulfur alone. The 400\,$^{\circ}$C number makes this plain, since the CHNS-derived 57\,mg\,g$^{-1}$ exceeds the 41\,mg\,g$^{-1}$ actually weighed in, this can only mean that the char shed some mass even as sulfur built up. At 600\,$^{\circ}$C the reverse also happens, the weight gain higher than the sulfur-content number.
+The data shown by the figure~\ref{fig:chns-s} can be compared against the gravimetric loading capacities in Section~\ref{subsec:results-sulfur}. The results from table~\ref{tab:sulfur_loading} were obtained independently from the mass each sample gained during loading. These two measures tell a broadly consistent story but do not match point for point. The 400\,$^{\circ}$C parent is widely agreed as a strong loader. They diverge most at 600\,$^{\circ}$C, which the mass gain ranks highest (44\,mg\,g$^{-1}$) but here, the sulfur analysis ranks among the lowest (5.2\,\%). The major reason for this difference is that the two methods count different things. The mass gain records the net
+
+
+%These sulfur contents can be set against the gravimetric loading capacities of Section~\ref{subsec:results-sulfur}, obtained independently from the mass each sample gained during loading. The two measures tell a broadly consistent story but do not match point for point. Both mark the 400\,$^{\circ}$C parent as a strong loader, and both place loading in the same tens-of-mg-per-gram range. They diverge most at 600\,$^{\circ}$C, which the mass gain ranks highest (44\,mg\,g$^{-1}$) but the sulfur analysis ranks among the lowest (5.2\,\%). The reason is that the two methods count different things: the mass gain records the net change in weight, folding in moisture, oxidation and handling alongside the deposited sulfur, whereas CHNS responds to sulfur alone. Expressing the CHNS sulfur as a deposited mass makes the point sharply---about 57\,mg\,g$^{-1}$ at 400\,$^{\circ}$C, more than the 41\,mg\,g$^{-1}$ actually weighed in, which can only mean the char shed some mass even as sulfur built up; at 600\,$^{\circ}$C the reverse holds, with the weight gain outrunning the sulfur. The elemental analysis is therefore the more direct measure of how much sulfur is present, while the gravimetric capacity better reflects the net operational mass change during loading.
+
+
+
+
+
+
+
 
 
 
@@ -922,14 +925,21 @@ The BET analysis of pristine as well as sulfur-loaded and activated French bioch
 \label{fig:bet_surface_area}
 \end{figure}
 
-Figure~\ref{fig:bet_surface_area} shows specifically the SSA of both pristine and activated, sulfur loaded French biochar samples measured during the BET-analysis. Pristine biochar samples exhibited an increase in SSA with increasing pyrolysis temperature. The lowest SSA values for the pristine biochar samples were measured at a pyrolysis temperature of 400 °C at around 0.78 m²/g and at 500°C at around 1.8 m²/g, which is consistent with the data reported in the literature. At a pyrolysis temperature of 600°C, the SSA reached the the highest number at 31.97 m²/g. This may be attributed to the promotion of de-volatilization and the development of internal pores and porous structure with increasing temperature, thereby increasing the accessible surface area \parencite{tomczyk-2020,ghorbani-2022}. 
+Figure~\ref{fig:bet_surface_area} shows specifically the SSA of both pristine and activated, sulfur loaded French biochar samples. Pristine biochar samples exhibited an increase in SSA with increasing pyrolysis temperature. The lowest SSA values for the pristine biochar samples were measured at a pyrolysis temperature of 400 °C at around 0.78 m²/g and at 500°C at around 1.8 m²/g, which is consistent with the data reported in the literature. At a pyrolysis temperature of 600°C, the SSA reached the the highest number at 31.97 m²/g. This may be attributed to the promotion of de-volatilization and the development of internal pores and porous structure with increasing temperature, thereby increasing the accessible surface area \parencite{tomczyk-2020,ghorbani-2022}. 
 
 \vspace{0.3em}
 
-Compared to pristine biochar samples, activated, sulfur-loaded biochar samples exhibited a substantially larger specific surface area. The SSA increased significantly to 100.97 m²/g at 400 °C and to 146.09 m²/g at 500 °C, suggesting that more micropores were successfully unblocked and developed during steam activation. Furthermore, this suggests that the biochar produced at a pyrolysis temperature of 500°C provided a particularly favorable carbon structure for subsequent pore formation, especially micropores, during steam activation, since the highest SSA was observed at 500°C. In contrast to the SSA of pristine biochar samples, the SSA observed at 600°C was the lowest among the SSA of other activated, sulfur-loaded biochar samples. This may indicate that carbon structure of biochar produced at pyrolysis temperature of 600°C was strongly and less reactive for further gasification and pore development during the steam activation. 
+Compared to pristine biochar samples, activated, sulfur-loaded biochar samples exhibited a substantially larger specific surface area. The SSA jumped significantly to 100.97 m²/g at 400°C and to 146.09 m²/²/
 
 
+g at 500°C, indicating that 
 
+
+The values increased to 100.97, 146.09, and 88.64~m$^2$,g$^{-1}$ for the biochars initially pyrolyzed at 400, 500, and 600,$^\circ$C, respectively. The largest final surface area was therefore obtained for the 500,$^\circ$C precursor rather than for the biochar produced at the highest pyrolysis temperature. This suggests that the 500,$^\circ$C biochar provided a particularly favorable precursor structure for subsequent pore development during steam activation. At this temperature, sufficient devolatilization had already taken place to establish an initial pore network, while the carbon structure apparently remained sufficiently reactive for further gasification and pore opening during activation.
+
+\vspace{0.3em}
+
+In contrast, the 600,$^\circ$C precursor already exhibited the largest surface area before activation but showed a smaller final surface area than the treated 500,$^\circ$C sample. This may indicate that the more strongly carbonized 600,$^\circ$C material was less susceptible to further pore development during steam activation. It is also possible that part of the existing pore structure was widened rather than generating additional high-surface-area pores \parencite{Sajjadi2019}.
 
 %As illustrated in Figure~\ref{fig:bet_surface_area}, the specific surface area (SSA) of the pristine biochar samples increased with rising pyrolysis temperature. The pristine biochar sample produced at pyrolysis temperatures of 400 °C and 500 °C exhibited a SSA of 0.78 and 1.8 m²/g, respectively, which align with the range reported in the literature for animal-based biochar. However, the SSA of the pristine biochar sample at 600°C increased significantly to 31.97 m²/g, suggesting that 
 
@@ -948,35 +958,35 @@ Compared to pristine biochar samples, activated, sulfur-loaded biochar samples e
 
 %the pristine biochar samples exhibited BET specific surface areas of only 0.78, 1.80, and 31.97~m$^2$,g$^{-1}$ at pyrolysis temperatures of 400, 500, and 600~$^\circ$C, respectively. Thus, increasing the pyrolysis temperature alone already promoted considerable pore development, particularly between 500 and 600~$^\circ$C. This behavior agrees with the mechanism discussed in Section~\ref{subsubsec:Effect of Temperature on Biochar}: increasing temperature promotes devolatilization, whereby volatile compounds are progressively removed from the carbon matrix and previously inaccessible voids and pores become exposed. As a result, a more developed internal pore network, including micropores and mesopores, can form. Since micropores provide a particularly large internal surface per unit mass, their formation and exposure can strongly increase the BET specific surface area \parencite{tomczyk-2020,ghorbani-2022}.
 
-
+\vspace{0.3em}
 
 %The effect of the subsequent treatment was substantially greater than that of pyrolysis alone. After steam activation and sulfur loading, the BET specific surface areas increased to 100.97, 146.09, and 88.64~m$^2$,g$^{-1}$ for the samples initially pyrolyzed at 400, 500, and 600~$^\circ$C, respectively. The corresponding absolute increases relative to the pristine biochars were approximately 100, 144, and 57~m$^2$,g$^{-1}$. These large differences provide strong evidence that the treatment opened a substantial fraction of previously inaccessible internal surface. During steam activation, H$_2$O penetrates into the pore system and partially gasifies the carbon matrix. This process can remove carbon from pore entrances, open blocked micropores, create new micropores, and enlarge existing pores into mesopores. Macropores contribute comparatively little directly to BET surface area because of their large dimensions, but they can serve as transport channels through which the adsorbate reaches smaller mesopores and micropores located deeper within the particle. The large increase in BET surface area therefore indicates the development of a more accessible hierarchical pore structure rather than simply the formation of larger pores \parencite{Sajjadi2019}.
 
-
+\vspace{0.3em}
 
 %The most important finding is that the highest BET surface area was not obtained from the biochar pyrolyzed at the highest temperature. Instead, the 500~$^\circ$C precursor reached the maximum value of 146.09~m$^2$,g$^{-1}$ after treatment. This suggests that the 500~$^\circ$C biochar provided the most favorable initial structure for subsequent pore development. At this temperature, sufficient devolatilization had already occurred to establish an initial pore network, while the carbon matrix apparently retained enough reactivity for steam to further gasify pore walls and open additional micropores. The 500~$^\circ$C precursor can therefore be interpreted as representing a balance between initial carbonization and subsequent activation reactivity under the conditions investigated.
 
-
+\vspace{0.3em}
 
 %The 400~$^\circ$C result further supports this interpretation. Although this sample exhibited a relatively high mass loss during steam activation, its final specific surface area reached only 100.97~m$^2$,g$^{-1}$, considerably below the 146.09~m$^2$,g$^{-1}$ obtained from the 500~$^\circ$C precursor. Therefore, activation mass loss cannot be interpreted directly as pore formation. The biochar initially produced at 400~$^\circ$C was less carbonized and consequently still contained a larger proportion of thermally unstable and volatile material. When reheated to the activation temperature of 700~$^\circ$C, part of the measured mass loss was likely associated with further devolatilization rather than selective carbon gasification responsible for creating new internal surface. In other words, a larger amount of material was removed, but this removal was apparently less efficient in generating BET-accessible microporosity.
 
-
+\vspace{0.3em}
 
 %A different behavior is observed for the 600~$^\circ$C precursor. Before activation, this sample already possessed by far the largest BET surface area of the pristine biochars, at 31.97~m$^2$,g$^{-1}$. Nevertheless, after treatment its surface area increased only to 88.64~m$^2$,g$^{-1}$ and remained below those of both the treated 400 and 500~$^\circ$C samples. Together with the lower activation mass loss measured for the 600~$^\circ$C biochar, this indicates that the highly carbonized precursor was less susceptible to additional steam gasification. A substantial portion of its pore structure may already have been developed during pyrolysis, leaving less reactive carbon available for further pore creation during activation. 
 
-
+\vspace{0.3em}
 
 %In addition, pore enlargement offers a plausible explanation for why stronger initial pore development does not necessarily lead to the largest final BET surface area. Steam gasification does not only create new micropores; continued carbon removal can also widen existing micropores into mesopores and, under stronger conversion, mesopores into macropores. While this process may increase total pore volume and improve transport through the particle, it does not necessarily increase specific surface area. A large number of narrow micropores provides considerably more internal surface than the same pore volume distributed among larger mesopores or macropores. Consequently, the decrease from 146.09~m$^2$,g$^{-1}$ for the 500~$^\circ$C precursor to 88.64~m$^2$,g$^{-1}$ for the 600~$^\circ$C precursor may indicate that pore development shifted from the generation of new high-surface-area micropores toward pore widening, or that parts of the pore network became less accessible \parencite{Sajjadi2019}.
 
-
+\vspace{0.3em}
 
 %The BET results therefore complement the activation mass-loss results and reveal information that mass loss alone cannot provide. High burn-off does not automatically correspond to high surface area; the decisive factor is how carbon removal modifies the pore network. Among the investigated conditions, the biochar initially pyrolyzed at 500~$^\circ$C produced the highest accessible surface area after treatment and therefore appears to provide the most favorable precursor structure for steam-induced pore development. This condition most likely promoted effective formation and opening of micropores while avoiding excessive pore widening into larger mesopores and macropores.
 
-
+\vspace{0.3em}
 
 %It should nevertheless be emphasized that the BET measurement was performed on samples that had undergone both steam activation and subsequent sulfur loading. The measured surface areas therefore represent the final pore accessibility after the complete treatment sequence and cannot be attributed quantitatively to steam activation alone. Sulfur deposited during the loading process may occupy or partially block micropores and mesopores, thereby reducing the surface accessible to nitrogen during BET analysis. Consequently, the actual surface area directly after steam activation may have been higher than the final values reported here. Separate BET measurements before and after sulfur loading would be required to distinguish pore generation during activation from subsequent pore occupation by sulfur.
 
-
+\vspace{0.3em}
 
 %Overall, the results demonstrate that the development of specific surface area is governed not simply by the highest pyrolysis temperature or the greatest activation mass loss, but by the interaction between the initial carbon structure and its reactivity during steam activation. Under the experimental conditions used in this work, the biochar pyrolyzed at 500~$^\circ$C showed the most favorable balance, producing the largest BET-accessible internal surface and therefore the greatest apparent potential for adsorption-related applications.
 
@@ -992,8 +1002,6 @@ Compared to pristine biochar samples, activated, sulfur-loaded biochar samples e
     bar width=22pt,
     ymin=0,
     ymax=0.1,
-    ytick={0,0.02,0.04,0.06,0.08,0.1},
-    yticklabels={0,0.02,0.04,0.06,0.08,0.1},
     ylabel={Total pore volume in cm$^3$/g},
     xlabel={Pyrolysis temperature},
     symbolic x coords={400C, 500C, 600C},
@@ -1040,26 +1048,21 @@ Compared to pristine biochar samples, activated, sulfur-loaded biochar samples e
     (500C, 0.005)
     (600C, 0.028)
 };
-\addlegendentry{Pristine biochar}
+\addlegendentry{BC}
 
 \addplot[fill=red!70!black, draw=none] coordinates {
     (400C, 0.071)
     (500C, 0.095)
     (600C, 0.068)
 };
-\addlegendentry{Activated, sulfur loaded biochar}
+\addlegendentry{A-BC+S}
 
 \end{axis}
 \end{tikzpicture}
-\caption{Total pore volume of French pristine and activated, sulfur loaded biochar samples across different pyrolysis temperatures.}
-\label{fig: total pore volumen}
+\caption{Total pore volume of the French biochar samples determined through BET analysis.}
 \end{figure}
 
-Figure~\ref{fig: total pore volumen} shows the total pore volumen of both pristine and activated, sulfur loaded French biochar samples measured during the BET-analysis. 
-
-
-
-s a similar tendency for the total pore volume. For the untreated biochars, the pore volume increased from 0.003~cm$^3$,g$^{-1}$ at 400,$^\circ$C to 0.005~cm$^3$,g$^{-1}$ at 500,$^\circ$C and 0.028~cm$^3$,g$^{-1}$ at 600,$^\circ$C. This increase supports the interpretation that higher pyrolysis temperatures promote the development and exposure of the internal pore structure through progressive devolatilization.
+Figure~\ref{fig:...} shows a similar tendency for the total pore volume. For the untreated biochars, the pore volume increased from 0.003~cm$^3$,g$^{-1}$ at 400,$^\circ$C to 0.005~cm$^3$,g$^{-1}$ at 500,$^\circ$C and 0.028~cm$^3$,g$^{-1}$ at 600,$^\circ$C. This increase supports the interpretation that higher pyrolysis temperatures promote the development and exposure of the internal pore structure through progressive devolatilization.
 
 After activation and sulfur loading, the pore volumes increased markedly to 0.071, 0.095, and 0.068~cm$^3$,g$^{-1}$ for the 400, 500, and 600,$^\circ$C precursors, respectively. As observed for the specific surface area, the highest value was obtained for the 500,$^\circ$C sample. The agreement between the maximum pore volume and maximum surface area suggests that this precursor developed the most extensive accessible pore network under the investigated treatment conditions.
 
