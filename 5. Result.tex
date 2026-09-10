@@ -5,6 +5,7 @@
 
 
 \subsection{Pyrolysis for Biochar Production}
+\setresponsible{Surya Salim}
 \label{subsec:results-pyrolysis}
 
 The amount of biochar produced during pyrolysis, as well as the amount of digestate used in the process, is listed in Table~\ref{tab:yield_summary}. The biochar yield from the pyrolysis is calculated using Equation~\ref{eq:biochar yield} and documented together in Table~\ref{tab:yield_summary}. 
@@ -127,12 +128,8 @@ bio-waste material.
 \newpage
 
 \subsection{\texorpdfstring{H$_2$O}{H2O}-Activation}
+\setresponsible{Surya Salim}
 \label{subsec:results-activation}
-%The steam activation was carried out at 700\,$^{\circ}$C on the French biochar samples. There are in total 3 samples - 400, 500, and 600\,$^{\circ}$C. The result that will be reported and discussed here is the mass loss of the biochar before and after the activation treatment.
-
-\vspace{0.3em}
-
-%The mass loss was evaluated in two ways. The wet basis compares the mass of the biochar directly before and after activation. The other mass loss also takes into account the condensation of the water from the post activation sample. This moisture-corrected value therefore reflects the mass actually removed from the char and is used here as the primary measure. 
 
 \begin{figure}[ht]
 \centering
@@ -182,8 +179,6 @@ From this behavior, one can interpret that a higher pyrolysis temperature yields
 
 As mentioned in section \ref{Physical Activation of Biochar}, steam gasification is the pore-forming reaction, and it depends heavily on a larger steam supply and temperatures above 700\,$^{\circ}$C used here. The 0.5\,mL\,g$^{-1}$ charge may or may not reach an greater carbon conversion despite its smaller total mass loss. Mass loss alone cannot fully depict the two contributions, and the point is left to the BET Results. The 0.5\,mL\,g$^{-1}$ dose was retained as the standard for its more reliable wetting of the char and lower mass loss.
 
-%MASUKKIN CO2-Activation table terus compare lagi dan interpret lagi dengan ref section 2.1 Steam activation compared with CO2 Activation%
-
 \begin{table}[ht]
 \centering
 \caption{CO$_2$ activation results for the three digestate-derived biochars of
@@ -230,8 +225,6 @@ Feedstock & Pyrolysis temp.\ ($^{\circ}$C) & Residual char (g) & Mass loss (\%) 
 \addplot[color=green!45!black, mark=square*, thick, dashed]
   coordinates {(400,15) (500,7) (600,2)};
 \addlegendentry{CO$_2$, slaughterhouse digestate (Algerian)}
-% optional: uncomment to flag the suspect 500 C, 0.1 mL point
-%\node[draw, circle, red!60!black, inner sep=3pt] at (axis cs:500,21.65) {};
 \end{axis}
 \end{tikzpicture}
 \caption{Activation mass loss versus pyrolysis temperature for the French
@@ -245,6 +238,7 @@ Steam tends toward a more extensive distribution of micropores and mesopores and
 
 \newpage
 \subsection{Sulfur loading}
+\setresponsible{Regen Wijaya}
 \label{subsec:results-sulfur}
 The mass gain of each sample after the sulfur loading process is calculated from the difference
 between the mass before and after the sulfur loading. The adsorption capacity of each sample is then calculated using Equation~\ref{Equation sulfur loading} and summarized together with the collected data in Table~\ref{tab:sulfur_loading}. 
@@ -538,6 +532,7 @@ Compared to the adsorption capacity CO$_2$-activated biochar samples after sulfu
 \label{sec:characterisation}
 
 \subsubsection{Calorific value}
+\setresponsible{Surya Salim}
 \label{subsubsec:calorific}
 
 \begin{figure}[ht]
@@ -623,6 +618,7 @@ biochar (Table~\ref{tab:hhv_fuels}), and when the densification factor is recalc
 
 \newpage
 \subsubsection{CHNS elemental analysis}
+\setresponsible{Surya Salim}
 \label{subsubsec:chns}
 
 The results are evaluated on two bases. The as-analyzed basis reports the composition of the whole sample, mineral matter included. The ash-free basis divides each element by the combustible fraction $(1-\text{ash})$ and therefore describes the organic matter alone. The Ash-content was determined for the three biochars in Section~\ref{subsubsec:calorific} but not for the activated and sulfur-loaded samples. That means neither the oxygen, obtained by difference, nor any ash-free value can be calculated for the sulfur-loaded chars. Because of this limitation, the pristine biochars are discussed on both bases, while the loaded chars are evaluated through their as-analyzed contents and through the atomic ratios.
@@ -835,7 +831,7 @@ The loaded chars sit lower again, with N/C values at 0.031, 0.027, and 0.024, cl
 
 The data shown by the figure~\ref{fig:chns-s} can be compared against the gravimetric loading capacities in Section~\ref{subsec:results-sulfur}. The results from table~\ref{tab:sulfur_loading} were obtained independently from the mass each sample gained during loading. Treating the loaded sulfur as a deposited mass and taking the char's own sulfur as the baseline, the deposited-sulfur capacity per gram, $q_\mathrm{S}$, follows from the measured loaded fraction $w_\mathrm{S,loaded}$ and the baseline $w_\mathrm{S,base}$:
 \begin{equation}
-q_\mathrm{S} = \frac{w_\mathrm{S,loaded} - w_\mathrm{S,base}}{1 - w_\mathrm{S,loaded}}
+Q_\mathrm{S} = \frac{w_\mathrm{S,loaded} - w_\mathrm{S,base}}{1 - w_\mathrm{S,loaded}}
 \label{eq:s-capacity}
 \end{equation}
 With $w_\mathrm{S,base}\approx1.5\,\%$, Equation~\ref{eq:s-capacity} gives 57, 40 and 39\,mg\,g$^{-1}$ at 400, 500, and 600\,$^{\circ}$C, against the gravimetric 41, 36, and 44\,mg\,g$^{-1}$. These two measures tell a broadly consistent story but do not match point for point. The 400\,$^{\circ}$C parent is widely agreed to be a strong loader. They diverge most at 600\,$^{\circ}$C, where the mass gain ranks highest (44\,mg\,g$^{-1}$) but here, the sulfur analysis ranks among the lowest (5.2\,\%). The major reason for this difference is that the two methods count different things. The mass gain records the net change (or decrease) in weight, which does not take some variables into account, like moisture, oxidation, and handling alongside the deposited sulfur. CHNS on the other side responds to sulfur alone. The 400\,$^{\circ}$C number makes this plain, since the CHNS-derived 57\,mg\,g$^{-1}$ exceeds the 41\,mg\,g$^{-1}$ actually weighed in, this can only mean that the char shed some mass even as sulfur built up. At 600\,$^{\circ}$C the reverse also happens, the weight gain higher than the sulfur-content number.
@@ -844,7 +840,7 @@ With $w_\mathrm{S,base}\approx1.5\,\%$, Equation~\ref{eq:s-capacity} gives 57, 4
 
 \newpage
 \subsubsection{BET analysis}
-
+\setresponsible{Regen Wijaya}
 The BET analysis of pristine as well as sulfur-loaded and activated French biochar samples resulted in three parameters, such as the SSA, total pore volume and mean pore diameter.  
 
 \begin{figure}[htbp]
@@ -1151,6 +1147,7 @@ After steam activation and sulfur loading, the mean pore diameters continued to 
 
 \newpage
 \subsection{Comparison of H\texorpdfstring{$_2$}{2}O and CO\texorpdfstring{$_2$}{2} activation}
+\setresponsible{Surya Salim}
 \label{subsec:h2o-vs-co2}
 
 The individual results in Sections~\ref{subsec:results-activation}, \ref{subsec:results-sulfur} and \ref{sec:characterisation} each touched on the CO$_2$-activated biochar from the preceding project work. In this section, the threads between them are laid out and read as one comparison. Because of the same parameter used in the char activation process, these 2 different data sets can be placed side by side with reasonable confidence \cite{MartinezHuete2024Projektarbeit}. It is important to specify two boundaries right away. The comparison is not a controlled head-to-head on a single sample, but rather two slaughterhouse digestates from different sources. Additionally, the surface-area aspect of the comparison is based on published values and the sulfur-loading reaction rather than a direct measurement because no BET measurement was performed on the CO$_2$-activated char. 
@@ -1175,6 +1172,7 @@ Considered altogether, the comparison points one way without exaggerating it. Fo
 
  
 \subsection{Application of the Biochars}
+\setresponsible{Regen Wijaya}
 \label{subsec:utilization}
 Based on the results of the characterization of the physicochemical properties of biochar conducted in this study, the potential applications of the biochar produced are limited to use in adsorption, carbon storage and soil amendment. The BET results show that the activated, sulfur-loaded biochar produced at a pyrolysis temperature of 500°C is the most promising biochar for adsorption-related applications, including the desulphurization of biogas, since it has the highest value of SSA and total pore volume among all biochars produced in this work. However, the activated, sulfur-loaded biochar produced at a pyrolysis temperature of 400°C might be promising as well, as discussed. 
 
@@ -1194,6 +1192,7 @@ The application of biochars as solid fuel is unfortunately less promising, as th
 
 
 \subsection{Overall assessment and viability}
+\setresponsible{Surya Salim}
 \label{subsec:assessment}
 With all of the results, analyzes, and discussions, this section weighs whether the thesis examined here; turning slaughterhouse digestate into a steam-activated; is worth pursuing beyond this work. The discussion here will remain qualitative, which means it rests on the material properties measured here rather than on cost figures. For that, it would then need pilot-scale data that the present experiments cannot provide.
 \vspace{0.3em}
@@ -1204,9 +1203,8 @@ The limits are just as obvious. The surface areas achieved here are modest compa
 Taken together, the concept is worth pursuing, but as a specific proposition rather than a general one. Its main strength is not peak adsorption but the combination of a near-free waste feedstock and a performance that is adequate for a low- to moderate-duty task. A realistic role would be a low-cost desulfurization or soil-amendment material derived from slaughterhouse waste, not a replacement for high-grade activated carbon, as mentioned in the previous section (section~\ref{subsec:utilization}).
 
 \subsection{Error Analysis}
+\setresponsible{Surya Salim}
 \label{subsec:error-analysis}
-
-
 The limitations of this work, such as the limited feedstock, the condition of the activation setup, and the outsourced surface and elemental analyses, were already explained in section~\ref{subsec:limitations}. In this section, the measurement errors that affect how far the reported numbers can be pushed are gathered and summarized. Several key quantities are inferred rather than measured directly and therefore, carry the errors of their inputs. The activation mass loss (Section~\ref{subsec:methods-activation}) equals the steam-gasified carbon only if that reaction removes all the mass, whereas residual devolatilization of the sub-700\,$^{\circ}$C-activated chars, condensation of injected water, and the low, variable pressure of the manual syringe injection all contribute. Because of this, rather than being a direct measurement, it is interpreted as an upper limit on carbon conversion. By the interpretation of CHNS results, the oxygen is taken by difference (Equation~\ref{eq:O_fraction}) and thus accumulates the error of every other channel. The ash-free values depend on the separately measuered ash content. The sulfur content read gravimetrically (Section~\ref{subsec:results-sulfur}) diverges from the CHNS value (Section~\ref{subsubsec:chns}), because the mass gain also counts moisture, oxidation and handling losses whereas CHNS responds only to sulfur. In the BET section, the mean pore diameter is computed as $4V/A$ (Equation~\ref{Equation mean pore}) from two BET inputs. The BET surface areas were, moreover, measured after sulfur loading rather than after activation alone. The deposited sulfur may block pores, and the "real" post-activation area, which can be higher than that reported in this paper (Section~\ref{sec:characterisation}). The scatter in the data can only be quantified for the repeated measurements, such as the pyrolysis data (triplicate, standard deviation below half a percentage point, Section~\ref{subsec:results-pyrolysis}) and the calorific values and ash contents (triplicate, Figure~\ref{fig:calorific-value}). The CHNS values are a four-run mean whose individual results were not released by the laboratory (Section~\ref{subsubsec:methods-chns}) and the BET parameters are averages of only two measurements, therefore no scatter can be attached to either. 
 
 
