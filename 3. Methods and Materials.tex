@@ -145,11 +145,13 @@ For this thesis, the biochar carbon content is assumed approximately 60\% based 
 
 \vspace{0.3em}
 
-To verify that the 10\% mass-loss target could be met under these non-ideal conditions, a comparative trial was carried out with two water doses applied to 1 g biochar samples from each pyrolysis temperature : 0.1 mL (close to the theoretical minimum) and 0.5 mL (a fivefold excess intended to compensate for steam losses to condensation). Both doses kept the measured mass loss well below the 10\% threshold, and the resulting losses were essentially identical between the two doses for the 500 °C and 600 °C biochars (see table~\ref{tab:activation-full}). This indicates that under the closed-tube conditions used in this work, water is not the limiting factor. 
+To verify that the 10\% mass-loss target could be met under these non-ideal conditions, a comparative trial was carried out with two water doses applied to 1 g biochar samples from each pyrolysis temperature : 0.1 mL (close to the theoretical minimum) and 0.5 mL (a fivefold excess intended to compensate for steam losses to condensation). The resulting losses were essentially identical for the 500 °C abd °C Biochars(see table~\ref{tab:activation-full}). On the wet basis, both doses sat near or below 10\%, while moisture-corrected losses run 10-22\%. 
 
 \vspace{0.3em}
 
-On this basis, the 0.5 mL of water per 1 g of biochar dose was adopted as the standard activation condition. All activated biochar samples were used thereafter for the elemental and surface analyzes described in \S~\ref{sec: Analyticalmethods} were produced under this condition. The 0.1 mL dose was retained only as a comparative reference for the activation study.
+On this basis, the 0.5 mL of water per 1 g of biochar dose was adopted as the standard activation condition. All activated biochar samples were used thereafter for the elemental and surface analyzes described in \S~\ref{sec: Analyticalmethods} were produced under this condition. The 0.1 mL dose was retained only as a comparative reference for the activation study. The same dose ratio was additionally checked at twice the scale. In runs 10--12 (Table~\ref{tab:activation-full}), 2\,g of biochar was activated with 1.0\,mL of water, and the
+moisture-corrected mass losses followed the same descending order with pyrolysis temperature as
+the corresponding 1\,g runs.
 
 \subsubsection*{Activation procedure}
 \begin{enumerate}
@@ -166,7 +168,7 @@ On this basis, the 0.5 mL of water per 1 g of biochar dose was adopted as the st
     \begin{equation}
         \Delta m_{active,wet}=\frac{m_{before}-m_{after,wet}}{m_{before}} \times 100\%
     \end{equation}
-    Because water was introduced during activation by spraying, this initial post-activation mass still contained moisture that had to be separated from the actual mass change caused by activation. Residual moisture was determined gravimetrically using a halogen moisture analyser (PCE-MA series, PCE Instruments GmbH, Germany) operating on the loss-on-drying (LOD) principle. The instrument heats the sample by means of halogen lamps and calculates moisture content from the mass difference before and after drying; a drying temperature of 190 °C was used. As the analyser required a minimum sample mass to produce a stable reading, two inert metal rings (combined mass $m_{Nutrings}$=20.74 g) were placed in the sample pan together with each biochar sample to meet this threshold. The rings were first dried so they contributed no moisture of their own, meaning the entire water mass detected during drying originated from the biochar.
+    Because water was introduced during activation by spraying, this initial post-activation mass still contained moisture that had to be separated from the actual mass change caused by activation. Residual moisture was determined gravimetrically using a halogen moisture analyzer (PCE-MA series, PCE Instruments GmbH, Germany) operating on the loss-on-drying (LOD) principle. The instrument heats the sample by means of halogen lamps and calculates moisture content from the mass difference before and after drying; a drying temperature of 190 °C was used. As the analyzer required a minimum sample mass to produce a stable reading, two inert metal rings (combined mass $m_{Nutrings}$=20.74 g) were placed in the sample pan together with each biochar sample to meet this threshold. The rings were first dried so they contributed no moisture of their own, meaning the entire water mass detected during drying originated from the biochar.
     
     Because the analyzer reports moisture as a fraction of the total mass in the chamber, the reported value $w_{dryer}$ refers to the combined mass of biochar and metal rings rather than to the biochar alone. To get the true biochar moisture content:
     \begin{equation}
@@ -177,7 +179,7 @@ where $m_{after,wet}$ is the post-activation mass of the biochar prior to drying
     \Delta m_{loss}=\frac{m_{before}-m_{after,dry}}{m_{before}} \times 100\%
 \end{equation}
     \begin{equation}
-        \Delta m_{loss}=\frac{m_{before}-(m_{after,wet}(1-w_{dryer}))}{m_{before}} \times 100\%
+        \Delta m_{loss}=\frac{m_{before}-(m_{after,wet}(1-w_{bio}))}{m_{before}} \times 100\%
     \end{equation}
     where $m_{before}$ is the mass of biochar loaded into the tube and $m_{after,dry}$ is the post-activation mass after drying. The activated biochars were stored in a glass container until further use in the sulphurization step.
 \end{enumerate}
@@ -253,7 +255,47 @@ For each measurement, approximately 1.0 g of dried sample was placed in the cruc
 Each Sample was measured in triplicate (n=3). Mean values and standard deviations are reported in Chapter \ref{Section:result}. 
 
 
-\newpage
+\subsubsection{Ash Content Determination}
+\label{subsubsec:methods-ash}
+The ash content was not determined in a separate ashing campaign. It was taken from the
+calorific value determination runs described in \S~\ref{subsubsec:methods-calorimetry}, each of which leaves a
+mineral residue in the crucible once the organic fraction has burned off.
+
+\vspace{0.3em}
+
+The empty crucible was tared on the analytical balance and the dried sample weighed into it,
+giving the initial mass $m_0$. After the bomb had been depressurised and opened, the crucible
+was weighed again with the residue still inside. The residue mass $m_{\mathrm{ash}}$ is the
+difference between the two readings, and the ash content follows as
+
+\begin{equation}
+\mathrm{Ash} = \frac{m_{\mathrm{ash}}}{m_0} \times 100\,\%
+\label{eq:ash-content}
+\end{equation}
+
+Since every calorimetric run yields one ash value, the triplicate measurement gives three ash
+values per material. Means and standard deviations are reported alongside the calorific values
+in Chapter~\ref{Section:result}, and the individual weighings are listed in
+Table~\ref{tab:calorific-full}. Ash was determined this way for the raw French digestate and for
+the three pristine biochars. The activated and sulfur-loaded chars were not measured, which is
+why no ash-free basis and no oxygen-by-difference can be given for them
+(\S~\ref{subsubsec:methods-chns}).
+
+\vspace{0.3em}
+
+This is not a standard ash determination. DIN EN ISO 18122 for
+solid biofuels and ASTM E1755 for biomass both ash the sample in a muffle furnace in air at
+550\,$^{\circ}$C and hold it until the mass is constant \parencite{iso18122_2022, astm_e1755_2020}.
+The residue weighed here comes instead from a short combustion in pressurised pure oxygen, at no
+defined holding temperature and no defined holding time. Carbonates and other thermally labile
+minerals may therefore decompose to a different extent than they would in a furnace, and traces
+of unburned carbon can remain in the crucible. The values reported in this work are combustion
+residues, defined by the calorimetric procedure itself, and they are not strictly comparable with
+ash contents measured according to the standards above. The procedure was used because it costs
+no additional sample material and no separate furnace run, and because the ash values enter this
+work as a correction factor for converting results to an ash-free basis
+\parencite{iso16993_2016} rather than as a fuel specification reported in its own right.
+
 \subsubsection{BET Analysis}
 
 The BET analysis was outsourced to the Chair for Energy Process Engineering and Conversion Technologies for Renewable Energies (Fachgebiet Energieverfahrenstechnik und Umwandlungstechniken regenerativer Energien, EVUR), Institute of Energy Technology, Faculty III -- Process Sciences, Technische Universität Berlin (TU Berlin), as the corresponding equipment and instrumentation were not available at HTW Berlin. The analysis used a BET analyzer with the model Sync220A and a static volumetric method. This analysis used nitrogen as the adsorbate and the measurement was done at 77.35 K. The analysis required approximately 2 hours. Only the pristine and activated, sulfur-enriched French biochar samples were subjected to BET analysis due to budgetary reasons and less mass loss during the activation.
