@@ -1,0 +1,176 @@
+%KI-Verzeichnis / AI Directory
+%Required by the HTW academic integrity declaration ("KI-kennzeichnungspflichtig").
+%Structure follows the HTW Handreichung (Tool / Form of use / Reason / Affected
+%parts / Notes), extended with representative prompts as required by the
+%declaration text.
+%
+%TODO before submission: check every chapter/section reference in the
+%"Affected parts" column and delete any row that does not apply.
+
+\section{AI Directory}
+\label{sec:ai-directory}
+
+The following directory lists all AI-based tools used in the preparation of this
+thesis, together with the form and purpose of their use and the parts of the work
+affected. Representative prompts are given in Section~\ref{subsec:ai-prompts}. All
+content generated with these tools was checked against the primary literature and
+against our own experimental data before it was adopted. Numerical results,
+measurements and their interpretation originate from our own laboratory work.
+
+\begin{table}[H]
+\centering
+\caption{Directory of AI-based tools used in this thesis}
+\label{tab:ai-directory}
+\footnotesize
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{L{2.2cm} L{3.0cm} X L{2.6cm}}
+\toprule
+\thd{Tool} & \thd{Form of use} & \thd{Reason} & \thd{Affected parts} \\
+\midrule
+
+DeepL \newline (DeepL SE) &
+Translation of source material &
+Reading German-language literature, standards and equipment documentation in
+English &
+Chapters 2 and 3 \\
+\addlinespace
+
+&
+Translation of own drafts &
+Transferring passages drafted in German or Indonesian into the English
+manuscript &
+Chapters 1--5 \\
+\addlinespace
+
+&
+Rephrasing (DeepL Write) &
+Grammar and wording correction of sentences written by the authors &
+Chapters 1--5 \\
+\addlinespace
+\midrule
+
+ChatGPT \newline (OpenAI) &
+Explanation of concepts &
+Building an understanding of pyrolysis, steam activation and the analytical
+methods as background for our own formulations &
+Chapters 2 and 3 \\
+\addlinespace
+
+&
+Language editing &
+Grammar, style and consistency of terminology in text written by the authors &
+Chapters 1--5 \\
+\addlinespace
+
+&
+Draft formulations &
+Producing first drafts of individual passages, which were subsequently revised,
+verified and rewritten by the authors &
+Chapters 2, 4 and 5 \\
+\addlinespace
+
+&
+\LaTeX{} and data handling &
+Assistance with \LaTeX{} code, figure and table formatting, and spreadsheet
+calculations on our own measurement data &
+Chapters 4 and 5, Appendix \\
+\addlinespace
+\midrule
+
+Claude \newline (Anthropic) &
+Drafting and revision of chapter text &
+Structuring and formulating sections on the basis of our own results and notes;
+all output was reviewed and edited by the authors &
+Chapters 1--5 \\
+\addlinespace
+
+&
+\LaTeX{} implementation &
+Preparation of \texttt{.tex} source, pgfplots figures, tables and the uniform
+figure and table style &
+Chapters 4 and 5, Appendix \\
+\addlinespace
+
+&
+Discussion of own data &
+Working through the experimental results and discussing possible interpretations;
+the measurements and the final interpretation are our own &
+Chapter 4 \\
+\addlinespace
+
+&
+Literature notes and consistency check &
+Summarising literature we had selected, and checking the manuscript for internal
+consistency, cross-references and language errors &
+Chapters 1--5 \\
+\addlinespace
+\midrule
+
+Google Gemini &
+Literature search &
+Identifying and pre-sorting publications, which were then retrieved and read in
+the original &
+Chapters 2 and 4 \\
+\addlinespace
+
+&
+Explanation of concepts &
+Clarifying individual technical relationships as background reading &
+Chapters 2 and 3 \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\vspace{1em}
+
+\subsection{Representative prompts}
+\label{subsec:ai-prompts}
+
+The prompts below are representative examples of the inputs used for each form of
+use listed in Table~\ref{tab:ai-directory}. They are reproduced in the form in
+which they were entered.
+
+\vspace{0.5em}
+\noindent\textbf{DeepL}
+\begin{itemize}
+	\setlength{\itemsep}{0.2em}
+	\item Translation of German source passages into English (text input, no
+	instruction prompt).
+	\item DeepL Write: rephrasing of own English sentences for grammar and style.
+\end{itemize}
+
+\noindent\textbf{ChatGPT}
+\begin{itemize}
+	\setlength{\itemsep}{0.2em}
+	\item ``Explain the difference between physical activation with steam and with
+	CO$_2$, and why steam activation is usually carried out at lower
+	temperatures.''
+	\item ``Correct the grammar and improve the readability of the following
+	paragraph without changing its technical content: [own text].''
+	\item ``How is the Van Krevelen diagram interpreted for biochars, and what do
+	low H/C and O/C ratios indicate?''
+	\item ``Write a LaTeX table with the following columns and values: [own
+	measurement data].''
+\end{itemize}
+
+\noindent\textbf{Claude}
+\begin{itemize}
+	\setlength{\itemsep}{0.2em}
+	\item ``Draft the results section for the H$_2$O activation experiments using
+	the following mass-loss data and my notes: [own data and notes].''
+	\item ``Create a pgfplots figure of biochar yield against pyrolysis temperature
+	from these values: [own data].''
+	\item ``Given these CHNS results, which trends are worth discussing, and how do
+	they compare with the values reported in the cited literature?''
+	\item ``Check the whole thesis for inconsistencies between chapters, incorrect
+	cross-references and language errors, and list the findings.''
+\end{itemize}
+
+\noindent\textbf{Google Gemini}
+\begin{itemize}
+	\setlength{\itemsep}{0.2em}
+	\item ``Which publications deal with steam activation of digestate-derived
+	biochar and its use for H$_2$S removal?''
+	\item ``Explain the mechanism of H$_2$S partial oxidation on a carbon surface.''
+\end{itemize}
