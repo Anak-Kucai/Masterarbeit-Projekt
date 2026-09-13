@@ -1,0 +1,207 @@
+%======================================================================
+%  plotstyle.tex
+%  Unified figure and table styling for the Masterarbeit.
+%
+%  Everything visual — colours, markers, axis geometry, table rules,
+%  caption formatting — is defined here and nowhere else. To change the
+%  look of every figure or table in the thesis, edit this file only.
+%
+%  Requires (already loaded in head.tex): pgfplots, xcolor, booktabs,
+%  caption, multirow, tabularx.
+%  Input this file at the end of the preamble:  \input{plotstyle}
+%======================================================================
+
+
+%----------------------------------------------------------------------
+% 1. COLOUR PALETTE
+%----------------------------------------------------------------------
+% Okabe-Ito palette: distinguishable under all common forms of colour
+% vision deficiency. The L* value in each comment is the CIE lightness;
+% series that must stay apart in greyscale printing are paired so that
+% their L* values differ by at least 20.
+%----------------------------------------------------------------------
+\definecolor{tcBlue}{HTML}{0072B2}        % L* 47  — primary series
+\definecolor{tcVermillion}{HTML}{D55E00}  % L* 52  — secondary series
+\definecolor{tcTeal}{HTML}{009E73}        % L* 58  — third series
+\definecolor{tcAmber}{HTML}{E69F00}       % L* 71  — second bar series
+\definecolor{tcSky}{HTML}{56B4E9}         % L* 72  — spare
+\definecolor{tcPurple}{HTML}{CC79A7}      % L* 61  — spare
+\definecolor{tcGrey}{HTML}{595959}        % L* 38  — literature / prior work
+\definecolor{tcGridGrey}{HTML}{BFBFBF}    % grid lines
+\definecolor{tcRule}{HTML}{404040}        % axis lines and table rules
+
+% Institutional colour, kept for the title page and header only.
+% (HTWGreen is defined in style.tex and is deliberately not used as a
+% data colour: it is hard to separate from teal in greyscale.)
+
+
+%----------------------------------------------------------------------
+% 2. SEMANTIC SERIES STYLES
+%----------------------------------------------------------------------
+% Colour carries MEANING and is constant across the whole thesis:
+%
+%   primary    blue        this work, main condition   (French, 0.5 mL,
+%                                                       as-analyzed, pristine)
+%   secondary  vermillion  this work, second condition (Algerian, 0.1 mL)
+%   tertiary   teal        this work, third condition
+%   emphasis   amber       derived / corrected quantity in BAR charts
+%                          (ash-free, activated, sulfur-loaded)
+%   reference  grey        literature or the preceding project work
+%
+% Shape and dash pattern duplicate that information so the figures stay
+% readable in black-and-white print.
+%----------------------------------------------------------------------
+\pgfplotsset{
+  % --- line series -----------------------------------------------------
+  s primary/.style={
+    tcBlue, thick, mark=*, mark size=2.3pt,
+    mark options={fill=tcBlue, draw=tcBlue}},
+  s secondary/.style={
+    tcVermillion, thick, mark=square*, mark size=2.2pt,
+    mark options={fill=tcVermillion, draw=tcVermillion}},
+  s tertiary/.style={
+    tcTeal, thick, mark=triangle*, mark size=2.8pt,
+    mark options={fill=tcTeal, draw=tcTeal}},
+  s quaternary/.style={
+    tcAmber, thick, mark=diamond*, mark size=2.8pt,
+    mark options={fill=tcAmber, draw=tcAmber}},
+  s reference/.style={
+    tcGrey, thick, densely dashed, mark=square*, mark size=2.2pt,
+    mark options={solid, fill=tcGrey, draw=tcGrey}},
+  % Open marker + dashed line = the same quantity on a different basis
+  % (e.g. wet vs. moisture-corrected). Hue stays with the condition.
+  s open/.style={
+    dashed, mark options={solid, fill=white, line width=0.8pt}},
+  %
+  % --- bar series ------------------------------------------------------
+  b primary/.style={fill=tcBlue,      draw=tcBlue!70!black,   line width=0.4pt},
+  b emphasis/.style={fill=tcAmber,    draw=tcAmber!70!black,  line width=0.4pt},
+  b secondary/.style={fill=tcVermillion, draw=tcVermillion!70!black, line width=0.4pt},
+  b reference/.style={fill=tcGrey!30, draw=tcGrey,            line width=0.4pt},
+}
+
+
+%----------------------------------------------------------------------
+% 3. AXIS STYLES
+%----------------------------------------------------------------------
+% One geometry for every plot in the thesis. The in-axis title is set once
+% here, so every figure title is the same size and sits the same distance
+% above the axis.
+%----------------------------------------------------------------------
+\pgfplotsset{
+  thesisaxis/.style={
+    width=0.86\textwidth,
+    height=0.54\textwidth,
+    title style={font=\normalsize, yshift=2pt},
+    axis lines*=box,
+    axis line style={tcRule, line width=0.5pt},
+    tick align=outside,
+    major tick length=3pt,
+    minor tick num=0,
+    tick style={tcRule, line width=0.4pt},
+    ymajorgrids=true,
+    grid style={tcGridGrey, line width=0.3pt},
+    tick label style={font=\small},
+    label style={font=\small},
+    legend cell align=left,
+    legend columns=2,
+    legend style={
+      font=\small,
+      draw=tcGridGrey,
+      fill=white,
+      at={(0.5,-0.20)}, anchor=north,
+      /tikz/every even column/.append style={column sep=0.6cm}},
+    error bars/error bar style={tcRule, line width=0.6pt},
+    error bars/error mark options={tcRule, rotate=90, mark size=2pt},
+  },
+  % line / scatter plots
+  thesisline/.style={thesisaxis},
+  % square-ish panel for scatter diagrams (e.g. van Krevelen)
+  thesissquare/.style={
+    thesisaxis,
+    width=0.66\textwidth, height=0.54\textwidth,
+    grid=both,
+    minor grid style={tcGridGrey!50, line width=0.2pt}},
+  % grouped bar charts
+  thesisbar/.style={
+    thesisaxis,
+    ybar,
+    area legend,
+    bar width=18pt,
+    ymin=0,
+    enlarge x limits=0.28,
+    xtick=data,
+    tick pos=left,
+    clip=false},
+  % value labels on top of bars
+  barlabels/.style={
+    nodes near coords,
+    nodes near coords align={vertical},
+    every node near coord/.append style={
+      font=\footnotesize, text=black,
+      /pgf/number format/.cd, fixed, fixed zerofill, precision=1}},
+  % overlay axis for a second y scale (no grid, no x axis)
+  thesisaxis right/.style={
+    width=0.86\textwidth,
+    height=0.54\textwidth,
+    axis y line*=right,
+    axis x line=none,
+    axis line style={tcRule, line width=0.5pt},
+    tick align=outside,
+    major tick length=3pt,
+    tick style={tcRule, line width=0.4pt},
+    tick label style={font=\small},
+    label style={font=\small},
+    error bars/error bar style={tcRule, line width=0.6pt},
+    error bars/error mark options={tcRule, rotate=90, mark size=2pt}},
+}
+
+
+%----------------------------------------------------------------------
+% 4. TABLE STYLE
+%----------------------------------------------------------------------
+% booktabs rules only — no vertical lines, no \hline.
+% Row height and column padding are set once here; individual tables
+% must not override them.
+%----------------------------------------------------------------------
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{6pt}
+
+\setlength{\heavyrulewidth}{0.9pt}
+\setlength{\lightrulewidth}{0.5pt}
+\setlength{\cmidrulewidth}{0.4pt}
+\setlength{\aboverulesep}{0.35ex}
+\setlength{\belowrulesep}{0.55ex}
+
+% Every table body is set one step below body text. Individual tables must
+% not declare their own size — this keeps the type size identical throughout.
+\usepackage{etoolbox}
+\AtBeginEnvironment{table}{\small}
+
+% For a table too wide to fit \textwidth at \small. Use this instead of
+% \resizebox, which scales the font by an arbitrary factor and therefore
+% makes every wide table a different size.
+\newcommand{\tabwide}{\footnotesize\setlength{\tabcolsep}{4pt}}
+
+% Header cell. Use for every column heading so bolding stays consistent.
+\newcommand{\thd}[1]{\textbf{#1}}
+
+% Ragged-right paragraph column: L{3cm} instead of p{3cm}. Narrow justified
+% columns produce heavy hyphenation and wide word gaps; ragged right does not.
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% Standard note block underneath a table.
+\newcommand{\tabnote}[1]{%
+  \vspace{1.5mm}%
+  \begin{minipage}{\textwidth}\footnotesize\textit{Note.} #1\end{minipage}}
+
+% (The centred tabularx column type C is already defined in head.tex.)
+
+
+%----------------------------------------------------------------------
+% 5. CAPTIONS
+%----------------------------------------------------------------------
+\captionsetup{font=small, labelfont=bf, justification=justified,
+              singlelinecheck=true}
+\captionsetup[figure]{skip=8pt}
+\captionsetup[table]{skip=6pt}
